@@ -1,10 +1,12 @@
-# aurora
+# jepsen-aurora
 
-A Clojure library designed to ... well, that part is up to you.
+Jepsen tests for Apache Aurora
 
 ## Usage
 
-FIXME
+```
+lein test
+```
 
 ## License
 
