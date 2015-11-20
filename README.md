@@ -5,8 +5,6 @@ Jepsen tests for Apache Aurora
 ## Usage
 
 ```
-:d
-
 lein test
 ```
 
