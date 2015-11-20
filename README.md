@@ -6,6 +6,11 @@ Jepsen tests for Apache Aurora
 
 ```
 lein test
+C
+ddC
+a
+i
+dd:wq
 ```
 
 ## License
