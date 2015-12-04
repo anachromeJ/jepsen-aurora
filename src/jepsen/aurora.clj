@@ -21,7 +21,7 @@
                     "EEA14886")
   (debian/add-repo! :webupd8team-src
                     "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main")
-  (debian/install {:oracle-java8-installer ""})
+  (debian/install {:oracle-java8-installer "1.8.0_66"})
   (c/su
    (c/exec :curl :-L "https://github.com/jchli/jepsen-aurora/raw/master/aurora/dist/distributions/aurora-scheduler-0.11.0-SNAPSHOT.zip" :-o "aurora-scheduler.zip")
    (c/exec :unzip "aurora-scheduler.zip" :-d "/usr/local")
