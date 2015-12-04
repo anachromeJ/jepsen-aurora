@@ -40,7 +40,7 @@
   (assoc tests/noop-test
          :name      "aurora"
          :os        debian/os
-         :db        (db)
+         :db        (db mesos-version)
          ;; :client    (->Client nil)
          ;; :generator (gen/phases
          ;;             (->> (add-job)
