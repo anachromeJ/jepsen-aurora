@@ -1,14 +1,15 @@
 (ns jepsen.aurora
   "Sets up Aurora"
-  (:require [jepsen [client :as client]
-                    [db :as db]
-                    [tests :as tests]
-                    [control :as c :refer [|]]
-                    [checker :as checker]
-                    [generator :as gen]
-                    [util :as util :refer [meh timeout]]
-                    [zookeeper :as zk]])
-)
+  (:require [jepsen 
+             [client :as client]
+             [db :as db]
+             [tests :as tests]
+             [control :as c :refer [|]]
+             [checker :as checker]
+             [generator :as gen]
+             [util :as util :refer [meh timeout]]
+             [zookeeper :as zk]]
+            [jepsen.os.debian :as debian]))
 
 (defn install!
   ""
