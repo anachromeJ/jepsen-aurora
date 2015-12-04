@@ -14,23 +14,24 @@
 (defn install!
   ""
   []
-  (c/exec "sudo apt-get update")
-  (c/exec "sudo apt-get install build-essential")
-  (c/exec "git clone http://git-wip-us.apache.org/repos/asf/aurora.git")
-  (c/exec "cd aurora")
-  (c/exec "./gradlew distZip"))
+  (c/su
+   (c/exec "unzip /aurora-scheduler-*.zip -d /usr/local")
+   (c/exec "ln -nfs \"$(ls -dt /usr/local/aurora-scheduler-* | head -1)\" /usr/local/aurora-scheduler")))
 
 (defn db
   "Installs Aurora"
   []
-  (reify db/DB
-    (setup! [_ test node]
+  (let [mesos (mesos/db mesos-version)]
+    (reify db/DB
+      (setup! [_ test node]
+        
+      (db/setup! mesos test node)
       (install!)
       )
-
-    (teardown! [_ test node]
-      )
-))
+      
+      (teardown! [_ test node]
+        )
+      )))
 
 (defn simple-test
   []
