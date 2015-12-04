@@ -6,3 +6,7 @@
 (deftest a-test
   (testing "always succeed"
     (is (= 1 1))))
+
+(deftest install-test
+  (run! (simple-test)))
+
