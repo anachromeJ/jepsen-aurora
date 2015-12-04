@@ -25,7 +25,7 @@
   (c/su
    (c/exec :echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" :| :tee "/etc/apt/sources.list.d/webupd8team-java.list")
    (c/exec :echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" :| :tee :-a "/etc/apt/sources.list.d/webupd8team-java.list")
-   (c/exec :apt-key :--keyserver "hkp://keyserver.ubuntu.com:80" :--recv-keys "EEA14886")
+   (c/exec :apt-key "adv" :--keyserver "hkp://keyserver.ubuntu.com:80" :--recv-keys "EEA14886")
    (c/exec :apt-get "update")
    (c/exec :apt-get "install oracle-java8-installer")
 
