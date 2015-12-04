@@ -8,7 +8,8 @@
              [checker :as checker]
              [generator :as gen]
              [util :as util :refer [meh timeout]]
-             [zookeeper :as zk]]
+             [zookeeper :as zk]
+             [mesos :as mesos]]
             [jepsen.os.debian :as debian]))
 
 (defn install!
@@ -21,7 +22,7 @@
 
 (defn db
   "Installs Aurora"
-  []
+  [mesos-version]
   (let [mesos (mesos/db mesos-version)]
     (reify db/DB
       (setup! [_ test node]
@@ -35,7 +36,7 @@
       )))
 
 (defn simple-test
-  []
+  [mesos-version]
   (assoc tests/noop-test
          :name      "aurora"
          :os        debian/os
