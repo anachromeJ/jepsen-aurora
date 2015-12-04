@@ -62,6 +62,5 @@
          ;; :checker   (checker/compose
          ;;             {:chronos (checker)
          ;;              :perf (checker/perf)})
-         :ssh       {:username "root"
-                     :private-key-path "/home/vagrant/.ssh/id_rsa"}))
+))
 
