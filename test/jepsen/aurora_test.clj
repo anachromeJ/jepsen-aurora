@@ -8,5 +8,5 @@
     (is (= 1 1))))
 
 (deftest install-test
-  (run! (simple-test "0.22.0-1.0.debian81")))
+  (run! (simple-test "0.22.0-1.0.debian78")))
 

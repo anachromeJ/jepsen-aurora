@@ -13,7 +13,7 @@
             [jepsen.os.debian :as debian]))
 
 (defn install!
-  ""
+  "Installs java 8 and aurora scheduler"
   []
   ; (debian/add-repo! :webupd8team
   ;                   "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main"
