@@ -27,7 +27,7 @@
    (c/exec :echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" :| :tee :-a "/etc/apt/sources.list.d/webupd8team-java.list")
    (c/exec :apt-key "adv" :--keyserver "hkp://keyserver.ubuntu.com:80" :--recv-keys "EEA14886")
    (c/exec :apt-get "update")
-   (c/exec :apt-get "install oracle-java8-installer")
+   (c/exec :apt-get "install" "oracle-java8-installer")
 
    (c/exec :curl :-L "https://github.com/jchli/jepsen-aurora/raw/master/aurora/dist/distributions/aurora-scheduler-0.11.0-SNAPSHOT.zip" :-o "aurora-scheduler.zip")
    (c/exec :unzip "aurora-scheduler.zip" :-d "/usr/local")
