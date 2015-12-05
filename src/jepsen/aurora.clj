@@ -31,7 +31,7 @@
    (c/exec :apt-get :install "oracle-java8-installer" :-y :--force-yes)
 
    (c/exec :curl :-L "https://github.com/jchli/jepsen-aurora/raw/master/aurora/dist/distributions/aurora-scheduler-0.11.0-SNAPSHOT.zip" :-o "aurora-scheduler.zip")
-   (c/exec :unzip "aurora-scheduler.zip" :-n :-d "/usr/local")
+   (c/exec :unzip :-n "aurora-scheduler.zip" :-d "/usr/local")
    (c/exec :ln :-nfs "aurora-scheduler" "/usr/local/aurora-scheduler")))
 
 (defn db
