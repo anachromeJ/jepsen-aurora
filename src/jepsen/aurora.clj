@@ -38,7 +38,7 @@
 (defn start!
   [test node]
   (c/su
-   (c/exec :/usr/local/aurora-scheduler/bin/aurora_scheduler
+   (c/exec ://usr/local/aurora-scheduler/bin/aurora_scheduler
            :-mesos_master_address (mesos/zk-uri test)
            :-backup_dir "/usr/local/aurora-scheduler/backup"
            :-serverset_path "/aurora/scheduler"
