@@ -32,7 +32,16 @@
 
    (c/exec :curl :-L "https://github.com/jchli/jepsen-aurora/raw/master/aurora/dist/distributions/aurora-scheduler-0.11.0-SNAPSHOT.zip" :-o "aurora-scheduler.zip")
    (c/exec :unzip "aurora-scheduler.zip" :-d "/usr/local")
-   (c/exec :ln :-nfs "aurora-scheduler" "/usr/local/aurora-scheduler")))
+   (c/exec :mv "/usr/local/aurora-scheduler-0.11.0-SNAPSHOT" "/usr/local/aurora-scheduler")))
+
+(defn start!
+  [test node]
+  (c/su
+   (c/exec :/usr/local/aurora-scheduler/bin/aurora_scheduler
+           :-mesos_master_address (mesos/zk-uri test)
+           :-backup_dir "/usr/local/aurora-scheduler/backup"
+           :-serverset_path "/aurora/scheduler"
+           :-cluster_name "test")))
 
 (defn db
   "Installs Aurora"
