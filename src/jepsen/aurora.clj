@@ -42,7 +42,8 @@
            :-mesos_master_address (mesos/zk-uri test)
            :-backup_dir "/usr/local/aurora-scheduler/backup"
            :-serverset_path "/aurora/scheduler"
-           :-cluster_name "test")))
+           :-cluster_name "test"
+           :-zk_endpoints "localhost:2181")))
 
 
 (defn db
