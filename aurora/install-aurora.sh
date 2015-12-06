@@ -18,6 +18,9 @@ if [[ ! -e $AURORA_DIR ]]; then
     unzip -n "aurora-scheduler.zip" -d "/usr/local"
     ln -nfs "/usr/local/aurora-scheduler-0.11.0-SNAPSHOT" $AURORA_DIR
     export PATH=$AURORA_DIR/bin:$PATH
+
+    # Add Log output parameter
+    mesos-log initialize --path=$AURORA_SCHEDULER_HOME/mesos-log
     echo "done"
 else
     echo "aurora already installed, aborting..."
