@@ -17,7 +17,8 @@
   []
   (c/su
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/install-aurora.sh" :-o "/install-aurora.sh")
-   (c/exec ://install_aurora.sh)))
+   (c/exec :bash "/install-aurora.sh")
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")))
 
 (defn start!
   [test node]
@@ -31,7 +32,7 @@
 
 
 (defn db
-  "Installs Aurora"
+  "Installs Aurora scheduler"
   [mesos-version]
   (let [mesos (mesos/db mesos-version)]
     (reify db/DB
