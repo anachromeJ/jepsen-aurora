@@ -26,13 +26,7 @@
   [test node]
   (info node "starting aurora-scheduler")
   (c/su
-   (c/exec ://usr/local/aurora-scheduler/bin/aurora-scheduler
-           :-mesos_master_address (mesos/zk-uri test)
-           :-backup_dir "/usr/local/aurora-scheduler/backup"
-           :-serverset_path "/aurora/scheduler"
-           :-cluster_name "test"
-           :-zk_endpoints "localhost:2181")))
-
+   (c/exec :bash "/aurora-scheduler.sh")))
 
 (defn db
   "Installs Aurora scheduler"
