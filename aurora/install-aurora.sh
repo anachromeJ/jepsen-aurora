@@ -20,7 +20,7 @@ if [[ ! -e $AURORA_DIR ]]; then
     export PATH=$AURORA_DIR/bin:$PATH
 
     # Add Log output parameter
-    mesos-log initialize --path=$AURORA_SCHEDULER_HOME/db
+    mesos-log initialize --path=$AURORA_DIR/db
     echo "done"
 else
     echo "aurora already installed, aborting..."
