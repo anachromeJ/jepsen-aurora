@@ -20,7 +20,14 @@
   (c/su
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/install-aurora.sh" :-o "/install-aurora.sh")
    (c/exec :bash "/install-aurora.sh")
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")))
+   ))
+
+(defn configure!
+  [test node]
+  (info node "Configuring Aurora")
+  (c/su
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
+   (c/exec :mesos-log :intialize :--path "/usr/local/aurora-scheduler/mesos-log")))
 
 (defn start!
   [test node]
@@ -37,6 +44,7 @@
         
       (db/setup! mesos test node)
       (install! test node)
+      (configure! test node)
       (start! test node)
       )
       

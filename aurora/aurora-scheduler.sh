@@ -3,9 +3,6 @@
 # Location where aurora-scheduler.zip was unpacked.
 AURORA_SCHEDULER_HOME=/usr/local/aurora-scheduler
 
-# Add Log output parameter
-mesos-log initialize --path=$AURORA_SCHEDULER_HOME/mesos-log
-
 # Flags that control the behavior of the JVM.
 JAVA_OPTS=(
   -server
