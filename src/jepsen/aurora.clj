@@ -24,7 +24,7 @@
 
 (defn start!
   [test node]
-  (info node "Starting Aurora")
+  (info node "starting aurora-scheduler")
   (c/su
    (c/exec ://usr/local/aurora-scheduler/bin/aurora-scheduler
            :-mesos_master_address (mesos/zk-uri test)
