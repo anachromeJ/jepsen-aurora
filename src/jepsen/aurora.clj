@@ -26,7 +26,7 @@
   [test node]
   (info node "starting aurora-scheduler")
   (c/su
-   (c/exec :bash "/aurora-scheduler.sh")))
+   (c/exec :bash "/aurora-scheduler.sh" :&)))
 
 (defn db
   "Installs Aurora scheduler"
@@ -37,7 +37,7 @@
         
       (db/setup! mesos test node)
       (install! test node)
-      ;; (start! test node)
+      (start! test node)
       )
       
       (teardown! [_ test node]
