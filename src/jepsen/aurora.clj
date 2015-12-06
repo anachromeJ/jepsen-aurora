@@ -1,6 +1,7 @@
 (ns jepsen.aurora
   "Sets up Aurora"
-  (:require [jepsen 
+  (:require [clojure.tools.logging :refer :all]
+            [jepsen 
              [client :as client]
              [db :as db]
              [tests :as tests]
