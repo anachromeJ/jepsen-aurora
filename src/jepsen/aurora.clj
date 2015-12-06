@@ -14,9 +14,9 @@
             [jepsen.os.debian :as debian]))
 
 (defn install!
-  "Installs java 8 and aurora scheduler"
+  "Installs Java 8 and Aurora scheduler"
   [test node]
-  (info node "installing aurora scheduler")
+  (info node "Installing Java 8 and Aurora")
   (c/su
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/install-aurora.sh" :-o "/install-aurora.sh")
    (c/exec :bash "/install-aurora.sh")
@@ -24,7 +24,7 @@
 
 (defn start!
   [test node]
-  (info node "starting aurora scheduler")
+  (info node "Starting Aurora")
   (c/su
    (c/exec ://usr/local/aurora-scheduler/bin/aurora-scheduler
            :-mesos_master_address (mesos/zk-uri test)
