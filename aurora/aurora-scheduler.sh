@@ -32,7 +32,7 @@ AURORA_FLAGS=(
 
   # TODO(Kevin Sweeney): Point these to real URLs.
   -thermos_executor_path=/dev/null
-  -gc_executor_path=/dev/null
+  # -gc_executor_path=/dev/null
 
   -vlog=INFO
   -logtostderr

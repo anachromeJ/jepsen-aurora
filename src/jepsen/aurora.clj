@@ -37,7 +37,7 @@
         
       (db/setup! mesos test node)
       (install! test node)
-      (start! test node)
+      ;; (start! test node)
       )
       
       (teardown! [_ test node]
