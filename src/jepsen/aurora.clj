@@ -15,25 +15,9 @@
 (defn install!
   "Installs java 8 and aurora scheduler"
   []
-  ; (debian/add-repo! :webupd8team
-  ;                   "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main"
-  ;                   "hkp://keyserver.ubuntu.com:80"
-  ;                   "EEA14886")
-  ; (debian/add-repo! :webupd8team-src
-  ;                   "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main")
-  ; (debian/install {:oracle-java8-installer "1.8.0_66"})
   (c/su
-   (c/exec :echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" :| :tee "/etc/apt/sources.list.d/webupd8team-java.list")
-   (c/exec :echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" :| :tee :-a "/etc/apt/sources.list.d/webupd8team-java.list")
-   (c/exec :apt-key "adv" :--keyserver "hkp://keyserver.ubuntu.com:80" :--recv-keys "EEA14886")
-   (c/exec :apt-get "update")
-   (c/exec :echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" :| "/usr/bin/debconf-set-selections")
-   (c/exec :apt-get :install "oracle-java8-installer" :-y :--force-yes)
-
-   (c/exec :curl :-L "https://github.com/jchli/jepsen-aurora/raw/master/aurora/dist/distributions/aurora-scheduler-0.11.0-SNAPSHOT.zip" :-o "aurora-scheduler.zip")
-   (c/exec :unzip :-n "aurora-scheduler.zip" :-d "/usr/local")
-   ;; (c/exec :mv :-n "/usr/local/aurora-scheduler-0.11.0-SNAPSHOT" "/usr/local/aurora-scheduler")))
-   (c/exec :ln :-nfs "/usr/local/aurora-scheduler-0.11.0-SNAPSHOT" "/usr/local/aurora-scheduler")))
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/install-aurora.sh" :-o "/install-aurora.sh")
+   (c/exec ://install_aurora.sh)))
 
 (defn start!
   [test node]
