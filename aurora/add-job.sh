@@ -5,7 +5,7 @@ TASKNAME=${NAME}_task
 DURATION=$2
 PARENT_JOB_DIR=/tmp/aurora-jobs/
 SLAVE_JOB_DIR=/tmp/aurora-test/
-AURORA_CLIENT=/jepsen/jepsen-aurora/aurora/aurora.pex
+AURORA_CLIENT=/jepsen/jepsen-aurora/aurora/client.pex
 
 mkdir -p $PARENT_JOB_DIR
 

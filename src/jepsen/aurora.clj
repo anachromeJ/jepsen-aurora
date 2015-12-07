@@ -30,7 +30,7 @@
   [test node]
   (info node "starting aurora-scheduler")
   (c/su
-   (c/exec :bash "/aurora-scheduler.sh" :&)))
+   (c/exec :bash "/aurora-scheduler.sh")))
 
 (defn db
   "Installs Aurora scheduler"
@@ -76,7 +76,7 @@
   "Submits a new job to Chronos. See
   https://mesos.github.io/chronos/docs/api.html."
   [node job]
-  (c/exec :bash "create-job.sh" (:name job) (:duration job)))
+  (c/exec :bash "add-job.sh" (:name job) (:duration job)))
 
 (defn simple-test
   [mesos-version]
