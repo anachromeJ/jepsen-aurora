@@ -16,6 +16,8 @@
 (def parent-job-dir "/tmp/aurora-jobs/")
 (def slave-job-dir "/tmp/aurora-test/")
 
+(def install-script-link )
+
 (defn install!
   "Installs Java 8 and Aurora scheduler"
   [test node]
@@ -64,8 +66,7 @@
 ; :duration - How long should a run take, in seconds?
 
 (defn add-job!
-  "Submits a new job to Chronos. See
-  https://mesos.github.io/chronos/docs/api.html."
+  "Submits a new job to Aurora"
   [node job]
   (c/exec :bash "add-job.sh" (:name job) (:duration job)))
 
