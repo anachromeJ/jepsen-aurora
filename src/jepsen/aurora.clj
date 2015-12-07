@@ -13,6 +13,9 @@
              [mesos :as mesos]]
             [jepsen.os.debian :as debian]))
 
+(def parent-job-dir "/tmp/aurora-jobs/")
+(def slave-job-dir "/tmp/aurora-test/")
+
 (defn install!
   "Installs Java 8 and Aurora scheduler"
   [test node]
@@ -43,7 +46,60 @@
       
       (teardown! [_ test node]
         )
+
+      db/LogFiles
+      (log-files [_ test node]
+        (concat (db/log-files mesosphere test node)
+                ["/var/log/messages"]))
       )))
+
+; Job representation
+;
+; Jobs are maps with the following keys:
+; :name     - A globally unique name for the job
+; :start    - A datetime for when the job begins
+; :interval - How long between runs in seconds
+; :count    - How many times should we repeat the job
+; :epsilon  - Allowable tolerance, in seconds, for scheduling
+; :duration - How long should a run take, in seconds?
+
+(def formatter (time.format/formatters :date-time))
+
+(defn interval-str
+  "Given a job, emits an ISO8601 repeating interval representation."
+  [job]
+  (str "R" (:count job) "/"
+       (time.format/unparse formatter (:start job))
+       "/PT" (:interval job) "S"))
+
+(defn command
+  "Given a job, constructs a shell command that picks a tempfile and logs the
+  job name, invocation time, sleeps, then logs the completion time."
+  [job]
+  ;; TODO: make a busy loop
+  (str "MEW=$(mktemp -p " slave-job-dir "); "
+       "echo \"" (:name job) "\" >> $MEW; "
+       "date -u -Ins >> $MEW; "
+       "sleep " (:duration job) "; "
+       "date -u -Ins >> $MEW;"))
+
+(defn aurora-config
+  "Given a job, constructs the contents of an aurora config file"
+  [path]
+  (str path
+       "")
+
+(defn add-job!
+  "Submits a new job to Chronos. See
+  https://mesos.github.io/chronos/docs/api.html."
+  [node job]
+  (c/exec :bash "create-job.sh" (:name job) (:duration job))
+  (c/exec :echo (command job) :> "simple-job.sh")
+  (c/exec ://jepsen/jepsen-aurora/aurora/aurora.pex
+          :job
+          :create
+          "testcluster/www-data/devel/simple-job"
+          "/jepsen/jepsen-aurora/aurora/simple-job.aurora"))
 
 (defn simple-test
   [mesos-version]
