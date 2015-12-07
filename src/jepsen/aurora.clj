@@ -72,34 +72,11 @@
        (time.format/unparse formatter (:start job))
        "/PT" (:interval job) "S"))
 
-(defn command
-  "Given a job, constructs a shell command that picks a tempfile and logs the
-  job name, invocation time, sleeps, then logs the completion time."
-  [job]
-  ;; TODO: make a busy loop
-  (str "MEW=$(mktemp -p " slave-job-dir "); "
-       "echo \"" (:name job) "\" >> $MEW; "
-       "date -u -Ins >> $MEW; "
-       "sleep " (:duration job) "; "
-       "date -u -Ins >> $MEW;"))
-
-(defn aurora-config
-  "Given a job, constructs the contents of an aurora config file"
-  [path]
-  (str path
-       "")
-
 (defn add-job!
   "Submits a new job to Chronos. See
   https://mesos.github.io/chronos/docs/api.html."
   [node job]
-  (c/exec :bash "create-job.sh" (:name job) (:duration job))
-  (c/exec :echo (command job) :> "simple-job.sh")
-  (c/exec ://jepsen/jepsen-aurora/aurora/aurora.pex
-          :job
-          :create
-          "testcluster/www-data/devel/simple-job"
-          "/jepsen/jepsen-aurora/aurora/simple-job.aurora"))
+  (c/exec :bash "create-job.sh" (:name job) (:duration job)))
 
 (defn simple-test
   [mesos-version]
