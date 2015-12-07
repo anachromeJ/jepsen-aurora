@@ -17,7 +17,7 @@ echo "MEW=\$(mktemp -p " $SLAVE_JOB_DIR "); " \
 
 TEMPCONFIG=$TEMPJOB.aurora
 printf 
-"$TEMPJOB
+"pkg_path = \'$TEMPJOB\'
 import hashlib
 with open(pkg_path, 'rb') as f:
   pkg_checksum = hashlib.md5(f.read()).hexdigest()
