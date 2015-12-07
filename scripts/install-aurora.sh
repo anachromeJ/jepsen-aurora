@@ -1,7 +1,8 @@
 #!/bin/bash
 
 AURORA_DIR=/usr/local/aurora-scheduler
-AURORA_ZIP_LINK=https://github.com/jchli/jepsen-aurora/raw/master/aurora/aurora-scheduler-0.11.0-SNAPSHOT.zip
+AURORA_ZIP=aurora-scheduler-0.11.0-SNAPSHOT.zip
+AURORA_ZIP_LINK=https://github.com/jchli/jepsen-aurora/raw/master/resources/$AURORA_ZIP
 
 # check if aurora is already installed first
 if [[ ! -e $AURORA_DIR ]]; then
@@ -14,9 +15,9 @@ if [[ ! -e $AURORA_DIR ]]; then
     echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | "/usr/bin/debconf-set-selections"
     apt-get install "oracle-java8-installer" -y --force-yes
 
-    curl -L $AURORA_ZIP_LINK -o "aurora-scheduler.zip"
-    unzip -n "aurora-scheduler.zip" -d "/usr/local"
-    ln -nfs "/usr/local/aurora-scheduler-0.11.0-SNAPSHOT" $AURORA_DIR
+    curl -L $AURORA_ZIP_LINK -o $AURORA_ZIP
+    unzip -n $AURORA_ZIP -d "/usr/local"
+    ln -nfs "/usr/local/$AURORA_ZIP" $AURORA_DIR
     export PATH=$AURORA_DIR/bin:$PATH
 
     # Add Log output parameter

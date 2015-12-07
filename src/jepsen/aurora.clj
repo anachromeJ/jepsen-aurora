@@ -21,9 +21,9 @@
   [test node]
   (info node "Installing Java 8 and Aurora")
   (c/su
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/install-aurora.sh" :-o "/install-aurora.sh")
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/install-aurora.sh" :-o "/install-aurora.sh")
    (c/exec :bash "/install-aurora.sh")
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/aurora/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
    ))
 
 (defn start!
@@ -62,15 +62,6 @@
 ; :count    - How many times should we repeat the job
 ; :epsilon  - Allowable tolerance, in seconds, for scheduling
 ; :duration - How long should a run take, in seconds?
-
-(def formatter (time.format/formatters :date-time))
-
-(defn interval-str
-  "Given a job, emits an ISO8601 repeating interval representation."
-  [job]
-  (str "R" (:count job) "/"
-       (time.format/unparse formatter (:start job))
-       "/PT" (:interval job) "S"))
 
 (defn add-job!
   "Submits a new job to Chronos. See
