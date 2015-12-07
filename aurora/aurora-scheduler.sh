@@ -17,7 +17,7 @@ JAVA_OPTS=(
 # Flags control the behavior of the Aurora scheduler.
 # For a full list of available flags, run bin/aurora-scheduler -help
 AURORA_FLAGS=(
-  -cluster_name=jepsen-aurora-testcluster
+  -cluster_name=testcluster
   -http_port=8081
   -native_log_quorum_size=1
   -zk_endpoints=localhost:2181
@@ -35,7 +35,7 @@ AURORA_FLAGS=(
   -logtostderr
 
   -allowed_container_types=MESOS,DOCKER
-  -http_authentication_mechanism=BASIC
+  -http_authentication_mechanism=UNAUTHENTICATED
   -use_beta_db_task_store=true
   -shiro_ini_path="$AURORA_SCHEDULER_HOME/etc/shiro.example.ini"
   -enable_h2_console=true
