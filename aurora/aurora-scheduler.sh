@@ -35,7 +35,7 @@ AURORA_FLAGS=(
   -logtostderr
 
   -allowed_container_types=MESOS,DOCKER
-  -http_authentication_mechanism=UNAUTHENTICATED
+  -http_authentication_mechanism=NONE
   -use_beta_db_task_store=true
   -shiro_ini_path="$AURORA_SCHEDULER_HOME/etc/shiro.example.ini"
   -enable_h2_console=true
