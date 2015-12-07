@@ -49,7 +49,7 @@
 
       db/LogFiles
       (log-files [_ test node]
-        (concat (db/log-files mesosphere test node)
+        (concat (db/log-files mesos test node)
                 ["/var/log/messages"]))
       )))
 
