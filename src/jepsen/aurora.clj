@@ -51,8 +51,9 @@
 
       db/LogFiles
       (log-files [_ test node]
-        (concat (db/log-files mesos test node)
-                ["/var/log/messages"]))
+        (db/log-files mesos test node))
+        ;; (concat (db/log-files mesos test node)
+        ;;         ["/var/log/messages"]))
       )))
 
 ; Job representation
