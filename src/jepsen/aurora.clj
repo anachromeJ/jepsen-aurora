@@ -30,7 +30,7 @@
   [test node]
   (info node "starting aurora-scheduler")
   (c/su
-   (c/exec :bash "/aurora-scheduler.sh")))
+   (c/exec :bash "/aurora-scheduler.sh" :&)))
 
 (defn db
   "Installs Aurora scheduler"
@@ -45,6 +45,10 @@
       )
       
       (teardown! [_ test node]
+        (info node "stopping aurora")
+        ;; (c/su (cu/grepkill "aurora-scheduler"))
+        ;; (db/teardown! mesos test node)
+        ;; (c/su (c/exec :rm :-rf slave-job-dir))
         )
 
       db/LogFiles
