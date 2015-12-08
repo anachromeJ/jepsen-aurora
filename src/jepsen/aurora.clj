@@ -74,31 +74,6 @@
   [node job]
   (c/exec :bash "add-job.sh" (:name job) (:duration job)))
 
-(defn add-job
-  "Generator for creating new jobs."
-  []
-  (let [id (atom 0)]
-    (reify gen/Generator
-      (op [_ test process]
-        (let [head-start  10 ; Schedule a bit in the future
-              duration    (rand-int 10)
-              epsilon     (+ 10 (rand-int 20))
-              ; Chronos won't schedule tasks concurrently, so we ensure they'll
-              ; never overlap.
-              interval    (+ 1
-                             duration
-                             epsilon
-                             epsilon-forgiveness
-                             (rand-int 30))]
-        {:type   :invoke
-         :f      :add-job
-         :value  {:name     (swap! id inc)
-                  :start    (time/plus (time/now) (time/seconds head-start))
-                  :count    (inc (rand-int 99))
-                  :duration duration
-                  :epsilon  epsilon
-                  :interval interval}})))))
-
 (defn simple-test
   [mesos-version]
   (assoc tests/noop-test
