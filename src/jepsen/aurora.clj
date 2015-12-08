@@ -41,7 +41,7 @@
         
       (db/setup! mesos test node)
       (install! test node)
-      (c/su (c/exec :mkdir :-p slave-job-dir)
+      (c/su (c/exec :mkdir :-p slave-job-dir))
       (start! test node)
       )
       
