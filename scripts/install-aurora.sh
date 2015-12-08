@@ -1,7 +1,8 @@
 #!/bin/bash
 
 AURORA_DIR=/usr/local/aurora-scheduler
-AURORA_ZIP=aurora-scheduler-0.11.0-SNAPSHOT.zip
+AURORA_SNAPSHOT=aurora-scheduler-0.11.0-SNAPSHOT
+AURORA_ZIP=$AURORA_SNAPSHOT.zip
 AURORA_ZIP_LINK=https://github.com/jchli/jepsen-aurora/raw/master/resources/$AURORA_ZIP
 
 # check if aurora is already installed first
@@ -17,7 +18,7 @@ if [[ ! -e $AURORA_DIR ]]; then
 
     curl -L $AURORA_ZIP_LINK -o $AURORA_ZIP
     unzip -n $AURORA_ZIP -d "/usr/local"
-    ln -nfs "/usr/local/$AURORA_ZIP" $AURORA_DIR
+    ln -nfs "/usr/local/$AURORA_SNAPSHOT" $AURORA_DIR
     export PATH=$AURORA_DIR/bin:$PATH
 
     # Add Log output parameter
