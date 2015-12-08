@@ -46,5 +46,5 @@ AURORA_FLAGS=(
 export GLOG_v=0
 export LIBPROCESS_PORT=8083
 
-JAVA_OPTS="${JAVA_OPTS[*]}" exec "$AURORA_SCHEDULER_HOME/bin/aurora-scheduler" "${AURORA_FLAGS[@]}"
+JAVA_OPTS="${JAVA_OPTS[*]}" exec "$AURORA_SCHEDULER_HOME/bin/aurora-scheduler" "${AURORA_FLAGS[@]}" > /dev/null &
 
