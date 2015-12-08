@@ -5,6 +5,8 @@ Jepsen tests for Apache Aurora
 ## Usage
 
 ```
+cd /jepsen/jepsen-aurora
+ln -s `pwd`/scripts/clusters.json /etc/aurora/clusters.json
 lein test
 ```
 

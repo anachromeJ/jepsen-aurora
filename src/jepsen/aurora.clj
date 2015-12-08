@@ -16,8 +16,6 @@
 (def parent-job-dir "/tmp/aurora-jobs/")
 (def slave-job-dir "/tmp/aurora-test/")
 
-(def install-script-link )
-
 (defn install!
   "Installs Java 8 and Aurora scheduler"
   [test node]
