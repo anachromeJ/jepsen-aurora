@@ -6,7 +6,7 @@ Jepsen tests for Apache Aurora
 
 ```
 git clone https://github.com/jchli/jepsen-aurora.git
-cd /jepsen-aurora
+cd jepsen-aurora
 mkdir -p /etc/aurora
 ln -s `pwd`/scripts/clusters.json /etc/aurora/clusters.json
 lein test
