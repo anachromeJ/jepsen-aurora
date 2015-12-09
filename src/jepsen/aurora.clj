@@ -79,6 +79,7 @@
 (defn add-job!
   "Submits a new job to Aurora"
   [node job]
+  (info node job "adding job")
   (c/exec :bash "add-job.sh" (:name job) (:duration job)))
 
 (def formatter (time.format/formatters :date-time))
