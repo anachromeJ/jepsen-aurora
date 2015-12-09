@@ -33,6 +33,7 @@
    (c/exec :bash "/install-aurora.sh")
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/add-job.sh" :-o "/add-job.sh")
+   (c/exec :chmod :+x "/add-job.sh")
    (c/exec :mkdir :-p "/etc/aurora")
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/clusters.json" :-o "/etc/aurora/clusters.json")
    ))
