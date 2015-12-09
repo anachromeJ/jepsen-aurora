@@ -1,0 +1,1693 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1208 23:47:56.945264  4897 process.cpp:961] libprocess is initialized on 10.0.0.4:5050 for 8 cpus
+I1208 23:47:56.945366  4897 logging.cpp:172] INFO level logging started!
+I1208 23:47:56.945492  4897 logging.cpp:177] Logging to /var/log/mesos
+I1208 23:47:56.945504  4897 main.cpp:181] Build: 2015-03-26 13:36:52 by root
+I1208 23:47:56.945513  4897 main.cpp:183] Version: 0.22.0
+I1208 23:47:56.945518  4897 main.cpp:186] Git tag: 0.22.0
+I1208 23:47:56.945523  4897 main.cpp:190] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1208 23:47:56.962133  4897 leveldb.cpp:176] Opened db in 16.400848ms
+I1208 23:47:56.963124  4897 leveldb.cpp:183] Compacted db in 833539ns
+I1208 23:47:56.963150  4897 leveldb.cpp:198] Created db iterator in 5749ns
+I1208 23:47:56.963156  4897 leveldb.cpp:204] Seeked to beginning of db in 468ns
+I1208 23:47:56.963162  4897 leveldb.cpp:273] Iterated through 0 keys in the db in 361ns
+I1208 23:47:56.963196  4897 replica.cpp:744] Replica recovered with log positions 0 -> 0 with 1 holes and 0 unlearned
+2015-12-08 23:47:56,963:4897(0x7fd673c8c700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-08 23:47:56,963:4897(0x7fd673c8c700):ZOO_INFO@log_env@716: Client environment:host.name=26ca5763a1ea
+2015-12-08 23:47:56,963:4897(0x7fd673c8c700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-08 23:47:56,963:4897(0x7fd673c8c700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-08 23:47:56,963:4897(0x7fd673c8c700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-08 23:47:56,963:4897(0x7fd673c8c700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-08 23:47:56,964:4897(0x7fd673c8c700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-08 23:47:56,964:4897(0x7fd673c8c700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/master
+2015-12-08 23:47:56,964:4897(0x7fd673c8c700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7fd67c8ba200 sessionId=0 sessionPasswd=<null> context=0x7fd65c000930 flags=0
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@716: Client environment:host.name=26ca5763a1ea
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/master
+2015-12-08 23:47:56,979:4897(0x7fd67348b700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7fd67c8ba200 sessionId=0 sessionPasswd=<null> context=0x7fd650000930 flags=0
+I1208 23:47:56.979709  4900 log.cpp:238] Attempting to join replica to ZooKeeper group
+I1208 23:47:56.979825  4900 recover.cpp:449] Starting replica recovery
+I1208 23:47:56.979885  4900 recover.cpp:475] Replica is in EMPTY status
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@716: Client environment:host.name=26ca5763a1ea
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/master
+2015-12-08 23:47:56,983:4897(0x7fd675c90700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7fd67c8ba200 sessionId=0 sessionPasswd=<null> context=0x1edf560 flags=0
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@716: Client environment:host.name=26ca5763a1ea
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/master
+2015-12-08 23:47:56,983:4897(0x7fd672c8a700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7fd67c8ba200 sessionId=0 sessionPasswd=<null> context=0x7fd66c003a80 flags=0
+I1208 23:47:57.003823  4897 main.cpp:306] Starting Mesos master
+2015-12-08 23:47:57,009:4897(0x7fd661ffb700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-08 23:47:57,041:4897(0x7fd662ffd700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-08 23:47:57,042:4897(0x7fd662ffd700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.4:2181], sessionId=0x35183fdefbd0001, negotiated timeout=10000
+I1208 23:47:57.042523  4901 group.cpp:313] Group process (group(2)@10.0.0.4:5050) connected to ZooKeeper
+I1208 23:47:57.042716  4901 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1208 23:47:57.042731  4901 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+2015-12-08 23:47:57,044:4897(0x7fd661ffb700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.4:2181], sessionId=0x25183fe00150001, negotiated timeout=10000
+I1208 23:47:57.044312  4899 group.cpp:313] Group process (group(3)@10.0.0.4:5050) connected to ZooKeeper
+I1208 23:47:57.044327  4899 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1208 23:47:57.044333  4899 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+2015-12-08 23:47:57,084:4897(0x7fd663fff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-08 23:47:57,084:4897(0x7fd660ff9700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+I1208 23:47:57.085280  4897 master.cpp:349] Master 20151208-234757-67108874-5050-4897 (n3) started on 10.0.0.4:5050
+I1208 23:47:57.085316  4897 master.cpp:397] Master allowing unauthenticated frameworks to register
+I1208 23:47:57.085322  4897 master.cpp:402] Master allowing unauthenticated slaves to register
+I1208 23:47:57.097045  4905 hierarchical.hpp:287] Initialized hierarchical allocator process
+I1208 23:47:57.097121  4905 whitelist_watcher.cpp:79] No whitelist given
+I1208 23:47:57.109632  4905 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+2015-12-08 23:47:57,116:4897(0x7fd663fff700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.5:2181], sessionId=0x25183fe00150002, negotiated timeout=10000
+I1208 23:47:57.117998  4901 group.cpp:313] Group process (group(1)@10.0.0.4:5050) connected to ZooKeeper
+I1208 23:47:57.118029  4901 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1208 23:47:57.118037  4901 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+2015-12-08 23:47:57,126:4897(0x7fd660ff9700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.5:2181], sessionId=0x25183fe00150003, negotiated timeout=10000
+I1208 23:47:57.126507  4898 group.cpp:313] Group process (group(4)@10.0.0.4:5050) connected to ZooKeeper
+I1208 23:47:57.126533  4898 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1208 23:47:57.126540  4898 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1208 23:47:57.126801  4902 contender.cpp:131] Joining the ZK group
+I1208 23:47:57.127043  4897 master.cpp:1295] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1208 23:47:57.132735  4899 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1208 23:47:57.155410  4901 contender.cpp:247] New candidate (id='2') has entered the contest for leadership
+I1208 23:47:57.155472  4901 network.hpp:424] ZooKeeper group memberships changed
+I1208 23:47:57.155550  4901 group.cpp:659] Trying to get '/mesos/log_replicas/0000000000' in ZooKeeper
+I1208 23:47:57.161813  4899 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1208 23:47:57.168381  4898 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1208 23:47:57.168427  4898 detector.cpp:138] Detected a new leader: (id='1')
+I1208 23:47:57.168485  4898 group.cpp:659] Trying to get '/mesos/info_0000000001' in ZooKeeper
+I1208 23:47:57.168535  4901 group.cpp:659] Trying to get '/mesos/log_replicas/0000000001' in ZooKeeper
+I1208 23:47:57.175972  4898 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1208 23:47:57.176115  4898 master.cpp:1356] The newly elected leader is master@10.0.0.2:5050 with id 20151208-234739-33554442-5050-4904
+I1208 23:47:57.176064  4901 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.4:5050 }
+I1208 23:47:57.176555  4901 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:57.178336  4898 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:57.178434  4898 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:57.748121  4898 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:58.013973  4901 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:58.022194  4903 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:58.022280  4903 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:58.109483  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:47:58.109534  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 65655ns
+I1208 23:47:58.406378  4903 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:58.635545  4903 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:58.636055  4901 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:58.636129  4901 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:59.112939  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:47:59.113004  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 78069ns
+I1208 23:47:59.145957  4900 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:59.147876  4902 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:59.147914  4902 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:47:59.208395  4902 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:59.339756  4904 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1208 23:47:59.340116  4900 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1208 23:47:59.364128  4904 network.hpp:424] ZooKeeper group memberships changed
+I1208 23:47:59.365206  4904 group.cpp:659] Trying to get '/mesos/log_replicas/0000000000' in ZooKeeper
+I1208 23:47:59.365818  4904 group.cpp:659] Trying to get '/mesos/log_replicas/0000000001' in ZooKeeper
+I1208 23:47:59.366744  4904 group.cpp:659] Trying to get '/mesos/log_replicas/0000000002' in ZooKeeper
+I1208 23:47:59.368252  4904 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.3:5050, log-replica(1)@10.0.0.4:5050 }
+I1208 23:47:59.383327  4904 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:59.387884  4900 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:59.788238  4900 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:47:59.790439  4905 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:48:00.062304  4899 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1208 23:48:00.062489  4899 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1208 23:48:00.062919  4899 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1208 23:48:00.063266  4898 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1208 23:48:00.063352  4898 recover.cpp:566] Updating replica status to STARTING
+I1208 23:48:00.064676  4898 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 1.249198ms
+I1208 23:48:00.064702  4898 replica.cpp:323] Persisted replica status to STARTING
+I1208 23:48:00.064744  4898 recover.cpp:475] Replica is in STARTING status
+I1208 23:48:00.064895  4898 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1208 23:48:00.065021  4898 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1208 23:48:00.065294  4898 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1208 23:48:00.065539  4903 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1208 23:48:00.065608  4903 recover.cpp:566] Updating replica status to VOTING
+I1208 23:48:00.065851  4903 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 204028ns
+I1208 23:48:00.065870  4903 replica.cpp:323] Persisted replica status to VOTING
+I1208 23:48:00.065889  4903 recover.cpp:580] Successfully joined the Paxos group
+I1208 23:48:00.065935  4903 recover.cpp:464] Recover process terminated
+I1208 23:48:00.101363  4903 replica.cpp:641] Replica in VOTING status received a broadcasted recover request
+I1208 23:48:00.115017  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:00.115116  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 103918ns
+I1208 23:48:00.522795  4902 replica.cpp:641] Replica in VOTING status received a broadcasted recover request
+I1208 23:48:00.525856  4904 replica.cpp:378] Replica received explicit promise request for position 0 with proposal 0
+I1208 23:48:00.711489  4904 replica.cpp:378] Replica received explicit promise request for position 0 with proposal 1
+I1208 23:48:00.711832  4904 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 281136ns
+I1208 23:48:00.711853  4904 replica.cpp:679] Persisted action at 0
+I1208 23:48:00.717193  4900 replica.cpp:511] Replica received write request for position 0
+I1208 23:48:00.717226  4900 leveldb.cpp:438] Reading position from leveldb took 14836ns
+I1208 23:48:00.717416  4900 leveldb.cpp:343] Persisting action (14 bytes) to leveldb took 173156ns
+I1208 23:48:00.717434  4900 replica.cpp:679] Persisted action at 0
+I1208 23:48:00.719702  4905 replica.cpp:658] Replica received learned notice for position 0
+I1208 23:48:00.721031  4905 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 173031ns
+I1208 23:48:00.721051  4905 replica.cpp:679] Persisted action at 0
+I1208 23:48:00.721058  4905 replica.cpp:664] Replica learned NOP action at position 0
+I1208 23:48:00.721077  4905 replica.cpp:477] Replica received implicit promise request with proposal 1
+I1208 23:48:00.721240  4905 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 151701ns
+I1208 23:48:00.721256  4905 replica.cpp:345] Persisted promised to 1
+I1208 23:48:00.749008  4901 replica.cpp:511] Replica received write request for position 1
+I1208 23:48:00.749326  4901 leveldb.cpp:343] Persisting action (126 bytes) to leveldb took 260762ns
+I1208 23:48:00.749358  4901 replica.cpp:679] Persisted action at 1
+I1208 23:48:00.769698  4899 replica.cpp:658] Replica received learned notice for position 1
+I1208 23:48:00.770685  4899 leveldb.cpp:343] Persisting action (128 bytes) to leveldb took 184261ns
+I1208 23:48:00.770711  4899 replica.cpp:679] Persisted action at 1
+I1208 23:48:00.770720  4899 replica.cpp:664] Replica learned APPEND action at position 1
+I1208 23:48:00.770733  4899 replica.cpp:511] Replica received write request for position 2
+I1208 23:48:00.770946  4899 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 199174ns
+I1208 23:48:00.770967  4899 replica.cpp:679] Persisted action at 2
+I1208 23:48:00.771612  4898 replica.cpp:658] Replica received learned notice for position 2
+I1208 23:48:00.771797  4898 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 166089ns
+I1208 23:48:00.771824  4898 leveldb.cpp:401] Deleting ~1 keys from leveldb took 9984ns
+I1208 23:48:00.772578  4898 replica.cpp:679] Persisted action at 2
+I1208 23:48:00.772596  4898 replica.cpp:664] Replica learned TRUNCATE action at position 2
+I1208 23:48:01.120216  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:01.120282  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 77776ns
+I1208 23:48:02.123352  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:02.123416  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 76211ns
+2015-12-08 23:48:02,705:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+I1208 23:48:03.131899  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:03.131970  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 81064ns
+I1208 23:48:04.141680  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:04.141891  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 219452ns
+I1208 23:48:05.171943  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:05.172005  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 72749ns
+2015-12-08 23:48:06,035:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 23ms
+2015-12-08 23:48:06,035:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 24ms
+2015-12-08 23:48:06,063:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 25ms
+2015-12-08 23:48:06,063:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 24ms
+I1208 23:48:06.182713  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:06.182773  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 69541ns
+I1208 23:48:07.203204  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:07.203274  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 78766ns
+I1208 23:48:08.205601  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:08.206154  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 561635ns
+I1208 23:48:09.219983  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:09.220049  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 76657ns
+I1208 23:48:10.235852  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:10.235911  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 68198ns
+I1208 23:48:11.254433  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:11.254529  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 106636ns
+I1208 23:48:12.262488  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:12.262554  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 87938ns
+I1208 23:48:13.263357  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:13.263427  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 80165ns
+I1208 23:48:14.275727  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:14.275810  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 94491ns
+I1208 23:48:15.276563  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:15.276624  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 80564ns
+I1208 23:48:15.502435  4898 replica.cpp:511] Replica received write request for position 3
+I1208 23:48:15.503159  4898 leveldb.cpp:343] Persisting action (288 bytes) to leveldb took 662122ns
+I1208 23:48:15.503190  4898 replica.cpp:679] Persisted action at 3
+I1208 23:48:15.503247  4898 replica.cpp:658] Replica received learned notice for position 3
+I1208 23:48:15.503772  4898 leveldb.cpp:343] Persisting action (290 bytes) to leveldb took 460667ns
+I1208 23:48:15.504676  4898 replica.cpp:679] Persisted action at 3
+I1208 23:48:15.504688  4898 replica.cpp:664] Replica learned APPEND action at position 3
+I1208 23:48:15.523005  4903 replica.cpp:511] Replica received write request for position 4
+I1208 23:48:15.523313  4903 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 253374ns
+I1208 23:48:15.523336  4903 replica.cpp:679] Persisted action at 4
+I1208 23:48:15.523378  4903 replica.cpp:658] Replica received learned notice for position 4
+I1208 23:48:15.523607  4903 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 215946ns
+I1208 23:48:15.523634  4903 leveldb.cpp:401] Deleting ~2 keys from leveldb took 10350ns
+I1208 23:48:15.523643  4903 replica.cpp:679] Persisted action at 4
+I1208 23:48:15.523661  4903 replica.cpp:664] Replica learned TRUNCATE action at position 4
+2015-12-08 23:48:16,088:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+I1208 23:48:16.282521  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:16.282594  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 84656ns
+I1208 23:48:17.283000  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:17.283174  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 182169ns
+I1208 23:48:18.283920  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:18.283988  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 78070ns
+I1208 23:48:19.285434  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:19.285511  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 87950ns
+I1208 23:48:20.285845  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:20.285912  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 77875ns
+I1208 23:48:21.286160  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:21.286406  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 253038ns
+I1208 23:48:22.287134  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:22.287215  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 91199ns
+I1208 23:48:23.289386  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:23.289448  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 72408ns
+I1208 23:48:24.290276  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:24.290361  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 95059ns
+I1208 23:48:25.291522  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:25.291602  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 93153ns
+I1208 23:48:26.292119  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:26.292228  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 121815ns
+I1208 23:48:27.292948  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:27.293175  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 236549ns
+I1208 23:48:28.294394  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:28.294486  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 102370ns
+I1208 23:48:29.294597  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:29.294664  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 77010ns
+I1208 23:48:30.296999  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:30.297104  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 157369ns
+I1208 23:48:31.301344  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:31.301453  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 117890ns
+I1208 23:48:32.304958  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:32.305086  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 138925ns
+I1208 23:48:33.307077  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:33.307121  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 543486ns
+I1208 23:48:34.311761  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:34.311830  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 78540ns
+I1208 23:48:35.312288  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:35.312324  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 47961ns
+2015-12-08 23:48:36,108:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+I1208 23:48:36.322358  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:36.322406  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 59456ns
+I1208 23:48:37.326436  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:37.326498  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 73827ns
+I1208 23:48:38.328420  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:38.329711  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.299279ms
+I1208 23:48:39.332528  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:39.333417  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 898518ns
+I1208 23:48:40.334111  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:40.335724  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.03353ms
+I1208 23:48:41.336168  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:41.336266  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 109276ns
+I1208 23:48:42.337949  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:42.338034  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 97297ns
+I1208 23:48:43.338973  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:43.339120  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 158716ns
+I1208 23:48:44.340281  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:44.340418  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 146694ns
+I1208 23:48:45.341101  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:45.341347  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 255265ns
+I1208 23:48:46.343523  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:46.343567  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 106930ns
+I1208 23:48:47.343806  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:47.344261  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 466840ns
+I1208 23:48:48.345654  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:48.345690  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 49927ns
+I1208 23:48:49.345927  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:49.345995  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78351ns
+I1208 23:48:50.346603  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:50.346863  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 269063ns
+I1208 23:48:51.347118  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:51.347157  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 50475ns
+I1208 23:48:52.348773  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:52.348826  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 62826ns
+I1208 23:48:53.349575  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:53.349723  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 160007ns
+I1208 23:48:54.350982  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:54.351047  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 77254ns
+I1208 23:48:55.352095  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:55.352296  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 211452ns
+I1208 23:48:56.353837  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:56.354050  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 222655ns
+I1208 23:48:57.355159  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:57.355224  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 76938ns
+I1208 23:48:58.356276  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:58.356719  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 451276ns
+I1208 23:48:59.357010  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:48:59.357097  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 208070ns
+I1208 23:49:00.357384  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:00.357780  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 404440ns
+I1208 23:49:01.358132  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:01.358223  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 105556ns
+I1208 23:49:02.359532  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:02.359763  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 374766ns
+I1208 23:49:03.360565  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:03.360844  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 288682ns
+I1208 23:49:04.362653  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:04.362720  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 144784ns
+I1208 23:49:05.362812  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:05.362879  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 77513ns
+I1208 23:49:06.363348  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:06.363418  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 94384ns
+I1208 23:49:07.363627  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:07.363694  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 95229ns
+I1208 23:49:08.364147  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:08.364398  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 258381ns
+I1208 23:49:09.365577  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:09.365648  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 85186ns
+I1208 23:49:10.370496  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:10.370656  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 170465ns
+I1208 23:49:11.371934  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:11.371997  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 73704ns
+I1208 23:49:12.373057  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:12.373123  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 76756ns
+I1208 23:49:13.374583  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:13.374666  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 93966ns
+I1208 23:49:14.376086  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:14.376590  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 510377ns
+I1208 23:49:15.377559  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:15.377794  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 243528ns
+I1208 23:49:16.378193  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:16.378370  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 308804ns
+I1208 23:49:17.383776  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:17.383826  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 65327ns
+I1208 23:49:18.385174  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:18.385579  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 417629ns
+I1208 23:49:19.386373  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:19.386445  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 82219ns
+I1208 23:49:20.386896  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:20.387208  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 321228ns
+I1208 23:49:21.388618  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:21.388681  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 73760ns
+I1208 23:49:22.389590  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:22.389652  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 73851ns
+I1208 23:49:23.392011  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:23.392082  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 82432ns
+I1208 23:49:24.393291  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:24.393352  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 72805ns
+I1208 23:49:25.394469  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:25.394536  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 76429ns
+I1208 23:49:26.395378  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:26.395445  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 81224ns
+I1208 23:49:27.398633  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:27.398772  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 152084ns
+I1208 23:49:28.398883  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:28.398952  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 80109ns
+I1208 23:49:29.400971  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:29.401069  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 79138ns
+I1208 23:49:30.405477  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:30.405666  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 200659ns
+I1208 23:49:31.406167  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:31.406250  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 92502ns
+I1208 23:49:32.410964  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:32.411031  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 77644ns
+I1208 23:49:33.426204  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:33.426271  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 128186ns
+I1208 23:49:34.432929  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:34.436607  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 3.690453ms
+I1208 23:49:35.451632  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:35.451704  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 82831ns
+2015-12-08 23:49:36,164:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+I1208 23:49:36.477360  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:36.477430  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 80178ns
+I1208 23:49:37.479265  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:37.488101  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 8.840266ms
+I1208 23:49:38.488662  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:38.488729  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 78692ns
+I1208 23:49:39.488999  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:39.489064  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 75297ns
+2015-12-08 23:49:39,511:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 13ms
+I1208 23:49:40.491053  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:40.491140  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 98530ns
+I1208 23:49:41.493553  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:41.493592  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 48762ns
+I1208 23:49:42.497462  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:42.497555  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 103973ns
+I1208 23:49:43.498091  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:43.580529  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 82.445991ms
+I1208 23:49:44.611714  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:44.611783  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 79030ns
+I1208 23:49:45.618821  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:45.620071  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.26074ms
+I1208 23:49:46.620939  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:46.621006  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 76577ns
+I1208 23:49:47.623149  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:47.623229  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 92870ns
+I1208 23:49:48.630298  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:48.630457  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 169461ns
+I1208 23:49:49.631346  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:49.631412  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 77103ns
+I1208 23:49:50.632879  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:50.632952  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 82739ns
+I1208 23:49:51.634219  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:51.634290  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 82607ns
+I1208 23:49:52.635354  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:52.667186  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 31.836064ms
+I1208 23:49:53.669791  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:53.669864  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 81782ns
+I1208 23:49:54.693025  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:54.693099  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 96184ns
+I1208 23:49:55.694265  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:55.694344  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 90626ns
+I1208 23:49:56.711588  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:56.711679  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 112648ns
+I1208 23:49:57.715482  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:57.715553  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 79727ns
+I1208 23:49:58.725720  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:58.727258  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.545629ms
+I1208 23:49:59.730824  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:49:59.731114  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 298402ns
+I1208 23:50:00.731350  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:00.731420  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 83825ns
+I1208 23:50:01.732801  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:01.733450  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 965109ns
+I1208 23:50:02.738824  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:02.738893  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 81342ns
+I1208 23:50:03.749347  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:03.749631  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 294534ns
+I1208 23:50:04.749846  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:04.749920  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 85114ns
+I1208 23:50:05.751083  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:05.754117  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 3.039759ms
+I1208 23:50:06.754317  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:06.755837  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.527875ms
+I1208 23:50:07.761755  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:07.762131  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 388696ns
+I1208 23:50:08.765280  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:08.770114  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.847461ms
+2015-12-08 23:50:09,524:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 18ms
+2015-12-08 23:50:09,524:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 17ms
+I1208 23:50:09.788651  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:09.788852  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 211172ns
+I1208 23:50:10.796475  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:10.797987  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.519063ms
+I1208 23:50:11.803901  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:11.803979  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 89870ns
+I1208 23:50:12.812901  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:12.812958  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 71658ns
+2015-12-08 23:50:12,869:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+2015-12-08 23:50:12,870:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+2015-12-08 23:50:12,907:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 14ms
+2015-12-08 23:50:12,907:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 14ms
+I1208 23:50:13.820956  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:13.821038  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 90117ns
+I1208 23:50:14.828572  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:14.828649  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 86842ns
+I1208 23:50:15.831576  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:15.831655  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 89335ns
+I1208 23:50:16.852735  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:16.852810  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 85400ns
+I1208 23:50:17.852910  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:17.856133  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 3.232147ms
+I1208 23:50:18.863025  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:18.863106  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 90365ns
+2015-12-08 23:50:19,562:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 20ms
+2015-12-08 23:50:19,562:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 21ms
+2015-12-08 23:50:19,594:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 14ms
+2015-12-08 23:50:19,594:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 14ms
+I1208 23:50:19.864800  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:19.864976  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 186671ns
+I1208 23:50:20.875653  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:20.875730  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 89444ns
+I1208 23:50:21.876796  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:21.878540  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.752769ms
+I1208 23:50:22.879129  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:22.879209  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 92483ns
+I1208 23:50:23.880843  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:23.880918  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 85745ns
+I1208 23:50:24.881784  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:24.883211  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.441346ms
+I1208 23:50:25.895316  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:25.895401  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 100810ns
+I1208 23:50:26.895891  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:26.895977  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 97345ns
+I1208 23:50:27.896266  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:27.896327  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 73623ns
+I1208 23:50:28.897069  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:28.897140  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 84300ns
+I1208 23:50:29.897773  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:29.897837  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 78619ns
+I1208 23:50:30.898638  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:30.898706  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 122359ns
+I1208 23:50:31.899109  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:31.899212  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 152252ns
+I1208 23:50:32.899629  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:32.901063  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.438197ms
+I1208 23:50:33.901574  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:33.901651  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 90508ns
+I1208 23:50:34.902056  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:34.902134  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 92295ns
+I1208 23:50:35.902679  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:35.902756  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 89787ns
+I1208 23:50:36.903157  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:36.903234  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 90874ns
+I1208 23:50:37.903780  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:37.905176  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.398196ms
+I1208 23:50:38.905503  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:38.905580  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 91742ns
+I1208 23:50:39.906067  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:39.906144  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 90426ns
+I1208 23:50:40.906483  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:40.906559  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 91203ns
+I1208 23:50:41.907099  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:41.907176  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 90690ns
+I1208 23:50:42.908108  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:42.909135  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.033183ms
+I1208 23:50:43.909638  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:43.909699  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 75649ns
+I1208 23:50:44.910030  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:44.910094  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 77394ns
+I1208 23:50:45.910404  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:45.910534  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 145106ns
+I1208 23:50:46.911481  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:46.911603  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 142453ns
+I1208 23:50:47.911845  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:47.913329  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.486673ms
+I1208 23:50:48.913782  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:48.913858  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 92896ns
+I1208 23:50:49.914188  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:49.914253  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 78436ns
+I1208 23:50:50.914933  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:50.915011  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 94775ns
+I1208 23:50:51.915406  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:51.915484  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 94579ns
+I1208 23:50:52.916677  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:52.918392  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.717954ms
+I1208 23:50:53.918742  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:53.918859  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 128688ns
+I1208 23:50:54.919284  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:54.919350  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 79956ns
+I1208 23:50:55.919872  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:55.919996  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 137039ns
+I1208 23:50:56.920361  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:56.920444  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 110169ns
+I1208 23:50:57.921022  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:57.922205  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.190575ms
+I1208 23:50:58.923493  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:58.923594  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 114448ns
+I1208 23:50:59.923997  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:50:59.924098  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 116580ns
+I1208 23:51:00.925272  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:00.925384  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 125652ns
+I1208 23:51:01.926378  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:01.926461  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 99822ns
+I1208 23:51:02.926909  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:02.928215  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.312945ms
+I1208 23:51:03.928597  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:03.928700  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 117037ns
+I1208 23:51:04.929713  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:04.929777  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 78072ns
+I1208 23:51:05.930342  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:05.930410  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 81608ns
+I1208 23:51:06.931280  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:06.931346  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 80395ns
+I1208 23:51:07.932461  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:07.933106  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 656447ns
+I1208 23:51:08.933558  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:08.933636  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 96418ns
+I1208 23:51:09.933955  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:09.934036  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 97751ns
+I1208 23:51:10.935220  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:10.935278  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 71395ns
+I1208 23:51:11.936558  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:11.936625  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 82726ns
+I1208 23:51:12.936861  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:12.938212  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.357866ms
+I1208 23:51:13.939131  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:13.939237  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 121107ns
+I1208 23:51:14.941071  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:14.941153  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 95732ns
+I1208 23:51:15.941411  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:15.941468  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 69828ns
+I1208 23:51:16.941845  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:16.941936  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 106555ns
+I1208 23:51:17.942579  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:17.944169  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.596616ms
+I1208 23:51:18.944452  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:18.944531  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 98019ns
+I1208 23:51:19.945293  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:19.945369  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 92224ns
+I1208 23:51:20.946794  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:20.946869  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 92746ns
+I1208 23:51:21.947046  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:21.947149  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 115433ns
+I1208 23:51:22.947449  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:22.948750  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.238872ms
+I1208 23:51:23.949275  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:23.949350  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 94805ns
+I1208 23:51:24.950512  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:24.950577  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 80178ns
+I1208 23:51:25.950945  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:25.951022  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 93146ns
+I1208 23:51:26.951740  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:26.951817  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 92623ns
+I1208 23:51:27.952594  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:27.954241  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.65069ms
+I1208 23:51:28.954793  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:28.954918  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 141407ns
+I1208 23:51:29.955618  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:29.955744  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 140591ns
+I1208 23:51:30.956476  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:30.956547  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 88030ns
+I1208 23:51:31.956979  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:31.957058  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 98979ns
+I1208 23:51:32.958387  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:32.959980  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.594539ms
+I1208 23:51:33.960582  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:33.960647  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 79754ns
+I1208 23:51:34.961227  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:34.961303  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 93041ns
+I1208 23:51:35.961680  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:35.961746  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 79680ns
+I1208 23:51:36.962908  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:36.962985  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 93588ns
+I1208 23:51:37.963343  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:37.964783  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.441963ms
+I1208 23:51:38.965800  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:38.965911  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 124846ns
+I1208 23:51:39.966980  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:39.967044  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 79378ns
+I1208 23:51:40.968370  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:40.968464  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 109736ns
+I1208 23:51:41.969079  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:41.969156  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 93768ns
+I1208 23:51:42.969560  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:42.971017  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.459399ms
+I1208 23:51:43.971333  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:43.971412  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 98584ns
+I1208 23:51:44.972281  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:44.972406  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 140502ns
+I1208 23:51:45.972901  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:45.972978  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 95867ns
+I1208 23:51:46.973789  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:46.973867  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 93987ns
+I1208 23:51:47.974803  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:47.976369  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.569425ms
+I1208 23:51:48.976991  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:48.977068  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 93847ns
+I1208 23:51:49.977417  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:49.977483  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 77298ns
+I1208 23:51:50.978401  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:50.978471  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 87017ns
+I1208 23:51:51.979847  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:51.979961  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 126155ns
+I1208 23:51:52.981091  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:52.981632  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 549980ns
+I1208 23:51:53.982225  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:53.982281  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 72778ns
+I1208 23:51:54.982575  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:54.982682  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 120031ns
+I1208 23:51:55.983351  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:55.983429  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 95313ns
+I1208 23:51:56.984115  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:56.984194  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 94719ns
+I1208 23:51:57.984350  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:57.985448  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.107168ms
+I1208 23:51:58.985692  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:58.985750  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 72723ns
+I1208 23:51:59.986771  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:51:59.986835  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 77130ns
+I1208 23:52:00.987996  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:00.988071  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 88789ns
+I1208 23:52:01.988574  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:01.988678  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 117875ns
+I1208 23:52:02.989105  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:02.990768  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.66549ms
+I1208 23:52:03.991021  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:03.991153  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 149340ns
+I1208 23:52:04.991798  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:04.991874  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 95203ns
+I1208 23:52:05.992336  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:05.992408  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 85771ns
+I1208 23:52:06.992787  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:06.992866  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 95727ns
+I1208 23:52:07.993648  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:07.995407  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.765799ms
+I1208 23:52:08.995995  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:08.996057  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 76229ns
+I1208 23:52:09.997496  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:09.997560  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 78922ns
+I1208 23:52:10.998229  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:10.998358  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 146109ns
+I1208 23:52:11.999100  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:11.999178  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 99059ns
+I1208 23:52:13.000186  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:13.001647  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.467155ms
+I1208 23:52:14.002396  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:14.002475  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 95982ns
+I1208 23:52:15.003274  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:15.003352  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 94099ns
+I1208 23:52:16.004217  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:16.004309  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 106041ns
+I1208 23:52:17.004688  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:17.004794  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 119569ns
+I1208 23:52:18.005913  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:18.007694  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.783206ms
+I1208 23:52:19.008410  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:19.008488  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 94339ns
+I1208 23:52:20.009470  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:20.009596  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 140412ns
+I1208 23:52:21.010037  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:21.010116  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 97432ns
+I1208 23:52:22.010829  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:22.010906  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 92921ns
+I1208 23:52:23.011376  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:23.012931  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.557705ms
+I1208 23:52:24.013815  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:24.013927  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 125645ns
+I1208 23:52:25.015225  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:25.015291  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 81349ns
+I1208 23:52:26.015844  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:26.015920  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 90828ns
+I1208 23:52:27.016417  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:27.016482  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 80639ns
+I1208 23:52:28.017719  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:28.018538  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 828844ns
+I1208 23:52:29.018813  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:29.018935  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 137324ns
+I1208 23:52:30.020094  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:30.020218  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 144470ns
+I1208 23:52:31.021049  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:31.021128  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 96636ns
+I1208 23:52:32.021560  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:32.021687  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 142006ns
+I1208 23:52:33.022076  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:33.023761  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.69116ms
+I1208 23:52:34.024669  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:34.024745  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 92803ns
+I1208 23:52:35.025140  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:35.025243  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 116695ns
+I1208 23:52:36.025933  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:36.025995  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 74943ns
+I1208 23:52:37.026484  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:37.026548  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78717ns
+I1208 23:52:38.027057  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:38.028733  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.679139ms
+I1208 23:52:39.029800  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:39.029877  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 96461ns
+I1208 23:52:40.030555  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:40.030683  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 141682ns
+I1208 23:52:41.031513  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:41.031594  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 98154ns
+I1208 23:52:42.032415  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:42.032495  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 95696ns
+I1208 23:52:43.033084  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:43.034637  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.555873ms
+I1208 23:52:44.035341  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:44.035439  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 112710ns
+I1208 23:52:45.036378  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:45.036458  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 99608ns
+I1208 23:52:46.037881  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:46.037961  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 100038ns
+I1208 23:52:47.039165  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:47.039247  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 93794ns
+I1208 23:52:48.040035  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:48.040702  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 677871ns
+I1208 23:52:49.041771  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:49.041901  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 143218ns
+I1208 23:52:50.042227  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:50.042317  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 103840ns
+I1208 23:52:51.042876  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:51.042948  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 85194ns
+I1208 23:52:52.043653  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:52.043761  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 119946ns
+I1208 23:52:53.044467  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:53.045536  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.077345ms
+I1208 23:52:54.045984  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:54.046048  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 80049ns
+I1208 23:52:55.046602  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:55.046712  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 122825ns
+I1208 23:52:56.047356  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:56.047432  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 92705ns
+I1208 23:52:57.048545  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:57.048622  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 94311ns
+I1208 23:52:58.049571  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:58.051136  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.569825ms
+I1208 23:52:59.051942  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:52:59.052019  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 98206ns
+I1208 23:53:00.052661  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:00.052765  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 120230ns
+I1208 23:53:01.053311  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:01.053380  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 84151ns
+I1208 23:53:02.054857  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:02.054926  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 85012ns
+I1208 23:53:03.055402  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:03.057438  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.041182ms
+I1208 23:53:04.058908  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:04.059100  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 141261ns
+I1208 23:53:05.059792  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:05.059922  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 144507ns
+I1208 23:53:06.060226  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:06.060303  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 91972ns
+I1208 23:53:07.061167  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:07.061244  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 91954ns
+I1208 23:53:08.062541  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:08.064023  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.516386ms
+I1208 23:53:09.064594  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:09.064713  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 133366ns
+I1208 23:53:10.065394  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:10.065457  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 79068ns
+I1208 23:53:11.066289  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:11.066383  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 108617ns
+I1208 23:53:12.067348  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:12.067452  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 119217ns
+I1208 23:53:13.068645  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:13.069730  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.106121ms
+I1208 23:53:14.070080  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:14.070288  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 221953ns
+I1208 23:53:15.070940  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:15.071014  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 91148ns
+I1208 23:53:16.071946  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:16.072073  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 141406ns
+I1208 23:53:17.072537  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:17.072643  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 121077ns
+I1208 23:53:18.073420  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:18.074825  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.411667ms
+I1208 23:53:19.075964  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:19.076031  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 80950ns
+I1208 23:53:20.077703  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:20.077828  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 141042ns
+I1208 23:53:21.078863  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:21.078941  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 95972ns
+I1208 23:53:22.079430  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:22.079506  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 91998ns
+I1208 23:53:23.079974  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:23.081550  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.58046ms
+I1208 23:53:24.083123  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:24.083250  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 143649ns
+I1208 23:53:25.084354  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:25.084456  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 119026ns
+I1208 23:53:26.085676  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:26.085830  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 175516ns
+I1208 23:53:27.086570  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:27.086629  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 71664ns
+I1208 23:53:28.087599  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:28.088403  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 812653ns
+I1208 23:53:29.089277  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:29.089375  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 110435ns
+I1208 23:53:30.090370  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:30.090441  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 84196ns
+I1208 23:53:31.091044  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:31.091131  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 98536ns
+I1208 23:53:32.092067  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:32.092162  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 107645ns
+I1208 23:53:33.092609  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:33.093718  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.118644ms
+I1208 23:53:34.093991  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:34.094054  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 79187ns
+I1208 23:53:35.094717  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:35.094866  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 174066ns
+I1208 23:53:36.095659  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:36.095767  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 125903ns
+I1208 23:53:37.096668  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:37.096745  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 96339ns
+I1208 23:53:38.097880  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:38.099620  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.742867ms
+I1208 23:53:39.100988  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:39.101054  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 80285ns
+I1208 23:53:40.101992  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:40.102316  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 351722ns
+I1208 23:53:41.103204  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:41.103464  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 302666ns
+I1208 23:53:42.103946  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:42.104008  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 75780ns
+I1208 23:53:43.104259  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:43.105021  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 770259ns
+I1208 23:53:44.105948  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:44.106041  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 105849ns
+I1208 23:53:45.106173  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:45.106281  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 121956ns
+I1208 23:53:46.106654  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:46.106780  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 145405ns
+I1208 23:53:47.107413  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:47.107480  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 83392ns
+I1208 23:53:48.107933  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:48.108587  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 661374ns
+I1208 23:53:49.109598  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:49.109653  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 68390ns
+I1208 23:53:50.109853  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:50.109930  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 93260ns
+I1208 23:53:51.110656  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:51.110720  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 79325ns
+I1208 23:53:52.111515  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:52.111629  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 126870ns
+I1208 23:53:53.112396  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:53.113478  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.08933ms
+I1208 23:53:54.113668  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:54.113770  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 114657ns
+I1208 23:53:55.114600  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:55.114701  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 113899ns
+I1208 23:53:56.116031  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:56.116139  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 121374ns
+I1208 23:53:57.116719  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:57.116796  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 93858ns
+I1208 23:53:58.117822  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:58.118333  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 521851ns
+I1208 23:53:59.118680  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:53:59.118773  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 107427ns
+I1208 23:54:00.120103  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:00.120232  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 142885ns
+I1208 23:54:01.121366  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:01.121439  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 87686ns
+I1208 23:54:02.121851  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:02.121932  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 92511ns
+I1208 23:54:03.123061  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:03.124392  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.334453ms
+I1208 23:54:04.124861  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:04.124964  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 117625ns
+I1208 23:54:05.125975  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:05.126078  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 115501ns
+I1208 23:54:06.126438  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:06.126504  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 80512ns
+I1208 23:54:07.127126  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:07.127254  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 140837ns
+I1208 23:54:08.128293  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:08.130029  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.742264ms
+I1208 23:54:09.131098  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:09.131197  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 121908ns
+I1208 23:54:10.132396  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:10.132462  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 80559ns
+I1208 23:54:11.132719  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:11.132786  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 82688ns
+I1208 23:54:12.134325  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:12.134452  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 143101ns
+I1208 23:54:13.134871  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:13.136940  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.074047ms
+I1208 23:54:14.137889  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:14.138016  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 147403ns
+I1208 23:54:15.138697  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:15.138774  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 95281ns
+I1208 23:54:16.141257  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:16.141382  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 141414ns
+I1208 23:54:17.141827  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:17.141932  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 118701ns
+I1208 23:54:18.143314  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:18.145114  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.801873ms
+I1208 23:54:19.145966  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:19.146044  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 95804ns
+I1208 23:54:20.146435  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:20.146564  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 143502ns
+I1208 23:54:21.146836  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:21.146914  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 96598ns
+I1208 23:54:22.148531  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:22.148608  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 94338ns
+I1208 23:54:23.149494  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:23.150897  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.404892ms
+I1208 23:54:24.152495  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:24.152618  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 140249ns
+I1208 23:54:25.152923  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:25.152977  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 70882ns
+I1208 23:54:26.153354  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:26.153412  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 72072ns
+I1208 23:54:27.153805  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:27.153923  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 130445ns
+I1208 23:54:28.154288  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:28.155280  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.004175ms
+I1208 23:54:29.155602  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:29.155661  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 73287ns
+I1208 23:54:30.156016  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:30.156078  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 75678ns
+I1208 23:54:31.156982  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:31.157107  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 140777ns
+I1208 23:54:32.157371  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:32.157497  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 141976ns
+I1208 23:54:33.158293  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:33.159940  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.650728ms
+I1208 23:54:34.161406  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:34.161481  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 88050ns
+I1208 23:54:35.161840  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:35.161901  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 72630ns
+I1208 23:54:36.163199  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:36.163257  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 71023ns
+I1208 23:54:37.163748  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:37.163853  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 117418ns
+I1208 23:54:38.164083  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:38.165125  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.051459ms
+I1208 23:54:39.165688  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:39.165767  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 97617ns
+I1208 23:54:40.166451  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:40.166538  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 101248ns
+I1208 23:54:41.166728  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:41.166793  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 77593ns
+I1208 23:54:42.167517  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:42.167594  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 94620ns
+I1208 23:54:43.168293  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:43.169903  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.61455ms
+I1208 23:54:44.170279  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:44.170383  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 117426ns
+I1208 23:54:45.171584  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:45.171650  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 79871ns
+I1208 23:54:46.172034  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:46.172113  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 95170ns
+I1208 23:54:47.172678  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:47.172806  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 141607ns
+I1208 23:54:48.173494  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:48.174173  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 712702ns
+I1208 23:54:49.174463  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:49.174540  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 92850ns
+I1208 23:54:50.175268  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:50.175323  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 65977ns
+I1208 23:54:51.175554  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:51.175612  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 72040ns
+I1208 23:54:52.175873  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:52.175925  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 64661ns
+I1208 23:54:53.176816  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:53.178308  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.49759ms
+I1208 23:54:54.178748  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:54.178812  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 77274ns
+I1208 23:54:55.179594  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:55.179675  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 92514ns
+I1208 23:54:56.180080  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:56.180178  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 111877ns
+I1208 23:54:57.181674  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:57.181741  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 87057ns
+I1208 23:54:58.182469  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:58.183750  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.295501ms
+I1208 23:54:59.185238  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:54:59.185304  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 80429ns
+I1208 23:55:00.185468  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:00.185547  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 96436ns
+I1208 23:55:01.185801  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:01.185883  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 97791ns
+I1208 23:55:02.187001  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:02.187095  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 104290ns
+I1208 23:55:03.188139  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:03.188678  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 559210ns
+I1208 23:55:04.188894  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:04.188951  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 69015ns
+I1208 23:55:05.189187  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:05.189244  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 69881ns
+I1208 23:55:06.189518  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:06.189573  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 76060ns
+I1208 23:55:07.190278  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:07.190323  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 57431ns
+I1208 23:55:08.191084  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:08.191617  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 540363ns
+I1208 23:55:09.191854  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:09.191922  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 81729ns
+I1208 23:55:10.193033  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:10.193085  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 64693ns
+I1208 23:55:11.193372  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:11.193424  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 65488ns
+I1208 23:55:12.194164  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:12.194249  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 96965ns
+I1208 23:55:13.194749  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:13.197074  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.330283ms
+I1208 23:55:14.197899  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:14.197975  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 92744ns
+I1208 23:55:15.198819  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:15.198881  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 74478ns
+I1208 23:55:16.199925  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:16.199990  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 78997ns
+I1208 23:55:17.201035  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:17.201087  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 66248ns
+I1208 23:55:18.201433  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:18.201993  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 495723ns
+I1208 23:55:19.202332  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:19.202394  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 76886ns
+I1208 23:55:20.202704  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:20.202754  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 61100ns
+I1208 23:55:21.202951  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:21.203035  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 95401ns
+I1208 23:55:22.208466  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:22.208542  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 91374ns
+I1208 23:55:23.211290  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:23.212456  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.177168ms
+I1208 23:55:24.213546  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:24.213640  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 106679ns
+I1208 23:55:25.213842  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:25.213920  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 89205ns
+I1208 23:55:26.214541  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:26.214622  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 92552ns
+I1208 23:55:27.215167  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:27.215245  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 94424ns
+I1208 23:55:28.215756  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:28.217669  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.916689ms
+I1208 23:55:29.218323  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:29.218400  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 94255ns
+I1208 23:55:30.219130  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:30.219194  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 78160ns
+I1208 23:55:31.219658  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:31.219722  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 78446ns
+I1208 23:55:32.220257  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:32.220335  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 93507ns
+I1208 23:55:33.220726  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:33.222506  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.782752ms
+I1208 23:55:34.224092  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:34.224158  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 82964ns
+I1208 23:55:35.224509  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:35.224586  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 92916ns
+I1208 23:55:36.224916  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:36.224997  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 98076ns
+I1208 23:55:37.225427  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:37.225505  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 95292ns
+I1208 23:55:38.226928  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:38.227848  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 931886ns
+I1208 23:55:39.228682  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:39.228746  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78296ns
+I1208 23:55:40.229383  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:40.229449  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78383ns
+I1208 23:55:41.230096  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:41.230162  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 79565ns
+I1208 23:55:42.230734  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:42.230799  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78606ns
+I1208 23:55:43.231606  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:43.233381  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.776154ms
+I1208 23:55:44.234765  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:44.234905  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 202924ns
+I1208 23:55:45.235755  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:45.235833  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 94160ns
+I1208 23:55:46.236791  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:46.236857  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 79847ns
+I1208 23:55:47.237282  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:47.237396  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 126867ns
+I1208 23:55:48.237694  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:48.304447  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 66.756895ms
+I1208 23:55:49.305011  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:49.305086  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 93551ns
+I1208 23:55:50.306161  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:50.306191  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 38835ns
+I1208 23:55:51.307376  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:51.307413  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 48452ns
+I1208 23:55:52.308532  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:52.308567  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 43522ns
+I1208 23:55:53.309353  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:53.310984  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.634612ms
+I1208 23:55:54.312240  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:54.312317  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 93048ns
+I1208 23:55:55.313094  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:55.313169  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 91424ns
+I1208 23:55:56.313769  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:56.313845  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 92372ns
+I1208 23:55:57.314807  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:57.314849  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 55197ns
+I1208 23:55:58.315304  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:58.316740  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.179526ms
+I1208 23:55:59.317138  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:55:59.317214  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 91712ns
+I1208 23:56:00.317680  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:00.317744  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 76784ns
+I1208 23:56:01.318959  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:01.319037  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 94748ns
+I1208 23:56:02.319432  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:02.319494  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 78092ns
+I1208 23:56:03.320421  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:03.321882  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.463567ms
+I1208 23:56:04.322432  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:04.322475  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 57872ns
+I1208 23:56:05.323729  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:05.323806  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 93185ns
+I1208 23:56:06.324422  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:06.324501  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 96129ns
+I1208 23:56:07.325196  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:07.325273  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 94111ns
+I1208 23:56:08.325907  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:08.325944  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 48130ns
+I1208 23:56:09.326249  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:09.326283  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 45957ns
+I1208 23:56:10.327152  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:10.327211  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 69681ns
+I1208 23:56:11.327360  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:11.327428  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 80613ns
+I1208 23:56:12.327739  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:12.327792  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 63337ns
+I1208 23:56:13.328449  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:13.329402  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 964992ns
+I1208 23:56:14.330085  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:14.330142  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 68734ns
+I1208 23:56:15.330759  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:15.330835  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 92990ns
+I1208 23:56:16.331989  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:16.332046  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 68594ns
+I1208 23:56:17.333410  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:17.333441  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 40641ns
+I1208 23:56:18.334156  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:18.335383  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.235152ms
+I1208 23:56:19.335535  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:19.335595  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 71293ns
+I1208 23:56:20.335919  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:20.335981  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 73524ns
+I1208 23:56:21.337211  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:21.337360  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 159981ns
+I1208 23:56:22.337576  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:22.337632  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 67684ns
+I1208 23:56:23.338430  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:23.340101  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.603446ms
+I1208 23:56:24.340857  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:24.341058  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 206506ns
+I1208 23:56:25.344856  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:25.344929  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 85712ns
+I1208 23:56:26.346021  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:26.346101  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 91911ns
+I1208 23:56:27.347792  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:27.347923  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 139040ns
+I1208 23:56:28.349937  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:28.351073  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.147819ms
+I1208 23:56:29.352255  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:29.352463  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 221146ns
+I1208 23:56:30.353283  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:30.353344  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 72413ns
+I1208 23:56:31.354471  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:31.354526  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 64215ns
+I1208 23:56:32.354838  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:32.354984  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 159677ns
+I1208 23:56:33.355423  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:33.356956  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.534928ms
+I1208 23:56:34.357293  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:34.357369  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 88286ns
+I1208 23:56:35.357718  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:35.357795  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 91871ns
+I1208 23:56:36.358327  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:36.358392  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 76959ns
+I1208 23:56:37.359212  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:37.359288  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 92937ns
+I1208 23:56:38.359972  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:38.361758  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.79358ms
+I1208 23:56:39.363251  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:39.363298  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 60073ns
+I1208 23:56:40.364629  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:40.364694  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78382ns
+I1208 23:56:41.364940  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:41.365017  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 92615ns
+I1208 23:56:42.366273  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:42.366339  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 79436ns
+I1208 23:56:43.366928  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:43.366962  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 45001ns
+I1208 23:56:44.367413  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:44.367444  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 39837ns
+I1208 23:56:45.368088  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:45.368122  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 44201ns
+I1208 23:56:46.368607  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:46.368643  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 46101ns
+I1208 23:56:47.369213  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:47.369469  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 264569ns
+I1208 23:56:48.370090  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:48.371482  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.400417ms
+I1208 23:56:49.372656  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:49.372691  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 47694ns
+I1208 23:56:50.373139  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:50.373183  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 55960ns
+I1208 23:56:51.373710  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:51.373754  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 56442ns
+I1208 23:56:52.374183  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:52.374228  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 55613ns
+I1208 23:56:53.374912  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:53.376442  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.536514ms
+I1208 23:56:54.377521  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:54.377554  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 44575ns
+I1208 23:56:55.377934  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:55.378015  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 90489ns
+I1208 23:56:56.378376  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:56.378401  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 36958ns
+I1208 23:56:57.379077  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:57.379113  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 44736ns
+I1208 23:56:58.379469  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:58.380542  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.081315ms
+I1208 23:56:59.381598  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:56:59.381635  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 47720ns
+I1208 23:57:00.382176  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:00.382212  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 46369ns
+I1208 23:57:01.383071  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:01.383115  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 56702ns
+I1208 23:57:02.383796  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:02.383838  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 55141ns
+I1208 23:57:03.384459  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:03.385555  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.101257ms
+I1208 23:57:04.385901  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:04.385936  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 45855ns
+I1208 23:57:05.386610  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:05.386652  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 53858ns
+I1208 23:57:06.387207  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:06.387241  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 45084ns
+I1208 23:57:07.387939  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:07.387981  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 54150ns
+I1208 23:57:08.388818  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:08.390409  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.593574ms
+I1208 23:57:09.391623  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:09.391710  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 102491ns
+I1208 23:57:10.392091  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:10.392132  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 56201ns
+I1208 23:57:11.392463  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:11.392496  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 43325ns
+I1208 23:57:12.392731  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:12.392758  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 35811ns
+I1208 23:57:13.393276  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:13.394413  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.145798ms
+I1208 23:57:14.395469  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:14.395509  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 48502ns
+I1208 23:57:15.396105  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:15.396203  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 123283ns
+I1208 23:57:16.396546  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:16.396611  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 77608ns
+I1208 23:57:17.397408  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:17.397547  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 153872ns
+I1208 23:57:18.398741  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:18.398807  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 79312ns
+I1208 23:57:19.400005  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:19.400095  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 106094ns
+I1208 23:57:20.401127  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:20.401203  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 91990ns
+I1208 23:57:21.401577  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:21.401657  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 93676ns
+I1208 23:57:22.401959  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:22.402024  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 76637ns
+I1208 23:57:23.403645  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:23.403682  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 75851ns
+I1208 23:57:24.404084  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:24.404135  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 62950ns
+I1208 23:57:25.404350  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:25.404428  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 93679ns
+I1208 23:57:26.404811  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:26.404876  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 79074ns
+I1208 23:57:27.405171  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:27.405236  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 78693ns
+I1208 23:57:28.405683  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:28.406937  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.265488ms
+I1208 23:57:29.407335  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:29.407379  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 79819ns
+I1208 23:57:30.407908  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:30.407940  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 40004ns
+I1208 23:57:31.408514  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:31.408542  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 36433ns
+I1208 23:57:32.408957  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:32.409025  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 77611ns
+I1208 23:57:33.409245  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:33.410243  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.006337ms
+I1208 23:57:34.411593  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:34.411638  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 60441ns
+I1208 23:57:35.412020  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:35.412065  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 59311ns
+I1208 23:57:36.412291  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:36.412320  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 42883ns
+I1208 23:57:37.412839  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:37.412873  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 46371ns
+I1208 23:57:38.413692  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:38.414371  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 690171ns
+I1208 23:57:39.414883  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:39.414918  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 47606ns
+I1208 23:57:40.415287  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:40.415355  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 79257ns
+I1208 23:57:41.415815  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:41.415849  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 47168ns
+I1208 23:57:42.416838  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:42.416929  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 102058ns
+I1208 23:57:43.417183  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:43.418509  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.335393ms
+I1208 23:57:44.421326  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:44.421355  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 39279ns
+I1208 23:57:45.424960  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:45.424988  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 37249ns
+I1208 23:57:46.427568  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:46.427597  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 38552ns
+I1208 23:57:47.427914  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:47.427944  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 39333ns
+I1208 23:57:48.428561  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:48.429056  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 504513ns
+I1208 23:57:49.430410  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:49.433007  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.605477ms
+I1208 23:57:50.433681  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:50.433751  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 80312ns
+I1208 23:57:51.460288  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:51.460356  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 81384ns
+I1208 23:57:52.471406  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:52.471451  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 54682ns
+I1208 23:57:53.479962  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:53.481035  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.03211ms
+I1208 23:57:54.490461  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:54.490517  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 65735ns
+I1208 23:57:55.490962  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:55.491024  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 72521ns
+I1208 23:57:56.494500  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:56.494577  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 89183ns
+I1208 23:57:57.495389  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:57.495465  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 86956ns
+I1208 23:57:58.501726  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:58.501770  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 56356ns
+I1208 23:57:59.503654  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:57:59.503710  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 69870ns
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+F1208 23:57:59.613402  6679 process.cpp:868] Failed to initialize: Failed to bind on 0.0.0.0:5050: Address already in use: Address already in use [98]
+*** Check failure stack trace: ***
+I1208 23:58:00.504963  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:00.505039  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 87898ns
+I1208 23:58:01.522496  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:01.523689  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.202096ms
+I1208 23:58:02.524127  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:02.524216  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 100578ns
+I1208 23:58:03.528924  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:03.539778  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 10.861071ms
+I1208 23:58:04.567631  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:04.567705  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 84345ns
+I1208 23:58:05.568297  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:05.568392  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 105673ns
+I1208 23:58:06.580140  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:06.580220  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 92955ns
+2015-12-08 23:58:06,746:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 14ms
+2015-12-08 23:58:06,746:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 15ms
+2015-12-08 23:58:06,746:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 15ms
+2015-12-08 23:58:06,746:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 15ms
+I1208 23:58:07.601827  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:07.601923  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 108255ns
+I1208 23:58:08.602738  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:08.604120  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.389785ms
+I1208 23:58:09.606510  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:09.606557  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 57324ns
+2015-12-08 23:58:10,092:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 13ms
+2015-12-08 23:58:10,092:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 13ms
+2015-12-08 23:58:10,093:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 13ms
+2015-12-08 23:58:10,093:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 13ms
+I1208 23:58:10.607251  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:10.609580  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.335078ms
+I1208 23:58:11.622696  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:11.622773  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 87811ns
+I1208 23:58:12.643960  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:12.644037  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 91738ns
+I1208 23:58:13.661684  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:13.662953  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.280331ms
+I1208 23:58:14.663729  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:14.663811  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 101231ns
+I1208 23:58:15.703397  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:15.703481  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 96245ns
+I1208 23:58:16.709393  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:16.709471  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 89120ns
+2015-12-08 23:58:16,810:4897(0x7fd662ffd700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 44ms
+2015-12-08 23:58:16,810:4897(0x7fd660ff9700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 44ms
+2015-12-08 23:58:16,810:4897(0x7fd661ffb700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 44ms
+2015-12-08 23:58:16,810:4897(0x7fd663fff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 44ms
+I1208 23:58:17.710889  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:17.710960  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 82215ns
+I1208 23:58:18.711448  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:18.711519  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 80215ns
+I1208 23:58:19.711839  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:19.711949  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 121425ns
+I1208 23:58:20.712301  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:20.712406  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 121782ns
+I1208 23:58:21.713834  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:21.713984  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 161680ns
+I1208 23:58:22.714377  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:22.714524  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 225308ns
+I1208 23:58:23.715241  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:23.715400  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 169942ns
+I1208 23:58:24.716713  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:24.716789  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 84889ns
+I1208 23:58:25.717267  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:25.717360  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 244047ns
+I1208 23:58:26.718334  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:26.718471  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 149564ns
+I1208 23:58:27.719832  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:27.719965  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 150701ns
+I1208 23:58:28.721180  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:28.721341  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 172956ns
+I1208 23:58:29.721711  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:29.721834  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 132745ns
+I1208 23:58:30.722822  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:30.722859  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 47230ns
+I1208 23:58:31.723449  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:31.723512  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 73311ns
+I1208 23:58:32.723623  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:32.723784  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 170060ns
+I1208 23:58:33.726394  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:33.726462  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 79779ns
+I1208 23:58:34.726667  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:34.726732  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 74886ns
+I1208 23:58:35.728147  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:35.728214  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 77288ns
+I1208 23:58:36.734437  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:36.734501  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 77653ns
+I1208 23:58:37.736065  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:37.736142  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 85250ns
+I1208 23:58:38.736798  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:38.736876  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 89980ns
+I1208 23:58:39.739226  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:39.739297  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 81344ns
+I1208 23:58:40.741657  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:40.741695  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 49075ns
+I1208 23:58:41.743783  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:41.744295  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 520825ns
+I1208 23:58:42.744527  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:42.744608  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 92730ns
+I1208 23:58:43.745208  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:43.745308  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 107751ns
+I1208 23:58:44.749089  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:44.749191  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 111738ns
+I1208 23:58:45.755857  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:45.755920  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 71961ns
+I1208 23:58:46.757570  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:46.757643  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 85715ns
+I1208 23:58:47.757869  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:47.757949  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 91312ns
+I1208 23:58:48.762013  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:48.762107  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 104589ns
+I1208 23:58:49.767163  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:49.767225  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 77335ns
+I1208 23:58:50.769484  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:50.769624  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 153275ns
+I1208 23:58:51.769903  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:51.769979  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 87821ns
+I1208 23:58:52.770273  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:52.770321  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 59831ns
+I1208 23:58:53.773433  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:53.774580  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.151833ms
+I1208 23:58:54.774884  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:54.774950  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 78976ns
+I1208 23:58:55.775768  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:55.775903  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 149009ns
+I1208 23:58:56.776597  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:56.776674  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 91067ns
+I1208 23:58:57.777968  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:57.778019  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 61258ns
+I1208 23:58:58.778861  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:58.778920  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 68916ns
+I1208 23:58:59.779727  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:58:59.779799  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 83419ns
+I1208 23:59:00.782058  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:00.783416  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.369339ms
+I1208 23:59:01.784060  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:01.784131  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 81961ns
+I1208 23:59:02.785193  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:02.785256  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 74388ns
+I1208 23:59:03.785488  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:03.785537  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 59855ns
+I1208 23:59:04.785766  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:04.785895  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 138916ns
+I1208 23:59:05.786881  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:05.787008  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 137307ns
+I1208 23:59:06.787261  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:06.787344  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 96262ns
+I1208 23:59:07.787817  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:07.787861  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 55619ns
+I1208 23:59:08.789033  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:08.789091  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 80749ns
+I1208 23:59:09.228904  4905 replica.cpp:511] Replica received write request for position 5
+I1208 23:59:09.230553  4905 leveldb.cpp:343] Persisting action (441 bytes) to leveldb took 923713ns
+I1208 23:59:09.230594  4905 replica.cpp:679] Persisted action at 5
+I1208 23:59:09.231169  4904 replica.cpp:658] Replica received learned notice for position 5
+I1208 23:59:09.233131  4904 leveldb.cpp:343] Persisting action (443 bytes) to leveldb took 1.912697ms
+I1208 23:59:09.233170  4904 replica.cpp:679] Persisted action at 5
+I1208 23:59:09.233180  4904 replica.cpp:664] Replica learned APPEND action at position 5
+I1208 23:59:09.234221  4902 replica.cpp:511] Replica received write request for position 6
+I1208 23:59:09.234470  4902 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 222090ns
+I1208 23:59:09.234496  4902 replica.cpp:679] Persisted action at 6
+I1208 23:59:09.235596  4898 replica.cpp:658] Replica received learned notice for position 6
+I1208 23:59:09.235766  4898 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 148757ns
+I1208 23:59:09.235793  4898 leveldb.cpp:401] Deleting ~2 keys from leveldb took 10066ns
+I1208 23:59:09.235803  4898 replica.cpp:679] Persisted action at 6
+I1208 23:59:09.235811  4898 replica.cpp:664] Replica learned TRUNCATE action at position 6
+I1208 23:59:09.789726  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:09.789778  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 63020ns
+I1208 23:59:10.790127  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:10.790185  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 70154ns
+I1208 23:59:11.790571  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:11.790628  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 68565ns
+I1208 23:59:12.790957  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:12.791019  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 82781ns
+I1208 23:59:13.791218  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:13.791270  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 62791ns
+I1208 23:59:14.792665  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:14.792743  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 87723ns
+I1208 23:59:15.793871  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:15.793979  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 110461ns
+I1208 23:59:16.794085  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:16.794170  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 96244ns
+I1208 23:59:17.795394  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:17.795490  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 108749ns
+I1208 23:59:18.795958  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:18.796144  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 246543ns
+I1208 23:59:19.797668  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:19.797899  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 271769ns
+I1208 23:59:20.798099  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:20.798216  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 127090ns
+I1208 23:59:21.798951  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:21.799057  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 118848ns
+I1208 23:59:22.800000  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:22.800094  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 107424ns
+I1208 23:59:23.800928  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:23.801194  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 303556ns
+I1208 23:59:24.801780  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:24.801877  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 111035ns
+I1208 23:59:25.802180  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:25.802261  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 94873ns
+I1208 23:59:26.803084  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:26.803447  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 158306ns
+I1208 23:59:27.804510  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:27.804617  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 120040ns
+I1208 23:59:28.807348  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:28.807417  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 81394ns
+I1208 23:59:29.808039  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:29.808574  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 543235ns
+I1208 23:59:30.808780  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:30.808873  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 106867ns
+I1208 23:59:31.811528  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:31.811638  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 123823ns
+I1208 23:59:32.811758  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:32.811833  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 85917ns
+I1208 23:59:33.812310  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:33.813782  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.373257ms
+I1208 23:59:34.814903  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:34.814988  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 98595ns
+I1208 23:59:35.815320  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:35.815451  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 147821ns
+I1208 23:59:36.816321  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:36.816450  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 146992ns
+I1208 23:59:37.817401  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:37.817451  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 60141ns
+I1208 23:59:38.819247  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:38.819284  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 47697ns
+I1208 23:59:39.823190  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:39.823288  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 104871ns
+I1208 23:59:40.823761  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:40.823823  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 72298ns
+I1208 23:59:41.824060  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:41.824146  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 96711ns
+I1208 23:59:42.825356  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:42.825429  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 85898ns
+I1208 23:59:43.825718  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:43.825923  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 215458ns
+I1208 23:59:44.826352  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:44.826483  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 141484ns
+I1208 23:59:45.827234  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:45.827303  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 80868ns
+I1208 23:59:46.827702  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:46.827913  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 222934ns
+I1208 23:59:47.829139  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:47.829211  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 84142ns
+I1208 23:59:48.830332  4901 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:48.830400  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 79660ns
+I1208 23:59:49.831125  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:49.831187  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 74315ns
+I1208 23:59:50.831974  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:50.832057  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 96723ns
+I1208 23:59:51.832602  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:51.832659  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 68100ns
+I1208 23:59:52.833220  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:52.833277  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 69265ns
+I1208 23:59:53.834270  4904 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:53.834336  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 78123ns
+I1208 23:59:54.834799  4898 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:54.834870  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 88230ns
+I1208 23:59:55.835919  4900 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:55.836025  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 120135ns
+I1208 23:59:56.836634  4905 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:56.836766  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 161107ns
+I1208 23:59:57.837826  4899 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:57.837903  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 228770ns
+I1208 23:59:58.838832  4903 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:58.838914  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 93319ns
+I1208 23:59:59.842157  4902 hierarchical.hpp:834] No resources available to allocate!
+I1208 23:59:59.842221  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 74018ns
+I1209 00:00:00.843734  4901 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:00.843801  4901 hierarchical.hpp:741] Performed allocation for 0 slaves in 76413ns
+I1209 00:00:01.844318  4904 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:01.844382  4904 hierarchical.hpp:741] Performed allocation for 0 slaves in 74594ns
+I1209 00:00:02.845239  4898 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:02.924000  4898 hierarchical.hpp:741] Performed allocation for 0 slaves in 78.777758ms
+I1209 00:00:03.925254  4900 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:03.926424  4900 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.190217ms
+I1209 00:00:04.928364  4905 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:04.928544  4905 hierarchical.hpp:741] Performed allocation for 0 slaves in 190456ns
+I1209 00:00:05.928735  4899 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:05.928802  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 81378ns
+I1209 00:00:06.929198  4899 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:06.929327  4899 hierarchical.hpp:741] Performed allocation for 0 slaves in 197297ns
+I1209 00:00:07.930559  4903 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:07.930629  4903 hierarchical.hpp:741] Performed allocation for 0 slaves in 82056ns
+I1209 00:00:08.931442  4902 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:00:08.931509  4902 hierarchical.hpp:741] Performed allocation for 0 slaves in 78785ns

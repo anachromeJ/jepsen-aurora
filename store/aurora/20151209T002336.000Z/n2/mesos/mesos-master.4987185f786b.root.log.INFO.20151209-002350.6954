@@ -1,0 +1,182 @@
+Log file created at: 2015/12/09 00:23:50
+Running on machine: 4987185f786b
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1209 00:23:50.145244  6954 logging.cpp:172] INFO level logging started!
+I1209 00:23:50.145371  6954 logging.cpp:177] Logging to /var/log/mesos
+I1209 00:23:50.145383  6954 main.cpp:181] Build: 2015-03-26 13:36:52 by root
+I1209 00:23:50.145391  6954 main.cpp:183] Version: 0.22.0
+I1209 00:23:50.145396  6954 main.cpp:186] Git tag: 0.22.0
+I1209 00:23:50.145401  6954 main.cpp:190] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1209 00:23:50.168942  6954 leveldb.cpp:176] Opened db in 23.316821ms
+I1209 00:23:50.198284  6954 leveldb.cpp:183] Compacted db in 29.298854ms
+I1209 00:23:50.198323  6954 leveldb.cpp:198] Created db iterator in 6741ns
+I1209 00:23:50.198331  6954 leveldb.cpp:204] Seeked to beginning of db in 693ns
+I1209 00:23:50.198338  6954 leveldb.cpp:273] Iterated through 0 keys in the db in 303ns
+I1209 00:23:50.198365  6954 replica.cpp:744] Replica recovered with log positions 0 -> 0 with 1 holes and 0 unlearned
+I1209 00:23:50.198799  6962 log.cpp:238] Attempting to join replica to ZooKeeper group
+I1209 00:23:50.199605  6961 recover.cpp:449] Starting replica recovery
+I1209 00:23:50.199663  6961 recover.cpp:475] Replica is in EMPTY status
+I1209 00:23:50.241497  6954 main.cpp:306] Starting Mesos master
+I1209 00:23:50.250833  6956 group.cpp:313] Group process (group(1)@10.0.0.3:5050) connected to ZooKeeper
+I1209 00:23:50.250864  6956 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1209 00:23:50.250874  6956 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+I1209 00:23:50.254722  6954 master.cpp:349] Master 20151209-002350-50331658-5050-6954 (n2) started on 10.0.0.3:5050
+I1209 00:23:50.254765  6954 master.cpp:397] Master allowing unauthenticated frameworks to register
+I1209 00:23:50.254770  6954 master.cpp:402] Master allowing unauthenticated slaves to register
+I1209 00:23:50.269484  6962 hierarchical.hpp:287] Initialized hierarchical allocator process
+I1209 00:23:50.269553  6962 whitelist_watcher.cpp:79] No whitelist given
+I1209 00:23:50.269752  6959 master.cpp:1295] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1209 00:23:50.279806  6962 contender.cpp:131] Joining the ZK group
+I1209 00:23:50.280160  6959 group.cpp:313] Group process (group(2)@10.0.0.3:5050) connected to ZooKeeper
+I1209 00:23:50.280185  6959 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1209 00:23:50.280192  6959 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+I1209 00:23:50.320962  6957 group.cpp:313] Group process (group(4)@10.0.0.3:5050) connected to ZooKeeper
+I1209 00:23:50.321002  6957 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1209 00:23:50.321009  6957 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1209 00:23:50.369647  6956 network.hpp:424] ZooKeeper group memberships changed
+I1209 00:23:50.369762  6956 group.cpp:659] Trying to get '/mesos/log_replicas/0000000003' in ZooKeeper
+I1209 00:23:50.369796  6962 group.cpp:313] Group process (group(3)@10.0.0.3:5050) connected to ZooKeeper
+I1209 00:23:50.369807  6962 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1209 00:23:50.369814  6962 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1209 00:23:50.373980  6956 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050 }
+I1209 00:23:50.383658  6958 contender.cpp:247] New candidate (id='5') has entered the contest for leadership
+I1209 00:23:50.400733  6963 network.hpp:424] ZooKeeper group memberships changed
+I1209 00:23:50.400810  6963 group.cpp:659] Trying to get '/mesos/log_replicas/0000000003' in ZooKeeper
+I1209 00:23:50.403683  6963 group.cpp:659] Trying to get '/mesos/log_replicas/0000000004' in ZooKeeper
+I1209 00:23:50.404518  6963 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.3:5050 }
+I1209 00:23:50.405449  6962 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1209 00:23:50.405550  6957 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1209 00:23:50.405792  6957 detector.cpp:138] Detected a new leader: (id='4')
+I1209 00:23:50.405930  6957 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1209 00:23:50.406224  6956 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1209 00:23:50.410887  6956 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:50.410796  6957 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1209 00:23:50.417481  6959 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:50.417556  6957 master.cpp:1356] The newly elected leader is master@10.0.0.2:5050 with id 20151209-002349-33554442-5050-6960
+I1209 00:23:50.514261  6957 network.hpp:424] ZooKeeper group memberships changed
+I1209 00:23:50.514884  6957 group.cpp:659] Trying to get '/mesos/log_replicas/0000000003' in ZooKeeper
+I1209 00:23:50.515249  6957 group.cpp:659] Trying to get '/mesos/log_replicas/0000000004' in ZooKeeper
+I1209 00:23:50.515593  6957 group.cpp:659] Trying to get '/mesos/log_replicas/0000000005' in ZooKeeper
+I1209 00:23:50.515964  6957 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.3:5050, log-replica(1)@10.0.0.4:5050 }
+I1209 00:23:50.602231  6957 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1209 00:23:50.612990  6958 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1209 00:23:50.624989  6958 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1209 00:23:50.632309  6960 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1209 00:23:51.273895  6962 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:51.273967  6962 hierarchical.hpp:741] Performed allocation for 0 slaves in 79906ns
+I1209 00:23:51.273936  6963 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1209 00:23:51.406654  6961 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1209 00:23:51.407186  6961 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:51.408892  6956 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:51.425706  6959 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:51.425856  6959 recover.cpp:566] Updating replica status to STARTING
+I1209 00:23:51.437676  6957 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 11.63036ms
+I1209 00:23:51.437732  6957 replica.cpp:323] Persisted replica status to STARTING
+I1209 00:23:51.437799  6957 recover.cpp:475] Replica is in STARTING status
+I1209 00:23:51.437994  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:51.438029  6957 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:51.450386  6957 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:51.450467  6957 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:51.825593  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:52.279922  6958 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:52.280001  6958 hierarchical.hpp:741] Performed allocation for 0 slaves in 92687ns
+I1209 00:23:52.375362  6960 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:52.378485  6960 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:52.387059  6962 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:52.387150  6962 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:52.761370  6962 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:52.961958  6963 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:52.962177  6963 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:52.967417  6956 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:52.975270  6961 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:53.291903  6961 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:53.291978  6961 hierarchical.hpp:741] Performed allocation for 0 slaves in 86970ns
+I1209 00:23:53.428282  6959 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:53.642525  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:53.645707  6957 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:53.665597  6958 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:53.665766  6958 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:54.209975  6958 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:54.300492  6960 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:54.300568  6960 hierarchical.hpp:741] Performed allocation for 0 slaves in 95539ns
+I1209 00:23:54.359730  6962 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:54.360059  6962 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:54.361317  6962 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:54.372155  6963 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:54.804445  6963 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:55.187696  6956 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:55.187909  6956 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:55.206517  6961 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:55.206604  6961 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:55.307358  6961 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:55.307437  6961 hierarchical.hpp:741] Performed allocation for 0 slaves in 90846ns
+I1209 00:23:55.444762  6959 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:56.144626  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:56.146546  6957 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:56.158776  6958 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:56.175189  6960 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:56.311657  6960 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:56.316303  6960 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.649829ms
+I1209 00:23:56.340399  6962 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:56.982867  6963 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:56.993710  6963 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:57.007079  6956 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:57.024909  6961 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:57.059419  6961 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:57.324690  6959 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:57.327216  6959 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.53601ms
+I1209 00:23:57.875258  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:57.875473  6957 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:57.890157  6957 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:57.890249  6957 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:57.976521  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:58.331158  6958 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:58.331233  6958 hierarchical.hpp:741] Performed allocation for 0 slaves in 88303ns
+I1209 00:23:58.568020  6960 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:58.733593  6962 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:58.733810  6962 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:58.756652  6962 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:58.757974  6962 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:59.303268  6962 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:59.307026  6962 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:59.307204  6962 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:59.313455  6962 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:59.324414  6963 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:59.334309  6963 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:23:59.334369  6963 hierarchical.hpp:741] Performed allocation for 0 slaves in 67952ns
+I1209 00:23:59.860574  6956 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:59.874819  6956 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:59.864909  6961 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1209 00:23:59.874898  6961 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:59.874915  6961 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:23:59.901546  6961 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:23:59.928876  6959 replica.cpp:372] Replica ignoring promise request as it is in STARTING status
+I1209 00:24:00.174877  6957 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:24:00.334841  6958 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:24:00.343502  6958 hierarchical.hpp:741] Performed allocation for 0 slaves in 8.665544ms
+I1209 00:24:00.730206  6960 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1209 00:24:00.730411  6960 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1209 00:24:00.750187  6960 recover.cpp:195] Received a recover response from a replica in VOTING status
+I1209 00:24:00.755278  6962 recover.cpp:195] Received a recover response from a replica in VOTING status
+I1209 00:24:00.755389  6962 recover.cpp:566] Updating replica status to RECOVERING
+I1209 00:24:00.755738  6962 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 312360ns
+I1209 00:24:00.755758  6962 replica.cpp:323] Persisted replica status to RECOVERING
+I1209 00:24:00.755789  6962 recover.cpp:545] Starting catch-up from position 0 to 0
+I1209 00:24:00.756019  6962 replica.cpp:372] Replica ignoring promise request as it is in RECOVERING status
+I1209 00:24:00.911720  6963 replica.cpp:372] Replica ignoring promise request as it is in RECOVERING status
+I1209 00:24:00.939209  6956 replica.cpp:506] Replica ignoring write request as it is in RECOVERING status
+I1209 00:24:00.979676  6961 replica.cpp:658] Replica received learned notice for position 0
+I1209 00:24:00.982040  6961 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 502643ns
+I1209 00:24:01.023547  6961 replica.cpp:679] Persisted action at 0
+I1209 00:24:01.023581  6961 replica.cpp:664] Replica learned NOP action at position 0
+I1209 00:24:01.023741  6961 recover.cpp:566] Updating replica status to VOTING
+I1209 00:24:01.024097  6961 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 322349ns
+I1209 00:24:01.024121  6961 replica.cpp:323] Persisted replica status to VOTING
+I1209 00:24:01.024140  6961 recover.cpp:580] Successfully joined the Paxos group
+I1209 00:24:01.024170  6961 recover.cpp:464] Recover process terminated
+I1209 00:24:01.346478  6961 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:24:01.350476  6961 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.003151ms
+I1209 00:24:02.354132  6959 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:24:02.354207  6959 hierarchical.hpp:741] Performed allocation for 0 slaves in 85887ns
+I1209 00:24:03.375975  6957 hierarchical.hpp:834] No resources available to allocate!
+I1209 00:24:03.376057  6957 hierarchical.hpp:741] Performed allocation for 0 slaves in 106077ns
