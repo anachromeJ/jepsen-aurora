@@ -112,7 +112,7 @@
   [test]
   (->> (c/on-many
          (:nodes test)
-         (->> (cu/ls-full job-dir)
+         (->> (cu/ls-full slave-job-dir)
               (pmap (partial c/exec :cat))
               (mapv (partial parse-file c/*host*))))
        vals
