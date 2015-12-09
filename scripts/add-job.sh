@@ -3,14 +3,12 @@
 NAME=$1
 TASKNAME=${NAME}_task
 DURATION=$2
-PARENT_JOB_DIR=/tmp/aurora-jobs/
-SLAVE_JOB_DIR=/tmp/aurora-test/
+JOB_SCRIPT_DIR=/tmp/aurora-jobs/
+JOB_RESULT_DIR=/tmp/aurora-test/
 AURORA_CLIENT=/jepsen/jepsen-aurora/resources/client.pex
 
-mkdir -p $PARENT_JOB_DIR
-
-TEMPJOB=$(mktemp -p $PARENT_JOB_DIR)
-echo "MEW=\$(mktemp -p " $SLAVE_JOB_DIR "); " \
+TEMPJOB=$(mktemp -p $JOB_SCRIPT_DIR)
+echo "MEW=\$(mktemp -p " $JOB_RESULT_DIR "); " \
     "echo \"" $NAME "\" >> $MEW; " \
     "date -u -Ins >> $MEW; " \
     "sleep " $DURATION "; " \

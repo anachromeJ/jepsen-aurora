@@ -20,8 +20,8 @@
             [jepsen.os.debian :as debian]
             [jepsen.aurora.checker :refer [checker epsilon-forgiveness]]))
 
-(def parent-job-dir "/tmp/aurora-jobs/")
-(def slave-job-dir "/tmp/aurora-test/")
+(def job-script-dir "/tmp/aurora-jobs/")
+(def job-result-dir "/tmp/aurora-test/")
 
 (defn install!
   "Installs Java 8 and Aurora scheduler"
@@ -31,6 +31,7 @@
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/install-aurora.sh" :-o "/install-aurora.sh")
    (c/exec :bash "/install-aurora.sh")
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/add-job.sh" :-o "/add-job.sh")
    ))
 
 (defn start!
@@ -48,7 +49,7 @@
         
       (db/setup! mesos test node)
       (install! test node)
-      (c/su (c/exec :mkdir :-p slave-job-dir))
+      (c/su (c/exec :mkdir :-p job-result-dir))
       (start! test node)
       )
       
@@ -56,7 +57,7 @@
         (info node "stopping aurora")
         (c/su (cu/grepkill "aurora-scheduler"))
         (db/teardown! mesos test node)
-        (c/su (c/exec :rm :-rf slave-job-dir))
+        (c/su (c/exec :rm :-rf job-result-dir))
         )
 
       db/LogFiles
@@ -79,8 +80,7 @@
 (defn add-job!
   "Submits a new job to Aurora"
   [node job]
-  (info node job "adding job")
-  (c/exec :bash "add-job.sh" (:name job) (:duration job)))
+  (c/exec :bash "/add-job.sh" (:name job) (:duration job)))
 
 (def formatter (time.format/formatters :date-time))
 
@@ -114,7 +114,7 @@
   [test]
   (->> (c/on-many
          (:nodes test)
-         (->> (cu/ls-full slave-job-dir)
+         (->> (cu/ls-full job-result-dir)
               (pmap (partial c/exec :cat))
               (mapv (partial parse-file c/*host*))))
        vals
