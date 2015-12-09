@@ -127,7 +127,7 @@
         (let [head-start  10 ; Schedule a bit in the future
               duration    (rand-int 10)
               epsilon     (+ 10 (rand-int 20))
-              ; (Chronos) won't schedule tasks concurrently, so we ensure they'll
+              ; (Aurora) won't schedule tasks concurrently, so we ensure they'll
               ; never overlap.
               interval    (+ 1
                              duration
@@ -143,14 +143,46 @@
                   :epsilon  epsilon
                   :interval interval}})))))
 
-(def noop
-  "Does nothing."
+(defrecord Client [node]
+  client/Client
+  (setup! [this test node]
+    (assoc this :node node))
+
+  (invoke! [this test op]
+    (timeout 20000 (assoc op :type :info, :value :timed-out)
+             (try
+               (case (:f op)
+                 :add-job (do (add-job! node (:value op))
+                              (assoc op :type :ok))
+                 :read    (do ; (info (with-out-str (pprint (jobs node))))
+                              (assoc op
+                                     :type :ok
+                                     :value (read-runs test))))
+               )))
+
+  (teardown! [_ test]))
+
+(defn resurrection-hub
+  "Mesos and Aurora like to crash all the time. We have to bring them back to
+  life regularly. Wraps another nemesis."
+  [nemesis]
   (reify client/Client
     (setup! [this test node]
-      (info node "setting up client")
-      this)
-    (teardown! [this test])
-    (invoke!   [this test op] (assoc op :type :ok))))
+      (resurrection-hub (client/setup! nemesis test node)))
+
+    (invoke! [this test op]
+      (if (not= :resurrect (:f op))
+        (client/invoke! nemesis test op)
+        (do (c/on-many (:nodes test)
+                       (let [node (keyword c/*host*)]
+                         (mesos/start-master! test node)
+                         (mesos/start-slave! test node)
+                         (start! test node)))
+            (assoc op :value :resurrection-complete))))
+
+    (teardown! [this test]
+      (client/teardown! nemesis test))))
+
 
 (defn simple-test
   [mesos-version]
@@ -158,29 +190,29 @@
          :name      "aurora"
          :os        debian/os
          :db        (db mesos-version)
-         :client    noop ;; (->Client nil)
-         ;; :generator (gen/phases
-         ;;             (->> (add-job)
-         ;;                  (gen/delay 30)
-         ;;                  (gen/stagger 30)
-         ;;                  (gen/nemesis
-         ;;                   (gen/seq (cycle [(gen/sleep 200)
-         ;;                                    {:type :info, :f :start}
-         ;;                                    (gen/sleep 200)
-         ;;                                    {:type :info, :f :stop}
-         ;;                                    {:type :info, :f :resurrect}])))
-         ;;                  (gen/time-limit 450))
-         ;;             (gen/nemesis (gen/once {:type :info, :f :stop}))
-         ;;             (gen/nemesis (gen/once {:type :info, :f :resurrect}))
-         ;;             (gen/log "Waiting for executions")
-         ;;             (gen/sleep 400)
-         ;;             (gen/clients
-         ;;              (gen/once
-         ;;               {:type :invoke, :f :read})))
-         ;; :nemesis   (resurrection-hub
-         ;;             (nemesis/partition-random-halves))
-         ;; :checker   (checker/compose
-         ;;             {:aurora (checker)
-         ;;              :perf (checker/perf)})
+         :client    (->Client nil)
+         :generator (gen/phases
+                     (->> (add-job)
+                          (gen/delay 30)
+                          (gen/stagger 30)
+                          (gen/nemesis
+                           (gen/seq (cycle [(gen/sleep 200)
+                                            {:type :info, :f :start}
+                                            (gen/sleep 200)
+                                            {:type :info, :f :stop}
+                                            {:type :info, :f :resurrect}])))
+                          (gen/time-limit 450))
+                     (gen/nemesis (gen/once {:type :info, :f :stop}))
+                     (gen/nemesis (gen/once {:type :info, :f :resurrect}))
+                     (gen/log "Waiting for executions")
+                     (gen/sleep 400)
+                     (gen/clients
+                      (gen/once
+                       {:type :invoke, :f :read})))
+         :nemesis   (resurrection-hub
+                     (nemesis/partition-random-halves))
+         :checker   (checker/compose
+                     {:aurora (checker)
+                      :perf (checker/perf)})
 ))
 
