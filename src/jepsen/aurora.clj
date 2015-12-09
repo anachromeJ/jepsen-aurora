@@ -11,7 +11,9 @@
              [util :as util :refer [meh timeout]]
              [zookeeper :as zk]
              [mesos :as mesos]]
-            [jepsen.os.debian :as debian]))
+            [jepsen.control.util :as cu]
+            [jepsen.os.debian :as debian]
+            [jepsen.chronos.checker :refer [checker epsilon-forgiveness]]))
 
 (def parent-job-dir "/tmp/aurora-jobs/")
 (def slave-job-dir "/tmp/aurora-test/")
@@ -73,6 +75,60 @@
   "Submits a new job to Aurora"
   [node job]
   (c/exec :bash "add-job.sh" (:name job) (:duration job)))
+
+(defn parse-file-time
+  "Date can (maybe depending on locale) emit datetimes with commas to separate
+  fractional seconds, which (even though it's valid ISO8601) confuses
+  clj-time, so we substitute dots for commas before parsing."
+  [t]
+  (when t
+    (time.format/parse formatter (str/replace t \, \.))))
+
+(defn parse-file
+  "Given a node name and a run logfile with a name, start time, and end time,
+  returns a map for that run."
+  [node file-str]
+  (let [[name start end] (str/split file-str #"\n")]
+    {:node  node
+     :name  (Long/parseLong name)
+     :start (parse-file-time start)
+     :end   (parse-file-time end)}))
+
+(defn read-runs
+  "Returns all runs from all nodes."
+  [test]
+  (->> (c/on-many
+         (:nodes test)
+         (->> (cu/ls-full job-dir)
+              (pmap (partial c/exec :cat))
+              (mapv (partial parse-file c/*host*))))
+       vals
+       (reduce concat)))
+
+(defn add-job
+  "Generator for creating new jobs."
+  []
+  (let [id (atom 0)]
+    (reify gen/Generator
+      (op [_ test process]
+        (let [head-start  10 ; Schedule a bit in the future
+              duration    (rand-int 10)
+              epsilon     (+ 10 (rand-int 20))
+              ; Chronos won't schedule tasks concurrently, so we ensure they'll
+              ; never overlap.
+              interval    (+ 1
+                             duration
+                             epsilon
+                             epsilon-forgiveness
+                             (rand-int 30))]
+        {:type   :invoke
+         :f      :add-job
+         :value  {:name     (swap! id inc)
+                  :start    (time/plus (time/now) (time/seconds head-start))
+                  :count    (inc (rand-int 99))
+                  :duration duration
+                  :epsilon  epsilon
+                  :interval interval}})))))
 
 (defn simple-test
   [mesos-version]
