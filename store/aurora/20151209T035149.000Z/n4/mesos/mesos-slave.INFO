@@ -1,0 +1,91 @@
+Log file created at: 2015/12/09 03:55:13
+Running on machine: 9c383fda5168
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1209 03:55:13.011255  4921 logging.cpp:172] INFO level logging started!
+I1209 03:55:13.011396  4921 main.cpp:156] Build: 2015-03-26 13:36:52 by root
+I1209 03:55:13.011405  4921 main.cpp:158] Version: 0.22.0
+I1209 03:55:13.011410  4921 main.cpp:161] Git tag: 0.22.0
+I1209 03:55:13.011415  4921 main.cpp:165] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1209 03:55:13.011461  4921 containerizer.cpp:110] Using isolation: posix/cpu,posix/mem
+I1209 03:55:13.011565  4921 main.cpp:200] Starting Mesos slave
+I1209 03:55:13.011714  4921 slave.cpp:174] Slave started on 1)@10.0.0.5:5051
+I1209 03:55:13.011801  4921 slave.cpp:299] Slave resources: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1209 03:55:13.011821  4921 slave.cpp:328] Slave hostname: n4
+I1209 03:55:13.011826  4921 slave.cpp:329] Slave checkpoint: true
+I1209 03:55:13.018734  4928 state.cpp:35] Recovering state from '/var/lib/mesos/slave/meta'
+I1209 03:55:13.025845  4929 status_update_manager.cpp:197] Recovering status update manager
+I1209 03:55:13.025882  4929 containerizer.cpp:307] Recovering containerizer
+I1209 03:55:13.025976  4929 slave.cpp:3778] Finished recovery
+I1209 03:55:13.158514  4929 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1209 03:55:13.158540  4929 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1209 03:55:13.158548  4929 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1209 03:55:26.428921  4924 detector.cpp:138] Detected a new leader: (id='1')
+I1209 03:55:26.429026  4924 group.cpp:659] Trying to get '/mesos/info_0000000001' in ZooKeeper
+I1209 03:55:26.430104  4924 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1209 03:55:26.430214  4924 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1209 03:55:26.430557  4922 status_update_manager.cpp:171] Pausing sending status updates
+I1209 03:55:26.430611  4924 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1209 03:55:26.430631  4924 slave.cpp:660] Detecting new master
+I1209 03:56:13.035658  4924 slave.cpp:3618] Current disk usage 32.20%. Max allowed age: 4.046160501993090days
+I1209 03:57:13.041882  4924 slave.cpp:3618] Current disk usage 38.03%. Max allowed age: 3.638116775090984days
+I1209 03:57:26.909406  4924 slave.cpp:2918] master@10.0.0.2:5050 exited
+W1209 03:57:26.909452  4924 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+I1209 03:57:36.152818  4925 detector.cpp:138] Detected a new leader: (id='2')
+I1209 03:57:36.152920  4925 group.cpp:659] Trying to get '/mesos/info_0000000002' in ZooKeeper
+I1209 03:57:36.153296  4925 detector.cpp:452] A new leading master (UPID=master@10.0.0.4:5050) is detected
+I1209 03:57:36.154772  4925 slave.cpp:624] New master detected at master@10.0.0.4:5050
+I1209 03:57:36.154904  4925 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1209 03:57:36.154930  4925 slave.cpp:660] Detecting new master
+I1209 03:57:36.154950  4925 status_update_manager.cpp:171] Pausing sending status updates
+I1209 03:57:37.095402  4925 slave.cpp:792] Registered with master master@10.0.0.4:5050; given slave ID 20151209-035531-67108874-5050-4921-S0
+I1209 03:57:37.095535  4923 status_update_manager.cpp:178] Resuming sending status updates
+I1209 03:58:13.052482  4923 slave.cpp:3618] Current disk usage 38.33%. Max allowed age: 3.616819384252153days
+I1209 03:59:13.058918  4923 slave.cpp:3618] Current disk usage 38.91%. Max allowed age: 3.575973380786227days
+I1209 04:00:13.065189  4929 slave.cpp:3618] Current disk usage 40.59%. Max allowed age: 3.458353228920092days
+I1209 04:01:13.066714  4929 slave.cpp:3618] Current disk usage 40.62%. Max allowed age: 3.456441640813622days
+I1209 04:02:13.073475  4929 slave.cpp:3618] Current disk usage 40.62%. Max allowed age: 3.456431643714815days
+I1209 04:03:13.075352  4929 slave.cpp:3618] Current disk usage 40.62%. Max allowed age: 3.456423788851470days
+I1209 04:03:23.166484  4929 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+W1209 04:03:33.173594  4928 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=55184e0a7050000) expiration
+I1209 04:03:33.175290  4928 group.cpp:472] ZooKeeper session expired
+I1209 04:03:33.175550  4922 detector.cpp:138] Detected a new leader: None
+I1209 04:03:33.175741  4922 slave.cpp:617] Lost leading master
+I1209 04:03:33.175770  4922 slave.cpp:660] Detecting new master
+I1209 04:03:33.175842  4922 status_update_manager.cpp:171] Pausing sending status updates
+I1209 04:03:33.192236  4922 slave.cpp:2918] master@10.0.0.4:5050 exited
+W1209 04:03:33.192276  4922 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+I1209 04:04:13.112803  4927 slave.cpp:3618] Current disk usage 40.62%. Max allowed age: 3.456365234415637days
+I1209 04:04:37.134848  4927 slave.cpp:2908] No pings from master received within 75secs
+I1209 04:05:13.148239  4927 slave.cpp:3618] Current disk usage 40.62%. Max allowed age: 3.456310250372234days
+I1209 04:06:13.149417  4927 slave.cpp:3618] Current disk usage 40.62%. Max allowed age: 3.456252410014884days
+I1209 04:06:40.949121  4927 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1209 04:06:40.951110  4927 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1209 04:06:40.951131  4927 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1209 04:06:41.389904  4926 detector.cpp:138] Detected a new leader: (id='4')
+I1209 04:06:41.390007  4926 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1209 04:06:41.390352  4926 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1209 04:06:41.390405  4926 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1209 04:06:41.390506  4926 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1209 04:06:41.390527  4926 slave.cpp:660] Detecting new master
+I1209 04:06:41.390543  4926 status_update_manager.cpp:171] Pausing sending status updates
+I1209 04:06:43.690171  4926 slave.cpp:860] Re-registered with master master@10.0.0.3:5050
+I1209 04:06:43.690626  4926 slave.cpp:2010] Updated checkpointed resources from  to 
+I1209 04:06:43.694686  4923 status_update_manager.cpp:178] Resuming sending status updates
+W1209 04:06:45.940678  4929 slave.cpp:1911] Ignoring updating pid for framework 20151209-035531-67108874-5050-4921-0000 because it does not exist
+I1209 04:07:13.159051  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456158865733241days
+I1209 04:08:13.169008  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456147440477477days
+I1209 04:09:13.183737  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456134587064734days
+I1209 04:10:13.204802  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456090314198611days
+I1209 04:11:13.220368  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456095312748009days
+I1209 04:12:13.229290  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456083173413750days
+I1209 04:13:13.234905  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456070320001007days
+I1209 04:14:13.245570  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456059608823715days
+I1209 04:15:13.258832  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456047469489456days
+I1209 04:16:13.271999  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456034616076713days
+I1209 04:17:13.285797  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456023904899433days
+I1209 04:18:13.295076  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.456011765565174days
+I1209 04:19:13.310154  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.455998912152431days
+I1209 04:20:13.323204  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.455988200975139days
+I1209 04:21:13.338562  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.455975347562396days
+I1209 04:22:13.352653  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.455962494149653days
+I1209 04:23:13.368484  4922 slave.cpp:3618] Current disk usage 40.63%. Max allowed age: 3.455951068893877days
