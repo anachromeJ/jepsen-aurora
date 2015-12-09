@@ -80,6 +80,15 @@
   [node job]
   (c/exec :bash "add-job.sh" (:name job) (:duration job)))
 
+(def formatter (time.format/formatters :date-time))
+
+(defn interval-str
+  "Given a job, emits an ISO8601 repeating interval representation."
+  [job]
+  (str "R" (:count job) "/"
+       (time.format/unparse formatter (:start job))
+       "/PT" (:interval job) "S"))
+
 (defn parse-file-time
   "Date can (maybe depending on locale) emit datetimes with commas to separate
   fractional seconds, which (even though it's valid ISO8601) confuses
