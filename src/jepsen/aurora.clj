@@ -143,13 +143,22 @@
                   :epsilon  epsilon
                   :interval interval}})))))
 
+(def noop
+  "Does nothing."
+  (reify Client
+    (setup! [this test node]
+      (info node "setting up client")
+      this)
+    (teardown! [this test])
+    (invoke!   [this test op] (assoc op :type :ok))))
+
 (defn simple-test
   [mesos-version]
   (assoc tests/noop-test
          :name      "aurora"
          :os        debian/os
          :db        (db mesos-version)
-         ;; :client    (->Client nil)
+         :client    noop ;; (->Client nil)
          ;; :generator (gen/phases
          ;;             (->> (add-job)
          ;;                  (gen/delay 30)
@@ -171,7 +180,7 @@
          ;; :nemesis   (resurrection-hub
          ;;             (nemesis/partition-random-halves))
          ;; :checker   (checker/compose
-         ;;             {:chronos (checker)
+         ;;             {:aurora (checker)
          ;;              :perf (checker/perf)})
 ))
 
