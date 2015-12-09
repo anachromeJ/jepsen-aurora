@@ -145,7 +145,7 @@
 
 (def noop
   "Does nothing."
-  (reify Client
+  (reify client/Client
     (setup! [this test node]
       (info node "setting up client")
       this)
