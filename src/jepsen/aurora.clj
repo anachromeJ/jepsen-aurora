@@ -2,6 +2,7 @@
   "Sets up Aurora"
   (:require [clojure.tools.logging :refer :all]
             [clojure.java.io :as io]
+            [clojure.java.shell :as shell]
             [clojure.string :as str]
             [clj-time.core :as time]
             [clj-time.format :as time.format]            
@@ -82,7 +83,7 @@
 (defn add-job!
   "Submits a new job to Aurora"
   [node job]
-  (c/exec :bash "/add-job.sh" (:name job) (:duration job)))
+  (shell/sh "/add-job.sh" (:name job) (:duration job)))
 
 (def formatter (time.format/formatters :date-time))
 
