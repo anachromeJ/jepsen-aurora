@@ -11,6 +11,7 @@
              [tests :as tests]
              [control :as c :refer [|]]
              [checker :as checker]
+             [nemesis :as nemesis]
              [generator :as gen]
              [util :as util :refer [meh timeout]]
              [zookeeper :as zk]
