@@ -13,7 +13,7 @@
              [mesos :as mesos]]
             [jepsen.control.util :as cu]
             [jepsen.os.debian :as debian]
-            [jepsen.chronos.checker :refer [checker epsilon-forgiveness]]))
+            [jepsen.aurora.checker :refer [checker epsilon-forgiveness]]))
 
 (def parent-job-dir "/tmp/aurora-jobs/")
 (def slave-job-dir "/tmp/aurora-test/")
@@ -114,7 +114,7 @@
         (let [head-start  10 ; Schedule a bit in the future
               duration    (rand-int 10)
               epsilon     (+ 10 (rand-int 20))
-              ; Chronos won't schedule tasks concurrently, so we ensure they'll
+              ; (Chronos) won't schedule tasks concurrently, so we ensure they'll
               ; never overlap.
               interval    (+ 1
                              duration
