@@ -1,0 +1,114 @@
+I1210 23:11:00.398618 16798 logging.cpp:172] INFO level logging started!
+I1210 23:11:00.398908 16798 main.cpp:156] Build: 2015-03-26 13:36:52 by root
+I1210 23:11:00.398921 16798 main.cpp:158] Version: 0.22.0
+I1210 23:11:00.398926 16798 main.cpp:161] Git tag: 0.22.0
+I1210 23:11:00.398931 16798 main.cpp:165] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1210 23:11:00.412137 16798 containerizer.cpp:110] Using isolation: posix/cpu,posix/mem
+I1210 23:11:00.424759 16798 main.cpp:200] Starting Mesos slave
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@716: Client environment:host.name=bf4dc8a38c05
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/slave
+2015-12-10 23:11:00,425:16798(0x7f3220a97700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7f3228ec4200 sessionId=0 sessionPasswd=<null> context=0x7f32140010e0 flags=0
+I1210 23:11:00.428673 16798 slave.cpp:174] Slave started on 1)@10.0.0.5:5051
+I1210 23:11:00.431895 16798 slave.cpp:299] Slave resources: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1210 23:11:00.431928 16798 slave.cpp:328] Slave hostname: n4
+I1210 23:11:00.431936 16798 slave.cpp:329] Slave checkpoint: true
+I1210 23:11:00.444628 16805 state.cpp:35] Recovering state from '/var/lib/mesos/slave/meta'
+I1210 23:11:00.444823 16805 status_update_manager.cpp:197] Recovering status update manager
+I1210 23:11:00.444855 16805 containerizer.cpp:307] Recovering containerizer
+I1210 23:11:00.444964 16805 slave.cpp:3778] Finished recovery
+2015-12-10 23:11:00,463:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-10 23:11:00,556:16798(0x7f321d25a700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.5:2181], sessionId=0x2518e2973c90000, negotiated timeout=10000
+I1210 23:11:00.556632 16805 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1210 23:11:00.556654 16805 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1210 23:11:00.556663 16805 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1210 23:11:00.676347 16805 detector.cpp:138] Detected a new leader: (id='4')
+I1210 23:11:00.676435 16805 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1210 23:11:00.694367 16805 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1210 23:11:00.694437 16805 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1210 23:11:00.707728 16808 status_update_manager.cpp:171] Pausing sending status updates
+I1210 23:11:00.707926 16805 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1210 23:11:00.707958 16805 slave.cpp:660] Detecting new master
+I1210 23:11:00.709547 16805 slave.cpp:2918] master@10.0.0.2:5050 exited
+W1210 23:11:00.709583 16805 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+2015-12-10 23:11:04,120:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.5:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-10 23:11:04,120:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+I1210 23:11:04.129189 16808 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+2015-12-10 23:11:04,129:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-10 23:11:04,129:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-10 23:11:04,140:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-10 23:11:04,141:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-10 23:11:04,214:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-10 23:11:04,214:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.6:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-10 23:11:07,551:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-10 23:11:07,561:16798(0x7f321d25a700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.5:2181], sessionId=0x2518e2973c90000, negotiated timeout=10000
+I1210 23:11:07.561709 16810 group.cpp:313] Group process (group(1)@10.0.0.5:5051) reconnected to ZooKeeper
+I1210 23:11:07.561745 16810 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1210 23:11:16.074825 16811 detector.cpp:138] Detected a new leader: (id='8')
+I1210 23:11:16.079576 16811 group.cpp:659] Trying to get '/mesos/info_0000000008' in ZooKeeper
+I1210 23:11:16.080574 16811 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1210 23:11:16.080612 16811 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1210 23:11:16.080716 16811 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1210 23:11:16.087016 16807 status_update_manager.cpp:171] Pausing sending status updates
+I1210 23:11:16.087066 16811 slave.cpp:660] Detecting new master
+I1210 23:11:16.520414 16811 slave.cpp:792] Registered with master master@10.0.0.2:5050; given slave ID 20151210-231101-33554442-5050-8466-S1
+I1210 23:11:16.520824 16811 status_update_manager.cpp:178] Resuming sending status updates
+2015-12-10 23:11:22,769:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 16ms
+2015-12-10 23:11:26,141:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 38ms
+2015-12-10 23:11:29,493:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 18ms
+I1210 23:12:00.446013 16811 slave.cpp:3618] Current disk usage 27.68%. Max allowed age: 4.362208783491806days
+I1210 23:13:00.459264 16811 slave.cpp:3618] Current disk usage 27.68%. Max allowed age: 4.362183076666319days
+I1210 23:14:00.472929 16811 slave.cpp:3618] Current disk usage 27.68%. Max allowed age: 4.362158083919317days
+2015-12-10 23:14:50,063:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.5:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-10 23:14:50,063:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+I1210 23:14:50.063356 16811 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+2015-12-10 23:14:50,076:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-10 23:14:56,747:16798(0x7f321d25a700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 4ms)
+2015-12-10 23:14:56,747:16798(0x7f321d25a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-10 23:14:56,757:16798(0x7f321d25a700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.3:2181], sessionId=0x2518e2973c90000, negotiated timeout=10000
+I1210 23:14:56.757480 16807 group.cpp:313] Group process (group(1)@10.0.0.5:5051) reconnected to ZooKeeper
+I1210 23:14:56.758824 16807 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1210 23:15:00.474318 16806 slave.cpp:3618] Current disk usage 27.68%. Max allowed age: 4.362087390149225days
+I1210 23:15:04.032135 16806 detector.cpp:138] Detected a new leader: (id='11')
+I1210 23:15:04.032279 16806 group.cpp:659] Trying to get '/mesos/info_0000000011' in ZooKeeper
+I1210 23:15:04.032912 16806 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1210 23:15:04.032948 16806 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1210 23:15:04.033133 16812 status_update_manager.cpp:171] Pausing sending status updates
+I1210 23:15:04.033192 16806 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1210 23:15:04.033210 16806 slave.cpp:660] Detecting new master
+I1210 23:15:08.032114 16806 slave.cpp:860] Re-registered with master master@10.0.0.3:5050
+I1210 23:15:08.032253 16806 status_update_manager.cpp:178] Resuming sending status updates
+I1210 23:15:08.033004 16806 slave.cpp:2010] Updated checkpointed resources from  to 
+W1210 23:15:12.219133 16805 slave.cpp:1911] Ignoring updating pid for framework 20151210-231101-33554442-5050-8466-0000 because it does not exist
+I1210 23:16:00.477740 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.362005985201840days
+I1210 23:17:00.484315 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361926008411436days
+I1210 23:18:00.491137 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361827465580394days
+/usr/sbin/mesos-slave already running.
+2015-12-10 23:18:17,732:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 17ms
+2015-12-10 23:18:21,086:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 19ms
+2015-12-10 23:18:27,769:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 12ms
+I1210 23:19:00.495158 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361735349455730days
+I1210 23:20:00.502254 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361716069336609days
+I1210 23:21:00.508980 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361699645531435days
+/usr/sbin/mesos-slave already running.
+2015-12-10 23:21:34,647:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 16ms
+2015-12-10 23:21:37,994:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 13ms
+2015-12-10 23:21:44,689:16798(0x7f321d25a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 22ms
+I1210 23:22:00.509894 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361687506197176days
+I1210 23:23:00.514618 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361675366862917days
+I1210 23:24:00.521075 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361662513450174days
+I1210 23:25:00.524791 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361651088194398days
+I1210 23:26:00.525485 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361629665839827days
+I1210 23:27:00.533221 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361605387171308days
+I1210 23:28:00.533861 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361594675994028days
+I1210 23:29:00.542026 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361582536659768days
+I1210 23:30:00.545702 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361570397325509days
+I1210 23:31:00.552753 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361552545363357days
+I1210 23:32:00.555251 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361539691950614days
+I1210 23:33:00.561677 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361521125909989days
+I1210 23:34:00.562770 16808 slave.cpp:3618] Current disk usage 27.69%. Max allowed age: 4.361508986575729days
