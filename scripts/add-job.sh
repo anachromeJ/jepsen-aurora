@@ -20,7 +20,7 @@ echo "MEW=\$(mktemp -p " $JOB_RESULT_DIR "); " \
 # join arguments with a separator
 function join { local IFS="$1"; shift; echo "$*"; }
 
-ALLTASKS=join , $(for i in {1..$COUNT}; do printf $NAME; printf ' '; done)
+ALLTASKS=$(join ", " $(for i in {1..$COUNT}; do printf $NAME; printf ' '; done))
 
 TEMPCONFIG=$TEMPJOB.aurora
 echo "pkg_path = '$TEMPJOB'
