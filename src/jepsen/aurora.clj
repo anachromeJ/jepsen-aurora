@@ -83,6 +83,8 @@
   [node job]
   (shell/sh "/jepsen/jepsen-aurora/scripts/add-job.sh" (:name job) (:duration job)))
 
+(def formatter (time.format/formatters :date-time))
+
 (defn parse-file-time
   "Date can (maybe depending on locale) emit datetimes with commas to separate
   fractional seconds, which (even though it's valid ISO8601) confuses
