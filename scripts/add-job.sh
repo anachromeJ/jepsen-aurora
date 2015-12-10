@@ -3,7 +3,6 @@
 NAME=job${1}
 TASKNAME=${NAME}_task
 DURATION=$2
-COUNT=$3
 JOB_SCRIPT_DIR=/tmp/aurora-jobs/
 JOB_RESULT_DIR=/tmp/aurora-test/
 AURORA_CLIENT=/jepsen/jepsen-aurora/resources/client.pex
@@ -16,11 +15,6 @@ echo "MEW=\$(mktemp -p " $JOB_RESULT_DIR "); " \
     "sleep " $DURATION "; " \
     "date -u -Ins >> \$MEW;" \
     > $TEMPJOB
-
-# join arguments with a separator
-function join { local IFS="$1"; shift; echo "$*"; }
-
-ALLTASKS=$(join ", " $(for (( i=0; i < $COUNT; i++)); do printf $NAME; printf ' '; done))
 
 TEMPCONFIG=$TEMPJOB.aurora
 echo "pkg_path = '$TEMPJOB'
@@ -40,7 +34,7 @@ $NAME = Process(
 
 # describe the task
 $TASKNAME = SequentialTask(
-  processes = [install, $NAME, $NAME],
+  processes = [install, $NAME],
   resources = Resources(cpu = 1, ram = 1*MB, disk=8*MB))
 
 jobs = [
