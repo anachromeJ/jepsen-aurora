@@ -59,7 +59,7 @@
         (info node "stopping aurora")
         (c/su (cu/grepkill "aurora-scheduler"))
         (db/teardown! mesos test node)
-        (c/su (c/exec :rm :-rf job-result-dir)))
+        ;; (c/su (c/exec :rm :-rf job-result-dir)))
 
       db/LogFiles
       (log-files [_ test node]
