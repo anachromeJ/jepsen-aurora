@@ -40,7 +40,7 @@ $NAME = Process(
 
 # describe the task
 $TASKNAME = SequentialTask(
-  processes = [install, $ALLTASKS],
+  processes = [install, $NAME, $NAME],
   resources = Resources(cpu = 1, ram = 1*MB, disk=8*MB))
 
 jobs = [
