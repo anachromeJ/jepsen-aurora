@@ -106,7 +106,7 @@
   [node file-str]
   (let [[name start end] (str/split file-str #"\n")]
     {:node  node
-     :name  (Long/parseLong name)
+     :name  (Long/parseLong (subs name 3)) ;; take away the first three characters ('job')
      :start (parse-file-time start)
      :end   (parse-file-time end)}))
 
