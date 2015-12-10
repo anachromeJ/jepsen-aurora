@@ -1,12 +1,13 @@
 #!/bin/bash
 
-NAME=$1
+NAME=job${1}
 TASKNAME=${NAME}_task
 DURATION=$2
 JOB_SCRIPT_DIR=/tmp/aurora-jobs/
 JOB_RESULT_DIR=/tmp/aurora-test/
 AURORA_CLIENT=/jepsen/jepsen-aurora/resources/client.pex
 
+mkdir -p $JOB_SCRIPT_DIR
 TEMPJOB=$(mktemp -p $JOB_SCRIPT_DIR)
 echo "MEW=\$(mktemp -p " $JOB_RESULT_DIR "); " \
     "echo \"" $NAME "\" >> $MEW; " \
