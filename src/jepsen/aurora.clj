@@ -192,7 +192,7 @@
          :client    (->Client nil)
          :generator (gen/phases
                      (->> (add-job)
-                          (gen/delay 30)
+                          (gen/delay 120)
                           (gen/stagger 30)
                           (gen/nemesis
                            (gen/seq (cycle [(gen/sleep 100)
