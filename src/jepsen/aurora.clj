@@ -32,7 +32,9 @@
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/install-aurora.sh" :-o "/install-aurora.sh")
    (c/exec :bash "/install-aurora.sh")
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
+   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/add-job.sh" :-o "/add-job.sh")
    (c/exec :mkdir :-p job-result-dir)
+   (c/exec :mkdir :-p job-script-dir)
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/thermos/thermos_executor.pex" :-o "/thermos_executor.pex")
    ;; (c/exec :mkdir :-p "/etc/aurora")
    ;; (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/clusters.json" :-o "/etc/aurora/clusters.json")
@@ -82,9 +84,9 @@
 (defn add-job!
   "Submits a new job to Aurora"
   [node job]
-  (shell/sh "/jepsen/jepsen-aurora/scripts/add-job.sh" 
-            (str (:name job))
-            (str (:duration job))))
+  (c/exec "/add-job.sh" 
+          (str (:name job))
+          (str (:duration job))))
 
 (def formatter (time.format/formatters :date-time))
 
