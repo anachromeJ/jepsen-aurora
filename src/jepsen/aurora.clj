@@ -132,7 +132,8 @@
               interval    (+ 1
                              duration
                              epsilon
-                             epsilon-forgiveness)]
+                             epsilon-forgiveness
+                             60)]
         {:type   :invoke
          :f      :add-job
          :value  {:name     (swap! id inc)
@@ -140,7 +141,7 @@
                   :count    300 ;; actually running infinitely
                   :duration duration
                   :epsilon  epsilon
-                  :interval 60}}))))) ;; always 60 seconds
+                  :interval interval}}))))) ;; always 60 seconds
 
 (defrecord Client [node]
   client/Client
@@ -192,7 +193,7 @@
          :client    (->Client nil)
          :generator (gen/phases
                      (->> (add-job)
-                          (gen/delay 60)
+                          (gen/delay 30)
                           (gen/stagger 30)
                           (gen/nemesis
                            (gen/seq (cycle [(gen/sleep 120)
