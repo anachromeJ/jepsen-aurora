@@ -32,7 +32,7 @@ else
 fi
 
 # install mesos egg and build thermos
-if [[! -e "/aurora"]]; then
+if [[ ! -e "/aurora" ]]; then
     cd /
     apt-get update
     apt-get -y install gcc bison \
@@ -55,6 +55,12 @@ if [[! -e "/aurora"]]; then
     dpkg --install mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
 
     ./pants binary src/main/python/apache/aurora/executor:thermos_executor
+    ./pants binary src/main/python/apache/thermos/runner:thermos_runner
+    
+    # Package runner within executor.
+    build-support/embed_runner_in_executor.py
+    
+    chmod +x /aurora/dist/thermos_executor.pex
     popd
 else
     echo "thermos already installed, exiting..."
