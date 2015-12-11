@@ -21,6 +21,7 @@ echo "
 # run the script
 $NAME = Process(
   name = '$NAME',
+  min_duration = $(($DURATION * 2)),
   cmdline = '$(cat ${TEMPJOB})')
 
 # describe the task
