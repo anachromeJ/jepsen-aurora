@@ -115,6 +115,8 @@
               (str "--recovery_timeout=30secs")
               (str "--work_dir="  slave-dir)
               (str "--master="    (zk-uri test))
+              ;; having one single quote works for some reason
+              ;; anymore or anywhere else and... nope (wtf)
               (str "--resources='cpus:10;mem:1000;disk:1000")
               :>> (str log-dir "/slave.stdout")
               (c/lit "2>&1")))))
