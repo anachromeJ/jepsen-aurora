@@ -115,7 +115,7 @@
               (str "--recovery_timeout=30secs")
               (str "--work_dir="  slave-dir)
               (str "--master="    (zk-uri test))
-              (str "--resources=cpus:10;mem:1000;disk:1000")
+              (str "--resources='cpus:10;mem:1000;disk:1000'")
               :>> (str log-dir "/slave.stdout")
               (c/lit "2>&1")))))
 
