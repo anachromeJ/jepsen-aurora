@@ -1,0 +1,379 @@
+Log file created at: 2015/12/11 09:08:01
+Running on machine: cb0c4844a6ce
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 09:08:01.360682 13806 logging.cpp:172] INFO level logging started!
+I1211 09:08:01.360959 13806 logging.cpp:177] Logging to /var/log/mesos
+I1211 09:08:01.360986 13806 main.cpp:181] Build: 2015-03-26 13:36:52 by root
+I1211 09:08:01.361003 13806 main.cpp:183] Version: 0.22.0
+I1211 09:08:01.361013 13806 main.cpp:186] Git tag: 0.22.0
+I1211 09:08:01.361022 13806 main.cpp:190] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1211 09:08:01.391598 13806 leveldb.cpp:176] Opened db in 27.036241ms
+I1211 09:08:01.393172 13806 leveldb.cpp:183] Compacted db in 1.42686ms
+I1211 09:08:01.393230 13806 leveldb.cpp:198] Created db iterator in 11508ns
+I1211 09:08:01.393249 13806 leveldb.cpp:204] Seeked to beginning of db in 760ns
+I1211 09:08:01.393260 13806 leveldb.cpp:273] Iterated through 0 keys in the db in 415ns
+I1211 09:08:01.393308 13806 replica.cpp:744] Replica recovered with log positions 0 -> 0 with 1 holes and 0 unlearned
+I1211 09:08:01.395982 13816 log.cpp:238] Attempting to join replica to ZooKeeper group
+I1211 09:08:01.396164 13816 recover.cpp:449] Starting replica recovery
+I1211 09:08:01.396278 13816 recover.cpp:475] Replica is in EMPTY status
+I1211 09:08:01.399137 13806 main.cpp:306] Starting Mesos master
+I1211 09:08:01.399600 13806 master.cpp:349] Master 20151211-090801-67108874-5050-13806 (n3) started on 10.0.0.4:5050
+I1211 09:08:01.399659 13806 master.cpp:397] Master allowing unauthenticated frameworks to register
+I1211 09:08:01.399677 13806 master.cpp:402] Master allowing unauthenticated slaves to register
+I1211 09:08:01.403816 13812 hierarchical.hpp:287] Initialized hierarchical allocator process
+I1211 09:08:01.403988 13812 whitelist_watcher.cpp:79] No whitelist given
+I1211 09:08:01.412093 13818 contender.cpp:131] Joining the ZK group
+I1211 09:08:01.412436 13812 master.cpp:1295] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1211 09:08:01.456764 13812 group.cpp:313] Group process (group(4)@10.0.0.4:5050) connected to ZooKeeper
+I1211 09:08:01.456820 13812 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 09:08:01.456833 13812 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 09:08:01.465750 13817 group.cpp:313] Group process (group(3)@10.0.0.4:5050) connected to ZooKeeper
+I1211 09:08:01.465853 13817 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1211 09:08:01.465881 13817 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 09:08:01.466100 13816 group.cpp:313] Group process (group(1)@10.0.0.4:5050) connected to ZooKeeper
+I1211 09:08:01.466145 13816 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 09:08:01.466159 13816 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+I1211 09:08:01.466449 13812 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:01.509011 13816 group.cpp:313] Group process (group(2)@10.0.0.4:5050) connected to ZooKeeper
+I1211 09:08:01.509173 13816 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1211 09:08:01.509196 13816 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+I1211 09:08:01.523569 13815 contender.cpp:247] New candidate (id='4') has entered the contest for leadership
+I1211 09:08:01.532238 13815 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:01.537602 13815 detector.cpp:138] Detected a new leader: (id='4')
+I1211 09:08:01.537751 13815 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1211 09:08:01.545275 13817 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:01.546607 13811 network.hpp:424] ZooKeeper group memberships changed
+I1211 09:08:01.546727 13811 group.cpp:659] Trying to get '/mesos/log_replicas/0000000003' in ZooKeeper
+I1211 09:08:01.547372 13815 detector.cpp:452] A new leading master (UPID=master@10.0.0.4:5050) is detected
+I1211 09:08:01.548738 13811 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.4:5050 }
+I1211 09:08:01.557471 13815 master.cpp:1356] The newly elected leader is master@10.0.0.4:5050 with id 20151211-090801-67108874-5050-13806
+I1211 09:08:01.557626 13815 master.cpp:1369] Elected as the leading master!
+I1211 09:08:01.557658 13815 master.cpp:1187] Recovering from registrar
+I1211 09:08:01.557831 13815 registrar.cpp:313] Recovering registrar
+I1211 09:08:01.613034 13811 network.hpp:424] ZooKeeper group memberships changed
+I1211 09:08:01.613287 13813 group.cpp:659] Trying to get '/mesos/log_replicas/0000000003' in ZooKeeper
+I1211 09:08:01.614473 13813 group.cpp:659] Trying to get '/mesos/log_replicas/0000000004' in ZooKeeper
+I1211 09:08:01.625644 13812 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.4:5050 }
+I1211 09:08:01.626381 13812 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:01.626626 13812 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1211 09:08:01.628082 13816 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:01.628228 13815 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1211 09:08:01.639070 13816 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:01.654429 13813 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:02.226456 13811 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:02.378238 13817 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:02.380445 13817 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1211 09:08:02.382868 13815 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1211 09:08:02.407721 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:02.408262 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 548756ns
+I1211 09:08:02.408035 13816 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:02.413969 13814 network.hpp:424] ZooKeeper group memberships changed
+I1211 09:08:02.414160 13814 group.cpp:659] Trying to get '/mesos/log_replicas/0000000003' in ZooKeeper
+I1211 09:08:02.427754 13818 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:02.428176 13814 group.cpp:659] Trying to get '/mesos/log_replicas/0000000004' in ZooKeeper
+I1211 09:08:02.429731 13813 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:02.430165 13815 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 09:08:02.430572 13814 group.cpp:659] Trying to get '/mesos/log_replicas/0000000005' in ZooKeeper
+I1211 09:08:02.433600 13814 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.3:5050, log-replica(1)@10.0.0.4:5050 }
+I1211 09:08:02.528817 13814 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:02.783502 13818 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:02.795477 13811 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:03.030781 13816 replica.cpp:641] Replica in EMPTY status received a broadcasted recover request
+I1211 09:08:03.030999 13816 recover.cpp:195] Received a recover response from a replica in EMPTY status
+I1211 09:08:03.041791 13817 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1211 09:08:03.043349 13817 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1211 09:08:03.043540 13817 recover.cpp:566] Updating replica status to STARTING
+I1211 09:08:03.046804 13817 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 2.940481ms
+I1211 09:08:03.048902 13817 replica.cpp:323] Persisted replica status to STARTING
+I1211 09:08:03.049062 13817 recover.cpp:475] Replica is in STARTING status
+I1211 09:08:03.049653 13813 replica.cpp:641] Replica in STARTING status received a broadcasted recover request
+I1211 09:08:03.050132 13813 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1211 09:08:03.052163 13814 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1211 09:08:03.068864 13818 recover.cpp:195] Received a recover response from a replica in STARTING status
+I1211 09:08:03.069243 13818 recover.cpp:566] Updating replica status to VOTING
+I1211 09:08:03.075569 13818 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 6.036776ms
+I1211 09:08:03.076460 13818 replica.cpp:323] Persisted replica status to VOTING
+I1211 09:08:03.076567 13818 recover.cpp:580] Successfully joined the Paxos group
+I1211 09:08:03.076674 13818 recover.cpp:464] Recover process terminated
+I1211 09:08:03.076818 13818 log.cpp:660] Attempting to start the writer
+I1211 09:08:03.080451 13817 replica.cpp:477] Replica received implicit promise request with proposal 1
+I1211 09:08:03.082931 13817 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 1.740318ms
+I1211 09:08:03.083003 13817 replica.cpp:345] Persisted promised to 1
+I1211 09:08:03.105357 13817 replica.cpp:641] Replica in VOTING status received a broadcasted recover request
+I1211 09:08:03.133272 13817 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:03.331053 13816 replica.cpp:641] Replica in VOTING status received a broadcasted recover request
+I1211 09:08:03.353888 13812 replica.cpp:378] Replica received explicit promise request for position 0 with proposal 0
+I1211 09:08:03.410759 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:03.411499 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 747606ns
+I1211 09:08:03.473376 13814 replica.cpp:378] Replica received explicit promise request for position 0 with proposal 2
+I1211 09:08:03.475934 13814 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 2.39519ms
+I1211 09:08:03.476119 13814 replica.cpp:679] Persisted action at 0
+I1211 09:08:03.484560 13813 replica.cpp:511] Replica received write request for position 0
+I1211 09:08:03.484748 13813 leveldb.cpp:438] Reading position from leveldb took 35516ns
+I1211 09:08:03.487078 13813 leveldb.cpp:343] Persisting action (14 bytes) to leveldb took 2.273323ms
+I1211 09:08:03.487393 13813 replica.cpp:679] Persisted action at 0
+I1211 09:08:03.492439 13815 replica.cpp:658] Replica received learned notice for position 0
+I1211 09:08:03.500447 13815 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 3.288747ms
+I1211 09:08:03.503140 13815 replica.cpp:679] Persisted action at 0
+I1211 09:08:03.503175 13815 replica.cpp:664] Replica learned NOP action at position 0
+I1211 09:08:03.953354 13817 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:04.031224 13818 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:04.059801 13812 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:04.413420 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:04.414647 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.230817ms
+I1211 09:08:05.179782 13811 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:05.415256 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:05.415601 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 356103ns
+I1211 09:08:06.416322 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:06.416805 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 498965ns
+I1211 09:08:07.424482 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:07.424640 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 168658ns
+I1211 09:08:08.432296 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:08.432484 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 199662ns
+I1211 09:08:08.506914 13812 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:08.990068 13815 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:09.433529 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:09.433811 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 285170ns
+I1211 09:08:10.434101 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:10.434417 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 324418ns
+I1211 09:08:11.435657 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:11.440634 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.979129ms
+I1211 09:08:12.443382 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:12.444936 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.562512ms
+I1211 09:08:13.458412 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:13.459321 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 920183ns
+I1211 09:08:14.461570 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:14.461727 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 168684ns
+I1211 09:08:15.461999 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:15.462232 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 242684ns
+I1211 09:08:16.166399 13817 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:16.464545 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:16.464764 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 229241ns
+I1211 09:08:17.468235 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:17.468431 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 208723ns
+I1211 09:08:18.470072 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:18.470219 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 156548ns
+I1211 09:08:19.470854 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:19.471035 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 190884ns
+I1211 09:08:20.471735 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:20.475391 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 3.656292ms
+I1211 09:08:20.660087 13811 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:21.476310 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:21.477569 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.265222ms
+I1211 09:08:22.478688 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:22.478900 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 434555ns
+I1211 09:08:23.480208 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:23.480573 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 378921ns
+I1211 09:08:23.878715 13814 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:08:24.482133 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:24.482345 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 223433ns
+I1211 09:08:24.808569 13814 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:08:25.250243 13811 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:08:25.482686 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:25.482863 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 187335ns
+I1211 09:08:26.483721 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:26.483896 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 181309ns
+I1211 09:08:27.484313 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:27.484472 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 167276ns
+I1211 09:08:28.488374 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:28.488611 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 244494ns
+I1211 09:08:29.489413 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:29.489650 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 249386ns
+I1211 09:08:30.490064 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:30.490293 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 255231ns
+I1211 09:08:31.491117 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:31.491313 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 204192ns
+I1211 09:08:32.255372 13811 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:08:32.491976 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:32.492197 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 228767ns
+I1211 09:08:33.492700 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:33.492949 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 257420ns
+I1211 09:08:34.355980 13813 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:08:34.493417 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:34.493612 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 202161ns
+I1211 09:08:35.494050 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:35.494205 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 164904ns
+I1211 09:08:36.495084 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:36.495286 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 230864ns
+I1211 09:08:37.497630 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:37.497845 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 228291ns
+I1211 09:08:38.499254 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:38.499462 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 219709ns
+I1211 09:08:39.500313 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:39.500453 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 152084ns
+I1211 09:08:40.501313 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:40.501623 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 317262ns
+I1211 09:08:41.503037 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:41.503191 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 158935ns
+I1211 09:08:41.876974 13813 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:42.504792 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:42.504974 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 187256ns
+I1211 09:08:42.691324 13814 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:08:43.505550 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:43.505905 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 366114ns
+I1211 09:08:44.506896 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:44.507102 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 213471ns
+I1211 09:08:45.507908 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:45.508158 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 258312ns
+I1211 09:08:46.032577 13811 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:08:46.509311 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:46.509456 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 152890ns
+I1211 09:08:47.510263 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:47.510494 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 236372ns
+I1211 09:08:48.512363 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:48.512622 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 275200ns
+I1211 09:08:49.513523 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:49.513967 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 446150ns
+I1211 09:08:50.515923 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:50.522990 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 7.054418ms
+I1211 09:08:51.524770 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:51.527022 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.25966ms
+I1211 09:08:52.527612 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:52.527819 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 215868ns
+I1211 09:08:53.528059 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:53.528204 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 184232ns
+I1211 09:08:54.528969 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:54.529161 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 200285ns
+I1211 09:08:55.536303 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:55.536489 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 196416ns
+I1211 09:08:56.536947 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:56.537363 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 426648ns
+I1211 09:08:57.538511 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:57.538590 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 93217ns
+I1211 09:08:58.539041 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:58.539981 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 953025ns
+I1211 09:08:59.541815 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:08:59.542155 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 346799ns
+I1211 09:09:00.549015 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:00.549283 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 274071ns
+I1211 09:09:01.549799 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:01.550005 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 218361ns
+I1211 09:09:02.550220 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:02.550312 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 115015ns
+I1211 09:09:03.552472 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:03.552809 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 344199ns
+I1211 09:09:04.553226 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:04.553534 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 315811ns
+I1211 09:09:05.555126 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:05.555323 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 227496ns
+I1211 09:09:06.556588 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:06.556835 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 254170ns
+I1211 09:09:07.557158 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:07.559031 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.878014ms
+I1211 09:09:08.559355 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:08.559615 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 270170ns
+I1211 09:09:09.560012 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:09.560165 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 157961ns
+I1211 09:09:10.561014 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:10.561204 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 197885ns
+I1211 09:09:11.562189 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:11.562811 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 629942ns
+I1211 09:09:12.563513 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:12.563652 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 150236ns
+I1211 09:09:13.565122 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:13.566099 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 981542ns
+I1211 09:09:14.566696 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:14.566854 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 170537ns
+I1211 09:09:15.567085 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:15.567129 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 56337ns
+I1211 09:09:15.812744 13815 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:16.567368 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:16.567505 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 146971ns
+I1211 09:09:17.569756 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:17.569929 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 179199ns
+I1211 09:09:18.573118 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:18.573235 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 125746ns
+I1211 09:09:19.573734 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:19.573876 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 155534ns
+I1211 09:09:20.574908 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:20.575193 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 290983ns
+I1211 09:09:21.576184 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:21.576231 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 58048ns
+I1211 09:09:22.576900 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:22.577143 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 255572ns
+I1211 09:09:23.475718 13814 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:09:23.577761 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:23.588853 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 11.108586ms
+I1211 09:09:24.589203 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:24.593714 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.511661ms
+I1211 09:09:24.985726 13812 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:25.594009 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:25.594256 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 256902ns
+I1211 09:09:26.594420 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:26.594691 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 281277ns
+I1211 09:09:26.783154 13813 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:27.598253 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:27.614437 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 16.057568ms
+I1211 09:09:27.754272 13815 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:28.625854 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:28.626267 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 420376ns
+I1211 09:09:29.627450 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:29.627491 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 50871ns
+I1211 09:09:30.393399 13818 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:30.628024 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:30.637652 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 9.620058ms
+I1211 09:09:31.638190 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:31.638386 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 210071ns
+I1211 09:09:32.446494 13817 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:32.639087 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:32.641177 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.0948ms
+I1211 09:09:34.010767 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:34.013020 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.257519ms
+I1211 09:09:35.014329 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:35.020041 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 5.713232ms
+I1211 09:09:36.032127 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:36.035868 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 3.74377ms
+I1211 09:09:37.037840 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:37.037895 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 65447ns
+I1211 09:09:38.039098 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:38.039165 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 80499ns
+I1211 09:09:39.039669 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:39.039839 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 179448ns
+I1211 09:09:40.039983 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:40.040143 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 169543ns
+I1211 09:09:41.040813 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:41.041103 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 297742ns
+I1211 09:09:41.620160 13817 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:09:42.042306 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:42.042456 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 156814ns
+I1211 09:09:43.043185 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:43.043362 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 183457ns
+I1211 09:09:44.043787 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:44.043953 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 173906ns
+I1211 09:09:45.044112 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:45.044378 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 272231ns
+I1211 09:09:46.049841 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:46.049973 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 141087ns
+I1211 09:09:47.050201 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:47.050554 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 363351ns
+I1211 09:09:48.051200 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:48.057448 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 6.254558ms
+I1211 09:09:49.057766 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:49.057850 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 92231ns
+I1211 09:09:50.058660 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:50.058830 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 181299ns
+I1211 09:09:51.060124 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:51.060272 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 160365ns
+I1211 09:09:52.061239 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:52.061384 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 151781ns
+I1211 09:09:53.063655 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:53.066865 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 3.213017ms
+I1211 09:09:54.067505 13813 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:54.067567 13813 hierarchical.hpp:741] Performed allocation for 0 slaves in 75327ns
+I1211 09:09:54.362874 13814 master.cpp:1014] Dropping 'mesos.internal.RegisterFrameworkMessage' message since not recovered yet
+I1211 09:09:55.070406 13817 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:55.070513 13817 hierarchical.hpp:741] Performed allocation for 0 slaves in 117466ns
+I1211 09:09:56.073052 13812 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:56.077126 13812 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.070648ms
+I1211 09:09:57.078179 13811 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:57.078521 13811 hierarchical.hpp:741] Performed allocation for 0 slaves in 352369ns
+I1211 09:09:58.079172 13815 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:58.079475 13815 hierarchical.hpp:741] Performed allocation for 0 slaves in 315288ns
+I1211 09:09:59.080020 13816 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:09:59.080191 13816 hierarchical.hpp:741] Performed allocation for 0 slaves in 174489ns
+I1211 09:10:00.080541 13818 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:10:00.080665 13818 hierarchical.hpp:741] Performed allocation for 0 slaves in 131092ns
+I1211 09:10:00.873047 13813 master.cpp:1014] Dropping 'mesos.internal.RegisterSlaveMessage' message since not recovered yet
+I1211 09:10:01.082177 13814 hierarchical.hpp:834] No resources available to allocate!
+I1211 09:10:01.084416 13814 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.283061ms
+F1211 09:10:01.624514 13816 master.cpp:1176] Recovery failed: Failed to recover registrar: Failed to perform fetch within 2mins
