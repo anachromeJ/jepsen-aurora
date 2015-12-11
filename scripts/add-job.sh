@@ -17,24 +17,15 @@ echo "MEW=\$(mktemp -p " $JOB_RESULT_DIR "); " \
     > $TEMPJOB
 
 TEMPCONFIG=$TEMPJOB.aurora
-echo "pkg_path = '$TEMPJOB'
-import hashlib
-with open(pkg_path, 'rb') as f:
-  pkg_checksum = hashlib.md5(f.read()).hexdigest()
-
-# copy hello_world.py into the local sandbox
-install = Process(
-  name = 'fetch_package',
-  cmdline = 'cp %s . && echo %s && chmod +x $TEMPJOB' % (pkg_path, pkg_checksum))
-
+echo "
 # run the script
 $NAME = Process(
   name = '$NAME',
-  cmdline = 'bash $TEMPJOB')
+  cmdline = '$(cat TEMPJOB)')
 
 # describe the task
 $TASKNAME = SequentialTask(
-  processes = [install, $NAME],
+  processes = [$NAME],
   resources = Resources(cpu = 0.01, ram = 1*MB, disk=1*MB))
 
 jobs = [
