@@ -10,7 +10,7 @@ AURORA_CLIENT=/jepsen/jepsen-aurora/resources/client.pex
 mkdir -p $JOB_SCRIPT_DIR
 TEMPJOB=$(mktemp -p $JOB_SCRIPT_DIR)
 echo "MEW=\$(mktemp -p " $JOB_RESULT_DIR "); " \
-    "echo \"" $NAME "\" >> \$MEW; " \
+    "echo \"" ${NAME} "\" >> \$MEW; " \
     "date -u -Ins >> \$MEW; " \
     "sleep " $DURATION "; " \
     "date -u -Ins >> \$MEW;" \
