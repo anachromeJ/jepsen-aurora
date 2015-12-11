@@ -107,7 +107,7 @@
               :--pidfile        slave-pidfile
               :--chdir          slave-dir
               :--exec           slave-bin
-              :--resources      "cpus:10;mem:1000;disk:1000"
+              :--resources      "'cpus:10;mem:1000;disk:1000'"
               :--no-close
               :--oknodo
               :--
