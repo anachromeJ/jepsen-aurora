@@ -82,7 +82,7 @@
   "Submits a new job to Aurora"
   [node job]
   (shell/sh "/jepsen/jepsen-aurora/scripts/add-job.sh" 
-            (str @(:name job))
+            (str (:name job))
             (str (:duration job))))
 
 (def formatter (time.format/formatters :date-time))
