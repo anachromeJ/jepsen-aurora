@@ -35,7 +35,7 @@ $NAME = Process(
 # describe the task
 $TASKNAME = SequentialTask(
   processes = [install, $NAME],
-  resources = Resources(cpu = 0.001, ram = 1, disk=1))
+  resources = Resources(cpu = 0.01, ram = 1*KB, disk=1*KB))
 
 jobs = [
   Service(cluster = 'testcluster',
