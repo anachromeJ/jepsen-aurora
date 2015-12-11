@@ -191,12 +191,12 @@
                           (gen/delay 30)
                           (gen/stagger 30)
                           (gen/nemesis
-                           (gen/seq (cycle [(gen/sleep 200)
+                           (gen/seq (cycle [(gen/sleep 100)
                                             {:type :info, :f :start}
-                                            (gen/sleep 200)
+                                            (gen/sleep 100)
                                             {:type :info, :f :stop}
                                             {:type :info, :f :resurrect}])))
-                          (gen/time-limit 450))
+                          (gen/time-limit 350))
                      (gen/nemesis (gen/once {:type :info, :f :stop}))
                      (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
