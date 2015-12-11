@@ -35,7 +35,6 @@
    (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/add-job.sh" :-o "/add-job.sh")
    (c/exec :mkdir :-p job-result-dir)
    (c/exec :chmod :777 job-result-dir)
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/thermos/thermos_executor.pex" :-o "/thermos_executor.pex")
    ;; (c/exec :mkdir :-p "/etc/aurora")
    ;; (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/clusters.json" :-o "/etc/aurora/clusters.json")
    ))
@@ -104,7 +103,7 @@
   [node file-str]
   (let [[name start end] (str/split file-str #"\n")]
     {:node  node
-     :name  (Long/parseLong (subs name 3)) ;; take away the first three characters ('job')
+     :name  (Long/parseLong (subs (trim name) 3)) ;; take away the first three characters ('job')
      :start (parse-file-time start)
      :end   (parse-file-time end)}))
 
