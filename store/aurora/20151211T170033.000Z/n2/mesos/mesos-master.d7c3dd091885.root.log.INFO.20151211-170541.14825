@@ -1,0 +1,801 @@
+Log file created at: 2015/12/11 17:05:41
+Running on machine: d7c3dd091885
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 17:05:41.008111 14825 logging.cpp:172] INFO level logging started!
+I1211 17:05:41.008246 14825 logging.cpp:177] Logging to /var/log/mesos
+I1211 17:05:41.008257 14825 main.cpp:181] Build: 2015-03-26 13:36:52 by root
+I1211 17:05:41.008265 14825 main.cpp:183] Version: 0.22.0
+I1211 17:05:41.008270 14825 main.cpp:186] Git tag: 0.22.0
+I1211 17:05:41.008275 14825 main.cpp:190] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1211 17:05:41.021136 14825 leveldb.cpp:176] Opened db in 12.69105ms
+I1211 17:05:41.022707 14825 leveldb.cpp:183] Compacted db in 1.538251ms
+I1211 17:05:41.022728 14825 leveldb.cpp:198] Created db iterator in 5805ns
+I1211 17:05:41.022742 14825 leveldb.cpp:204] Seeked to beginning of db in 4169ns
+I1211 17:05:41.022780 14825 leveldb.cpp:273] Iterated through 2 keys in the db in 33188ns
+I1211 17:05:41.022805 14825 replica.cpp:744] Replica recovered with log positions 0 -> 0 with 0 holes and 0 unlearned
+I1211 17:05:41.025537 14826 log.cpp:238] Attempting to join replica to ZooKeeper group
+I1211 17:05:41.025638 14826 recover.cpp:449] Starting replica recovery
+I1211 17:05:41.025689 14826 recover.cpp:475] Replica is in VOTING status
+I1211 17:05:41.025712 14826 recover.cpp:464] Recover process terminated
+I1211 17:05:41.027236 14825 main.cpp:306] Starting Mesos master
+I1211 17:05:41.035315 14831 master.cpp:349] Master 20151211-170541-50331658-5050-14825 (n2) started on 10.0.0.3:5050
+I1211 17:05:41.035342 14831 master.cpp:397] Master allowing unauthenticated frameworks to register
+I1211 17:05:41.035348 14831 master.cpp:402] Master allowing unauthenticated slaves to register
+I1211 17:05:41.036094 14826 hierarchical.hpp:287] Initialized hierarchical allocator process
+I1211 17:05:41.036167 14826 whitelist_watcher.cpp:79] No whitelist given
+I1211 17:05:41.037622 14826 contender.cpp:131] Joining the ZK group
+I1211 17:05:41.037710 14831 master.cpp:1295] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1211 17:05:41.047853 14826 group.cpp:313] Group process (group(3)@10.0.0.3:5050) connected to ZooKeeper
+I1211 17:05:41.047876 14826 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1211 17:05:41.047885 14826 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 17:05:41.058881 14832 group.cpp:313] Group process (group(2)@10.0.0.3:5050) connected to ZooKeeper
+I1211 17:05:41.058910 14832 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1211 17:05:41.058917 14832 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+I1211 17:05:41.105849 14828 contender.cpp:247] New candidate (id='7') has entered the contest for leadership
+I1211 17:05:41.108556 14826 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 17:05:41.111093 14828 group.cpp:313] Group process (group(4)@10.0.0.3:5050) connected to ZooKeeper
+I1211 17:05:41.111109 14828 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 17:05:41.111116 14828 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 17:05:41.115164 14829 group.cpp:313] Group process (group(1)@10.0.0.3:5050) connected to ZooKeeper
+I1211 17:05:41.115181 14829 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 17:05:41.115188 14829 group.cpp:385] Trying to create path '/mesos/log_replicas' in ZooKeeper
+I1211 17:05:41.121505 14829 network.hpp:424] ZooKeeper group memberships changed
+I1211 17:05:41.121580 14829 group.cpp:659] Trying to get '/mesos/log_replicas/0000000005' in ZooKeeper
+I1211 17:05:41.121852 14828 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 17:05:41.121886 14828 detector.cpp:138] Detected a new leader: (id='6')
+I1211 17:05:41.121930 14828 group.cpp:659] Trying to get '/mesos/info_0000000006' in ZooKeeper
+I1211 17:05:41.122220 14829 group.cpp:659] Trying to get '/mesos/log_replicas/0000000006' in ZooKeeper
+I1211 17:05:41.122527 14828 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1211 17:05:41.122592 14828 master.cpp:1356] The newly elected leader is master@10.0.0.2:5050 with id 20151211-170103-33554442-5050-14582
+I1211 17:05:41.122864 14829 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.3:5050 }
+I1211 17:05:42.037628 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:42.037696 14833 hierarchical.hpp:741] Performed allocation for 0 slaves in 83556ns
+I1211 17:05:42.274986 14831 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 17:05:42.279670 14831 network.hpp:424] ZooKeeper group memberships changed
+I1211 17:05:42.279873 14831 group.cpp:659] Trying to get '/mesos/log_replicas/0000000005' in ZooKeeper
+I1211 17:05:42.279775 14830 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 17:05:42.283928 14831 group.cpp:659] Trying to get '/mesos/log_replicas/0000000006' in ZooKeeper
+I1211 17:05:42.284292 14831 group.cpp:659] Trying to get '/mesos/log_replicas/0000000007' in ZooKeeper
+I1211 17:05:42.284607 14831 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.2:5050, log-replica(1)@10.0.0.3:5050, log-replica(1)@10.0.0.4:5050 }
+I1211 17:05:43.047021 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:43.047101 14831 hierarchical.hpp:741] Performed allocation for 0 slaves in 100991ns
+I1211 17:05:44.061691 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:44.062566 14830 hierarchical.hpp:741] Performed allocation for 0 slaves in 883604ns
+I1211 17:05:45.065636 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:45.070399 14832 hierarchical.hpp:741] Performed allocation for 0 slaves in 4.792626ms
+I1211 17:05:46.084270 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:46.084430 14827 hierarchical.hpp:741] Performed allocation for 0 slaves in 180593ns
+I1211 17:05:47.100958 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:47.118839 14826 hierarchical.hpp:741] Performed allocation for 0 slaves in 17.886491ms
+I1211 17:05:48.157438 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:48.162434 14828 hierarchical.hpp:741] Performed allocation for 0 slaves in 5.003716ms
+I1211 17:05:49.177786 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:49.179147 14829 hierarchical.hpp:741] Performed allocation for 0 slaves in 1.371951ms
+I1211 17:05:50.181310 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:50.183922 14833 hierarchical.hpp:741] Performed allocation for 0 slaves in 2.618639ms
+I1211 17:05:51.192883 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:51.192960 14831 hierarchical.hpp:741] Performed allocation for 0 slaves in 93962ns
+I1211 17:05:52.200981 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:52.201032 14830 hierarchical.hpp:741] Performed allocation for 0 slaves in 64147ns
+I1211 17:05:53.209630 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:53.209970 14830 hierarchical.hpp:741] Performed allocation for 0 slaves in 349662ns
+I1211 17:05:54.215417 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:54.215495 14832 hierarchical.hpp:741] Performed allocation for 0 slaves in 90728ns
+I1211 17:05:55.216938 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:55.227674 14827 hierarchical.hpp:741] Performed allocation for 0 slaves in 10.741347ms
+I1211 17:05:56.245856 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:56.245924 14826 hierarchical.hpp:741] Performed allocation for 0 slaves in 83353ns
+I1211 17:05:57.249225 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:57.249294 14828 hierarchical.hpp:741] Performed allocation for 0 slaves in 79828ns
+I1211 17:05:58.105605 14833 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 17:05:58.105865 14833 detector.cpp:126] The current leader (id=6) is lost
+I1211 17:05:58.105880 14833 detector.cpp:138] Detected a new leader: (id='7')
+I1211 17:05:58.105939 14833 group.cpp:659] Trying to get '/mesos/info_0000000007' in ZooKeeper
+I1211 17:05:58.105813 14831 network.hpp:424] ZooKeeper group memberships changed
+I1211 17:05:58.106161 14831 group.cpp:659] Trying to get '/mesos/log_replicas/0000000006' in ZooKeeper
+I1211 17:05:58.106933 14833 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 17:05:58.108744 14833 master.cpp:1356] The newly elected leader is master@10.0.0.3:5050 with id 20151211-170541-50331658-5050-14825
+I1211 17:05:58.108772 14833 master.cpp:1369] Elected as the leading master!
+I1211 17:05:58.108783 14833 master.cpp:1187] Recovering from registrar
+I1211 17:05:58.108855 14833 registrar.cpp:313] Recovering registrar
+I1211 17:05:58.109073 14833 log.cpp:660] Attempting to start the writer
+I1211 17:05:58.109673 14832 replica.cpp:477] Replica received implicit promise request with proposal 2
+I1211 17:05:58.108692 14831 group.cpp:659] Trying to get '/mesos/log_replicas/0000000007' in ZooKeeper
+I1211 17:05:58.112186 14833 poll_socket.cpp:94] Socket error while connecting
+I1211 17:05:58.112226 14833 process.cpp:1546] Failed to send 'mesos.internal.log.PromiseRequest' to '10.0.0.2:5050', connect: Socket error while connecting
+I1211 17:05:58.115862 14831 network.hpp:466] ZooKeeper group PIDs: { log-replica(1)@10.0.0.3:5050, log-replica(1)@10.0.0.4:5050 }
+I1211 17:05:58.116483 14832 leveldb.cpp:306] Persisting metadata (8 bytes) to leveldb took 4.755539ms
+I1211 17:05:58.116511 14832 replica.cpp:345] Persisted promised to 2
+I1211 17:05:58.158362 14832 coordinator.cpp:230] Coordinator attemping to fill missing position
+I1211 17:05:58.180258 14832 replica.cpp:378] Replica received explicit promise request for position 1 with proposal 3
+I1211 17:05:58.179940 14830 group.cpp:717] Found non-sequence node 'log_replicas' at '/mesos' in ZooKeeper
+I1211 17:05:58.180961 14832 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 350898ns
+I1211 17:05:58.180992 14832 replica.cpp:679] Persisted action at 1
+I1211 17:05:58.214596 14832 master.cpp:1014] Dropping 'mesos.internal.ReregisterFrameworkMessage' message since not recovered yet
+I1211 17:05:58.214766 14831 replica.cpp:658] Replica received learned notice for position 1
+I1211 17:05:58.255241 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:58.280709 14829 hierarchical.hpp:741] Performed allocation for 0 slaves in 25.472255ms
+I1211 17:05:58.280994 14831 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 411561ns
+I1211 17:05:58.281023 14831 replica.cpp:679] Persisted action at 1
+I1211 17:05:58.285615 14831 replica.cpp:664] Replica learned NOP action at position 1
+I1211 17:05:58.285838 14831 replica.cpp:378] Replica received explicit promise request for position 2 with proposal 3
+I1211 17:05:58.286363 14831 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 506488ns
+I1211 17:05:58.286386 14831 replica.cpp:679] Persisted action at 2
+I1211 17:05:58.329438 14831 replica.cpp:658] Replica received learned notice for position 2
+I1211 17:05:58.335446 14831 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 2.507202ms
+I1211 17:05:58.335489 14831 replica.cpp:679] Persisted action at 2
+I1211 17:05:58.335499 14831 replica.cpp:664] Replica learned NOP action at position 2
+I1211 17:05:58.335692 14831 replica.cpp:378] Replica received explicit promise request for position 3 with proposal 3
+I1211 17:05:58.344640 14831 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 373456ns
+I1211 17:05:58.344674 14831 replica.cpp:679] Persisted action at 3
+I1211 17:05:58.365377 14831 replica.cpp:658] Replica received learned notice for position 3
+I1211 17:05:58.366140 14831 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 565295ns
+I1211 17:05:58.366168 14831 replica.cpp:679] Persisted action at 3
+I1211 17:05:58.366190 14831 replica.cpp:664] Replica learned NOP action at position 3
+I1211 17:05:58.366366 14831 replica.cpp:378] Replica received explicit promise request for position 4 with proposal 3
+I1211 17:05:58.366633 14831 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 248748ns
+I1211 17:05:58.366652 14831 replica.cpp:679] Persisted action at 4
+I1211 17:05:58.412487 14831 replica.cpp:658] Replica received learned notice for position 4
+I1211 17:05:58.415153 14831 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 2.484726ms
+I1211 17:05:58.415189 14831 replica.cpp:679] Persisted action at 4
+I1211 17:05:58.415199 14831 replica.cpp:664] Replica learned NOP action at position 4
+I1211 17:05:58.415359 14831 replica.cpp:378] Replica received explicit promise request for position 5 with proposal 3
+I1211 17:05:58.415645 14831 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 259118ns
+I1211 17:05:58.415666 14831 replica.cpp:679] Persisted action at 5
+I1211 17:05:58.449232 14831 replica.cpp:658] Replica received learned notice for position 5
+I1211 17:05:58.453526 14831 leveldb.cpp:343] Persisting action (446 bytes) to leveldb took 3.77738ms
+I1211 17:05:58.453562 14831 replica.cpp:679] Persisted action at 5
+I1211 17:05:58.453570 14831 replica.cpp:664] Replica learned APPEND action at position 5
+I1211 17:05:58.453728 14831 replica.cpp:378] Replica received explicit promise request for position 6 with proposal 3
+I1211 17:05:58.453992 14831 leveldb.cpp:343] Persisting action (8 bytes) to leveldb took 246684ns
+I1211 17:05:58.454012 14831 replica.cpp:679] Persisted action at 6
+I1211 17:05:58.467803 14831 master.cpp:1014] Dropping 'mesos.internal.ReregisterSlaveMessage' message since not recovered yet
+I1211 17:05:58.506212 14827 replica.cpp:658] Replica received learned notice for position 6
+I1211 17:05:58.507086 14827 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 289057ns
+I1211 17:05:58.507120 14827 leveldb.cpp:401] Deleting ~5 keys from leveldb took 15380ns
+I1211 17:05:58.507130 14827 replica.cpp:679] Persisted action at 6
+I1211 17:05:58.507141 14827 replica.cpp:664] Replica learned TRUNCATE action at position 6
+I1211 17:05:58.507253 14827 log.cpp:676] Writer started with ending position 6
+I1211 17:05:58.507454 14827 leveldb.cpp:438] Reading position from leveldb took 19426ns
+I1211 17:05:58.509567 14827 leveldb.cpp:438] Reading position from leveldb took 8101ns
+I1211 17:05:58.509856 14827 registrar.cpp:346] Successfully fetched the registry (386B) in 400.94592ms
+I1211 17:05:58.509937 14827 registrar.cpp:445] Applied 1 operations in 7301ns; attempting to update the 'registry'
+I1211 17:05:58.510608 14828 log.cpp:684] Attempting to append 425 bytes to the log
+I1211 17:05:58.510643 14828 coordinator.cpp:340] Coordinator attempting to write APPEND action at position 7
+I1211 17:05:58.514714 14828 replica.cpp:511] Replica received write request for position 7
+I1211 17:05:58.515782 14828 leveldb.cpp:343] Persisting action (444 bytes) to leveldb took 939942ns
+I1211 17:05:58.530102 14828 replica.cpp:679] Persisted action at 7
+I1211 17:05:58.530241 14828 replica.cpp:658] Replica received learned notice for position 7
+I1211 17:05:58.530601 14828 leveldb.cpp:343] Persisting action (446 bytes) to leveldb took 341893ns
+I1211 17:05:58.530622 14828 replica.cpp:679] Persisted action at 7
+I1211 17:05:58.530628 14828 replica.cpp:664] Replica learned APPEND action at position 7
+I1211 17:05:58.530827 14828 registrar.cpp:490] Successfully updated the 'registry' in 20.859904ms
+I1211 17:05:58.533644 14828 registrar.cpp:376] Successfully recovered registrar
+I1211 17:05:58.533742 14828 master.cpp:1214] Recovered 2 slaves from the Registry (386B) ; allowing 10mins for slaves to re-register
+I1211 17:05:58.533571 14829 log.cpp:703] Attempting to truncate the log to 7
+I1211 17:05:58.533812 14829 coordinator.cpp:340] Coordinator attempting to write TRUNCATE action at position 8
+I1211 17:05:58.533929 14829 replica.cpp:511] Replica received write request for position 8
+I1211 17:05:58.534781 14829 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 763441ns
+I1211 17:05:58.541038 14829 replica.cpp:679] Persisted action at 8
+I1211 17:05:58.541270 14829 replica.cpp:658] Replica received learned notice for position 8
+I1211 17:05:58.541595 14829 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 219913ns
+I1211 17:05:58.541625 14829 leveldb.cpp:401] Deleting ~2 keys from leveldb took 10246ns
+I1211 17:05:58.541635 14829 replica.cpp:679] Persisted action at 8
+I1211 17:05:58.541641 14829 replica.cpp:664] Replica learned TRUNCATE action at position 8
+I1211 17:05:58.565491 14829 master.cpp:3120] Re-registering slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:05:58.565675 14829 registrar.cpp:445] Applied 1 operations in 10762ns; attempting to update the 'registry'
+I1211 17:05:58.566375 14829 log.cpp:684] Attempting to append 425 bytes to the log
+I1211 17:05:58.568560 14829 coordinator.cpp:340] Coordinator attempting to write APPEND action at position 9
+I1211 17:05:58.568838 14830 replica.cpp:511] Replica received write request for position 9
+I1211 17:05:58.573407 14830 leveldb.cpp:343] Persisting action (444 bytes) to leveldb took 344538ns
+I1211 17:05:58.573431 14830 replica.cpp:679] Persisted action at 9
+I1211 17:05:58.581075 14830 replica.cpp:658] Replica received learned notice for position 9
+I1211 17:05:58.582300 14830 leveldb.cpp:343] Persisting action (446 bytes) to leveldb took 278311ns
+I1211 17:05:58.582329 14830 replica.cpp:679] Persisted action at 9
+I1211 17:05:58.582337 14830 replica.cpp:664] Replica learned APPEND action at position 9
+I1211 17:05:58.582535 14830 registrar.cpp:490] Successfully updated the 'registry' in 16.834048ms
+I1211 17:05:58.586366 14830 master.cpp:3191] Re-registered slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) with cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1211 17:05:58.586621 14830 master.cpp:3219] Sending updated checkpointed resources  to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:05:58.586005 14832 log.cpp:703] Attempting to truncate the log to 9
+I1211 17:05:58.595571 14832 coordinator.cpp:340] Coordinator attempting to write TRUNCATE action at position 10
+I1211 17:05:58.595711 14832 replica.cpp:511] Replica received write request for position 10
+I1211 17:05:58.586460 14827 hierarchical.hpp:455] Added slave 20151211-170102-67108874-5050-14575-S0 (n5) with cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (and cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] available)
+I1211 17:05:58.596073 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:58.596114 14827 hierarchical.hpp:759] Performed allocation for slave 20151211-170102-67108874-5050-14575-S0 in 138035ns
+I1211 17:05:58.596264 14832 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 391041ns
+I1211 17:05:58.596282 14832 replica.cpp:679] Persisted action at 10
+I1211 17:05:58.605558 14832 replica.cpp:658] Replica received learned notice for position 10
+I1211 17:05:58.605955 14832 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 268866ns
+I1211 17:05:58.605984 14832 leveldb.cpp:401] Deleting ~2 keys from leveldb took 9962ns
+I1211 17:05:58.605993 14832 replica.cpp:679] Persisted action at 10
+I1211 17:05:58.606000 14832 replica.cpp:664] Replica learned TRUNCATE action at position 10
+I1211 17:05:59.285219 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:05:59.285297 14832 hierarchical.hpp:741] Performed allocation for 1 slaves in 109287ns
+I1211 17:05:59.385005 14828 master.cpp:1711] Received re-registration request from framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-d1d7f0f9-858d-4498-83b3-94dd5679d37a@10.0.0.4:8083
+I1211 17:05:59.385130 14828 master.cpp:1764] Re-registering framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler)  at scheduler-d1d7f0f9-858d-4498-83b3-94dd5679d37a@10.0.0.4:8083
+I1211 17:05:59.385391 14828 hierarchical.hpp:321] Added framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:05:59.385609 14828 hierarchical.hpp:741] Performed allocation for 1 slaves in 63143ns
+I1211 17:05:59.385681 14831 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-d1d7f0f9-858d-4498-83b3-94dd5679d37a@10.0.0.4:8083
+I1211 17:05:59.718607 14826 master.cpp:3120] Re-registering slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:05:59.718760 14826 registrar.cpp:445] Applied 1 operations in 11183ns; attempting to update the 'registry'
+I1211 17:05:59.719497 14826 log.cpp:684] Attempting to append 425 bytes to the log
+I1211 17:05:59.722798 14826 coordinator.cpp:340] Coordinator attempting to write APPEND action at position 11
+I1211 17:05:59.722942 14826 replica.cpp:511] Replica received write request for position 11
+I1211 17:05:59.723315 14826 leveldb.cpp:343] Persisting action (444 bytes) to leveldb took 349381ns
+I1211 17:05:59.724529 14826 replica.cpp:679] Persisted action at 11
+I1211 17:05:59.775316 14832 replica.cpp:658] Replica received learned notice for position 11
+I1211 17:05:59.779485 14832 leveldb.cpp:343] Persisting action (446 bytes) to leveldb took 1.441799ms
+I1211 17:05:59.779534 14832 replica.cpp:679] Persisted action at 11
+I1211 17:05:59.779544 14832 replica.cpp:664] Replica learned APPEND action at position 11
+I1211 17:05:59.779742 14832 registrar.cpp:490] Successfully updated the 'registry' in 60.943104ms
+I1211 17:05:59.779801 14832 log.cpp:703] Attempting to truncate the log to 11
+I1211 17:05:59.780017 14832 master.cpp:3191] Re-registered slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) with cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1211 17:05:59.788041 14832 master.cpp:3219] Sending updated checkpointed resources  to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:05:59.787942 14831 hierarchical.hpp:455] Added slave 20151211-170102-67108874-5050-14575-S1 (n4) with cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (and cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] available)
+I1211 17:05:59.789530 14831 hierarchical.hpp:759] Performed allocation for slave 20151211-170102-67108874-5050-14575-S1 in 55164ns
+I1211 17:05:59.789588 14831 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-d1d7f0f9-858d-4498-83b3-94dd5679d37a@10.0.0.4:8083
+I1211 17:05:59.787699 14828 coordinator.cpp:340] Coordinator attempting to write TRUNCATE action at position 12
+I1211 17:05:59.789834 14828 replica.cpp:511] Replica received write request for position 12
+I1211 17:05:59.790385 14828 leveldb.cpp:343] Persisting action (16 bytes) to leveldb took 512936ns
+I1211 17:05:59.790403 14828 replica.cpp:679] Persisted action at 12
+I1211 17:05:59.843497 14828 replica.cpp:658] Replica received learned notice for position 12
+I1211 17:05:59.843910 14828 leveldb.cpp:343] Persisting action (18 bytes) to leveldb took 373198ns
+I1211 17:05:59.843940 14828 leveldb.cpp:401] Deleting ~2 keys from leveldb took 11130ns
+I1211 17:05:59.843950 14828 replica.cpp:679] Persisted action at 12
+I1211 17:05:59.843956 14828 replica.cpp:664] Replica learned TRUNCATE action at position 12
+I1211 17:06:00.287633 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:00.290801 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 3.211884ms
+I1211 17:06:01.294612 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:01.294661 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 95060ns
+I1211 17:06:02.313681 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:02.316040 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 2.400436ms
+I1211 17:06:03.328416 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:03.328498 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 125120ns
+I1211 17:06:04.329620 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:04.333358 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 3.787452ms
+I1211 17:06:05.339226 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:05.339303 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 124635ns
+I1211 17:06:06.354887 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:06.355221 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 380173ns
+I1211 17:06:07.356592 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:07.356662 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 125009ns
+I1211 17:06:08.358077 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:08.358153 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 120172ns
+I1211 17:06:09.359015 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:09.359097 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 128272ns
+I1211 17:06:09.398803 14833 master.cpp:1711] Received re-registration request from framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:06:09.399248 14833 master.cpp:1764] Re-registering framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler)  at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:06:09.399266 14833 master.cpp:1793] Framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-d1d7f0f9-858d-4498-83b3-94dd5679d37a@10.0.0.4:8083 failed over
+I1211 17:06:09.399523 14833 hierarchical.hpp:648] Recovered cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:06:09.399557 14833 hierarchical.hpp:648] Recovered cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:06:10.360222 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 144342ns
+I1211 17:06:10.360455 14833 master.cpp:3755] Sending 2 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:06:11.361692 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:11.361771 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 141880ns
+I1211 17:06:12.362862 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:12.362928 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 116993ns
+I1211 17:06:13.363131 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:13.363198 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 116962ns
+I1211 17:06:14.363507 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:14.365313 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 1.852809ms
+I1211 17:06:15.366575 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:15.366641 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 117263ns
+I1211 17:06:16.367274 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:16.367403 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 187313ns
+I1211 17:06:17.368070 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:17.368149 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 140254ns
+I1211 17:06:18.369140 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:18.369207 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 118704ns
+I1211 17:06:19.373066 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:19.373435 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 414365ns
+I1211 17:06:20.373854 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:20.373932 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 142279ns
+I1211 17:06:21.377614 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:21.377653 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 77625ns
+I1211 17:06:22.378007 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:22.378085 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 140187ns
+I1211 17:06:23.378598 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:23.378675 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 140080ns
+I1211 17:06:24.380197 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:24.380306 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 160872ns
+I1211 17:06:25.380487 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:25.380553 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 114033ns
+I1211 17:06:26.381889 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:26.381953 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 111095ns
+I1211 17:06:27.382338 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:27.382441 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 151219ns
+I1211 17:06:28.382977 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:28.383043 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 114334ns
+I1211 17:06:29.383267 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:29.385849 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 2.628022ms
+I1211 17:06:30.386844 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:30.386925 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 156046ns
+I1211 17:06:31.387754 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:31.387836 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 141885ns
+I1211 17:06:32.388321 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:32.388401 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 132531ns
+I1211 17:06:33.389720 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:33.389786 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 115628ns
+I1211 17:06:34.392434 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:34.393568 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 1.170363ms
+I1211 17:06:35.394693 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:35.394773 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 139161ns
+I1211 17:06:36.396222 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:36.396330 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 159335ns
+I1211 17:06:37.396792 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:37.396849 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 117049ns
+I1211 17:06:38.397006 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:38.397058 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 101480ns
+I1211 17:06:39.398047 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:39.398870 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 845654ns
+I1211 17:06:40.361285 14830 hierarchical.hpp:648] Recovered cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:06:40.361506 14830 hierarchical.hpp:648] Recovered cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:06:40.399868 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 84914ns
+I1211 17:06:40.399992 14832 master.cpp:3755] Sending 2 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:06:41.401288 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:41.401372 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 156862ns
+I1211 17:06:42.402084 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:42.402129 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 84793ns
+I1211 17:06:43.402391 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:43.402448 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 97688ns
+I1211 17:06:44.402887 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:44.403548 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 699832ns
+I1211 17:06:45.404712 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:45.404767 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 106783ns
+I1211 17:06:46.405712 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:46.405784 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 146548ns
+I1211 17:06:47.405948 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:47.405997 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 97349ns
+I1211 17:06:48.406721 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:48.406769 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 90720ns
+I1211 17:06:49.407492 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:49.408066 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 613713ns
+I1211 17:06:50.408437 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:50.408519 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 135004ns
+I1211 17:06:51.408946 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:51.409013 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 123667ns
+I1211 17:06:52.409301 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:52.409353 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 91456ns
+I1211 17:06:53.409572 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:53.409631 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 98163ns
+I1211 17:06:54.410253 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:54.410827 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 614855ns
+I1211 17:06:55.411123 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:55.411166 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 89954ns
+I1211 17:06:56.412473 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:56.412529 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 98995ns
+I1211 17:06:57.413899 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:57.413941 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 83986ns
+I1211 17:06:58.414172 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:58.414222 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 101165ns
+I1211 17:06:59.415477 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:06:59.416229 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 797917ns
+I1211 17:07:00.417158 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:00.417274 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 157509ns
+I1211 17:07:00.743700 14832 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O5 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:00.744134 14832 master.hpp:822] Adding task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 (n4)
+I1211 17:07:00.744206 14832 master.cpp:2545] Launching task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:00.744400 14832 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:00.744427 14832 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:00.835594 14832 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O4 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:00.835943 14832 master.hpp:822] Adding task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:00.835996 14832 master.cpp:2545] Launching task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:00.836107 14832 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:00.836210 14832 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:01.155109 14829 master.cpp:3388] Executor thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) exited with status 1
+I1211 17:07:01.155253 14829 master.cpp:4714] Removing executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.155335 14829 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.158747 14829 master.cpp:3295] Status update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.158846 14829 master.cpp:3336] Forwarding status update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.158918 14829 master.cpp:4618] Updating the latest state of task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:01.159021 14829 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.254883 14829 master.cpp:2618] Asked to kill task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.255061 14829 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:01.293709 14828 master.cpp:4685] Removing task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.293889 14828 master.cpp:2782] Forwarding status update acknowledgement e3593742-973e-49a3-a4b8-7addfdaf49a2 for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.423544 14831 hierarchical.hpp:898] Filtered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.423648 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 168103ns
+I1211 17:07:01.427217 14833 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:01.578637 14826 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O6 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:01.585372 14826 master.hpp:822] Adding task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:01.585424 14826 master.cpp:2545] Launching task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.585539 14826 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.585561 14826 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:01.990164 14830 master.cpp:3388] Executor thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) exited with status 1
+I1211 17:07:01.990262 14830 master.cpp:4714] Removing executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.990330 14830 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.992615 14830 master.cpp:3295] Status update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:01.992641 14830 master.cpp:3336] Forwarding status update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.992691 14830 master.cpp:4618] Updating the latest state of task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:01.992733 14830 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.132217 14830 master.cpp:2618] Asked to kill task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.132515 14830 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:02.222281 14832 master.cpp:4685] Removing task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:02.222527 14832 master.cpp:2782] Forwarding status update acknowledgement eae682d9-261b-44b6-914e-fb01099c3893 for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:02.427706 14828 hierarchical.hpp:898] Filtered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.427847 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 202482ns
+I1211 17:07:02.427922 14828 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:03.047422 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O7 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:03.047991 14828 master.hpp:822] Adding task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:03.048321 14828 master.cpp:2545] Launching task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.050509 14831 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.050566 14831 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:03.410598 14833 master.cpp:3388] Executor thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) terminated with signal Killed
+I1211 17:07:03.410641 14833 master.cpp:4714] Removing executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.410703 14833 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.417596 14833 master.cpp:3295] Status update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.417635 14833 master.cpp:3336] Forwarding status update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.417713 14833 master.cpp:4618] Updating the latest state of task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:03.417873 14833 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.429083 14833 hierarchical.hpp:898] Filtered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.429227 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 208533ns
+I1211 17:07:03.429293 14833 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:03.482236 14833 master.cpp:2618] Asked to kill task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.488008 14833 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:03.514358 14827 master.cpp:4685] Removing task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.514478 14827 master.cpp:2782] Forwarding status update acknowledgement 97c49ca5-679b-4c14-b56b-9e58e7b2a581 for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.542441 14826 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O8 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:03.542773 14826 master.hpp:822] Adding task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:03.542804 14826 master.cpp:2545] Launching task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.542915 14826 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.542938 14826 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:03.821562 14826 master.cpp:3388] Executor thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) terminated with signal Killed
+I1211 17:07:03.821730 14826 master.cpp:4714] Removing executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.821867 14826 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.826994 14830 master.cpp:3295] Status update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.827024 14830 master.cpp:3336] Forwarding status update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.827075 14830 master.cpp:4618] Updating the latest state of task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:03.827216 14832 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.914826 14829 master.cpp:2618] Asked to kill task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.914906 14829 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:03.946959 14831 master.cpp:4685] Removing task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:03.947078 14831 master.cpp:2782] Forwarding status update acknowledgement f4730928-6841-4205-a419-1393e84bedf8 for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:04.429926 14828 hierarchical.hpp:898] Filtered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:04.429994 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 154674ns
+I1211 17:07:04.430060 14828 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:04.759367 14828 master.cpp:3295] Status update TASK_STARTING (UUID: f4d40fac-178b-4d7a-bab2-d5e7195a5a48) for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:04.759584 14828 master.cpp:3336] Forwarding status update TASK_STARTING (UUID: f4d40fac-178b-4d7a-bab2-d5e7195a5a48) for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:04.759675 14828 master.cpp:4618] Updating the latest state of task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_STARTING
+I1211 17:07:04.835521 14827 master.cpp:2782] Forwarding status update acknowledgement f4d40fac-178b-4d7a-bab2-d5e7195a5a48 for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:05.196966 14833 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O9 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:05.197306 14833 master.hpp:822] Adding task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:05.198199 14833 master.cpp:2545] Launching task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:05.198354 14833 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.204763 14833 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:05.424751 14832 master.cpp:3295] Status update TASK_RUNNING (UUID: 4088d348-d98e-4f1b-b976-bec4e8cb3a62) for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:05.424798 14832 master.cpp:3336] Forwarding status update TASK_RUNNING (UUID: 4088d348-d98e-4f1b-b976-bec4e8cb3a62) for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.424856 14832 master.cpp:4618] Updating the latest state of task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_RUNNING
+I1211 17:07:05.431252 14830 hierarchical.hpp:898] Filtered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S0 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.431376 14830 hierarchical.hpp:898] Filtered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.431393 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:05.431401 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 209501ns
+I1211 17:07:05.447291 14826 master.cpp:2782] Forwarding status update acknowledgement 4088d348-d98e-4f1b-b976-bec4e8cb3a62 for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:05.458273 14829 master.cpp:3388] Executor thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) terminated with signal Killed
+I1211 17:07:05.458483 14829 master.cpp:4714] Removing executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:05.458569 14829 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.460772 14829 master.cpp:3295] Status update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:05.460800 14829 master.cpp:3336] Forwarding status update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.460854 14829 master.cpp:4618] Updating the latest state of task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:05.460934 14829 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.505712 14831 master.cpp:2618] Asked to kill task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.505786 14831 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:05.536584 14828 master.cpp:4685] Removing task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:05.536716 14828 master.cpp:2782] Forwarding status update acknowledgement 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684 for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:06.432638 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 108173ns
+I1211 17:07:06.432760 14828 master.cpp:3755] Sending 2 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:06.594863 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O10 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:06.595209 14828 master.hpp:822] Adding task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 (n4)
+I1211 17:07:06.595270 14828 master.cpp:2545] Launching task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:06.595381 14828 hierarchical.hpp:648] Recovered cpus(*):0.48; mem(*):2669; disk(*):33170; ports(*):[31000-32000] (total allocatable: cpus(*):0.48; mem(*):2669; disk(*):33170; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:06.595481 14828 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:07.434059 14831 hierarchical.hpp:898] Filtered cpus(*):0.48; mem(*):2669; disk(*):33170; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:07.434166 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:07.434177 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 210362ns
+I1211 17:07:07.592619 14826 master.cpp:3295] Status update TASK_STARTING (UUID: de44c19f-6082-4d0d-b70c-c2c2bdaaea85) for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:07.592715 14826 master.cpp:3336] Forwarding status update TASK_STARTING (UUID: de44c19f-6082-4d0d-b70c-c2c2bdaaea85) for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:07.592777 14826 master.cpp:4618] Updating the latest state of task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 to TASK_STARTING
+I1211 17:07:07.646431 14830 master.cpp:2782] Forwarding status update acknowledgement de44c19f-6082-4d0d-b70c-c2c2bdaaea85 for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:07.655899 14832 master.cpp:3295] Status update TASK_FINISHED (UUID: c1fdc1d5-50cc-4420-a3c8-4d9d81c48fa0) for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:07.655959 14832 master.cpp:3336] Forwarding status update TASK_FINISHED (UUID: c1fdc1d5-50cc-4420-a3c8-4d9d81c48fa0) for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:07.656013 14832 master.cpp:4618] Updating the latest state of task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_FINISHED
+I1211 17:07:07.656065 14832 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):0.49; mem(*):2670; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:07.731490 14832 master.cpp:4685] Removing task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:07.731617 14832 master.cpp:2782] Forwarding status update acknowledgement c1fdc1d5-50cc-4420-a3c8-4d9d81c48fa0 for task 1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:08.277184 14829 master.cpp:3295] Status update TASK_RUNNING (UUID: 5c8edb59-e64a-4e9e-86a7-5833d0002b4e) for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:08.277281 14829 master.cpp:3336] Forwarding status update TASK_RUNNING (UUID: 5c8edb59-e64a-4e9e-86a7-5833d0002b4e) for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:08.277377 14829 master.cpp:4618] Updating the latest state of task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 to TASK_RUNNING
+I1211 17:07:08.318027 14830 master.cpp:2782] Forwarding status update acknowledgement 5c8edb59-e64a-4e9e-86a7-5833d0002b4e for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:08.434583 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 78693ns
+I1211 17:07:08.434695 14833 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:09.376451 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O12 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:09.379045 14828 master.hpp:822] Adding task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 (n4)
+I1211 17:07:09.379096 14828 master.cpp:2545] Launching task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:09.379212 14828 hierarchical.hpp:648] Recovered cpus(*):0.23; mem(*):2541; disk(*):33170; ports(*):[31000-32000] (total allocatable: cpus(*):0.23; mem(*):2541; disk(*):33170; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.379235 14828 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:09.443091 14828 hierarchical.hpp:898] Filtered cpus(*):0.23; mem(*):2541; disk(*):33170; ports(*):[31000-32000] on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.443189 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:09.443200 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 167487ns
+I1211 17:07:09.504076 14831 master.cpp:3295] Status update TASK_FINISHED (UUID: ad0a4bb6-e53e-4372-aa58-9f8f09e635dc) for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:09.504150 14831 master.cpp:3336] Forwarding status update TASK_FINISHED (UUID: ad0a4bb6-e53e-4372-aa58-9f8f09e635dc) for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.504240 14831 master.cpp:4618] Updating the latest state of task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 to TASK_FINISHED
+I1211 17:07:09.504362 14831 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):0.24; mem(*):2542; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.544159 14831 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O11 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:09.544500 14831 master.hpp:822] Adding task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:09.544554 14831 master.cpp:2545] Launching task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:09.544667 14831 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.544766 14831 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:09.909361 14826 master.cpp:3517] Performing explicit task state reconciliation for 3 tasks of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:09.910842 14826 master.cpp:3601] Sending explicit reconciliation state TASK_FINISHED for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:09.911694 14826 master.cpp:3601] Sending explicit reconciliation state TASK_STAGING for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:09.919437 14826 master.cpp:3601] Sending explicit reconciliation state TASK_STAGING for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:10.076184 14832 master.cpp:3388] Executor thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) terminated with signal Killed
+I1211 17:07:10.076282 14832 master.cpp:4714] Removing executor 'thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.076362 14832 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.078773 14829 master.cpp:3295] Status update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.078804 14829 master.cpp:3336] Forwarding status update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.078856 14829 master.cpp:4618] Updating the latest state of task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:10.078904 14829 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.094971 14829 master.cpp:4685] Removing task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:10.095060 14829 master.cpp:2782] Forwarding status update acknowledgement ad0a4bb6-e53e-4372-aa58-9f8f09e635dc for task 1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:10.205828 14827 master.cpp:4685] Removing task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.205941 14827 master.cpp:2782] Forwarding status update acknowledgement 5738fb70-1818-4e82-9c56-f098a6cbaba2 for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.443891 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 124443ns
+I1211 17:07:10.444051 14833 master.cpp:3755] Sending 2 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:10.531074 14833 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O14 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:10.531491 14833 master.hpp:822] Adding task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:10.531570 14833 master.cpp:2545] Launching task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.531714 14833 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.532260 14833 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:10.738103 14830 master.cpp:3295] Status update TASK_STARTING (UUID: 2bdbae70-fb60-4280-9fc4-c6b380dcaafd) for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:10.738193 14830 master.cpp:3336] Forwarding status update TASK_STARTING (UUID: 2bdbae70-fb60-4280-9fc4-c6b380dcaafd) for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.738252 14830 master.cpp:4618] Updating the latest state of task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_STARTING
+I1211 17:07:10.756191 14828 master.cpp:2782] Forwarding status update acknowledgement 2bdbae70-fb60-4280-9fc4-c6b380dcaafd for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:10.889355 14831 master.cpp:3388] Executor thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) exited with status 1
+I1211 17:07:10.889479 14831 master.cpp:4714] Removing executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.889550 14831 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.894984 14831 master.cpp:3295] Status update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.895018 14831 master.cpp:3336] Forwarding status update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.895090 14831 master.cpp:4618] Updating the latest state of task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:10.895140 14831 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.964309 14831 master.cpp:2618] Asked to kill task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.964395 14831 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:10.985594 14832 master.cpp:4685] Removing task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:10.985680 14832 master.cpp:2782] Forwarding status update acknowledgement 1b40fe11-597c-4779-83de-e403e4d88fe1 for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:11.351606 14829 master.cpp:3295] Status update TASK_RUNNING (UUID: ac7bc4fa-132c-421c-a91d-ffc5c03c4b9f) for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:11.351704 14829 master.cpp:3336] Forwarding status update TASK_RUNNING (UUID: ac7bc4fa-132c-421c-a91d-ffc5c03c4b9f) for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:11.351773 14829 master.cpp:4618] Updating the latest state of task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_RUNNING
+I1211 17:07:11.400171 14827 master.cpp:2782] Forwarding status update acknowledgement ac7bc4fa-132c-421c-a91d-ffc5c03c4b9f for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:11.446450 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 128858ns
+I1211 17:07:11.446616 14833 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:12.446943 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:12.446996 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 113512ns
+I1211 17:07:12.702419 14828 master.cpp:3388] Executor thermos-1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) exited with status 0
+I1211 17:07:12.702527 14828 master.cpp:4714] Removing executor 'thermos-1449853620078-www-data-devel-job1-0-4f490c16-4c5e-4fe2-b919-178b220b2c39' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:12.702605 14828 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.25; mem(*):128) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:13.448386 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 83426ns
+I1211 17:07:13.448485 14828 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:13.452082 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O16 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:13.452216 14828 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.25; mem(*):128) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:13.452244 14828 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:13.452592 14830 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O13 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:13.452683 14830 hierarchical.hpp:648] Recovered cpus(*):0.24; mem(*):2542; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.49; mem(*):2670; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:13.452702 14830 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:14.448952 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 91948ns
+I1211 17:07:14.449071 14830 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:14.607048 14832 master.cpp:3388] Executor thermos-1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) exited with status 0
+I1211 17:07:14.607169 14832 master.cpp:4714] Removing executor 'thermos-1449853625467-www-data-devel-job6-0-d5618f88-1396-4c43-a518-91363c1df4fb' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:14.607270 14832 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.25; mem(*):128) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:15.449815 14832 hierarchical.hpp:898] Filtered cpus(*):0.25; mem(*):128 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:15.449887 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:15.449898 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 138473ns
+I1211 17:07:16.450413 14832 hierarchical.hpp:898] Filtered cpus(*):0.25; mem(*):128 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:16.450500 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:16.450512 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 162598ns
+I1211 17:07:17.450896 14832 hierarchical.hpp:898] Filtered cpus(*):0.25; mem(*):128 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:17.450966 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:17.450974 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 136894ns
+I1211 17:07:17.939494 14832 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O15 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:17.939847 14832 master.hpp:822] Adding task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:17.939913 14832 master.cpp:2545] Launching task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:17.940033 14832 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:17.940153 14832 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:18.004182 14831 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O17 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:18.004531 14831 master.hpp:822] Adding task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 (n4)
+I1211 17:07:18.004562 14831 master.cpp:2545] Launching task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:18.004710 14831 hierarchical.hpp:648] Recovered cpus(*):0.23; mem(*):2541; disk(*):33170; ports(*):[31000-32000] (total allocatable: cpus(*):0.48; mem(*):2669; disk(*):33170; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.004827 14831 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:18.238765 14829 master.cpp:3388] Executor thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) terminated with signal Killed
+I1211 17:07:18.239258 14829 master.cpp:4714] Removing executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.239398 14829 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.241211 14829 master.cpp:3295] Status update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.241238 14829 master.cpp:3336] Forwarding status update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.241288 14829 master.cpp:4618] Updating the latest state of task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:18.241331 14829 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.281473 14829 master.cpp:2618] Asked to kill task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.281610 14829 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:18.310576 14827 master.cpp:4685] Removing task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.310713 14827 master.cpp:2782] Forwarding status update acknowledgement ea7d0696-11bd-484f-8ec8-7f8d74639872 for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.453825 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 102980ns
+I1211 17:07:18.453951 14833 master.cpp:3755] Sending 2 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:18.587781 14828 master.cpp:3295] Status update TASK_FINISHED (UUID: 7d926dc8-8130-4430-ba44-f869835dbb80) for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:18.587918 14828 master.cpp:3336] Forwarding status update TASK_FINISHED (UUID: 7d926dc8-8130-4430-ba44-f869835dbb80) for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.587983 14828 master.cpp:4618] Updating the latest state of task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_FINISHED
+I1211 17:07:18.588060 14828 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):0.01; disk(*):1; mem(*):1) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.610167 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O18 ] on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:18.610482 14828 master.hpp:822] Adding task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 (n5)
+I1211 17:07:18.610509 14828 master.cpp:2545] Launching task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 with resources cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.610618 14828 hierarchical.hpp:648] Recovered cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000] (total allocatable: cpus(*):0.74; mem(*):2798; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.610728 14828 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S0 for 5secs
+I1211 17:07:18.693310 14830 master.cpp:4685] Removing task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:18.693428 14830 master.cpp:2782] Forwarding status update acknowledgement 7d926dc8-8130-4430-ba44-f869835dbb80 for task 1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:18.851135 14832 master.cpp:3388] Executor thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) terminated with signal Killed
+I1211 17:07:18.851230 14832 master.cpp:4714] Removing executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.851299 14832 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.99; mem(*):2926; disk(*):33171; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.853389 14831 master.cpp:3295] Status update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.853435 14831 master.cpp:3336] Forwarding status update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.853487 14831 master.cpp:4618] Updating the latest state of task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 to TASK_LOST
+I1211 17:07:18.853533 14831 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.872380 14831 master.cpp:2618] Asked to kill task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.872427 14831 master.cpp:2678] Telling slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5) to kill task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:18.910713 14831 master.cpp:4685] Removing task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.910830 14831 master.cpp:2782] Forwarding status update acknowledgement b95be312-58f0-406a-aa35-82d5a9be0561 for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S0 at slave(1)@10.0.0.6:5051 (n5)
+I1211 17:07:18.982283 14829 master.cpp:3295] Status update TASK_STARTING (UUID: 280c3199-66a6-4803-8f55-63e1728fd9b5) for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:18.982544 14829 master.cpp:3336] Forwarding status update TASK_STARTING (UUID: 280c3199-66a6-4803-8f55-63e1728fd9b5) for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.982609 14829 master.cpp:4618] Updating the latest state of task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 to TASK_STARTING
+I1211 17:07:19.012229 14827 master.cpp:2782] Forwarding status update acknowledgement 280c3199-66a6-4803-8f55-63e1728fd9b5 for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:19.455292 14826 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:19.455441 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 207193ns
+I1211 17:07:19.455520 14826 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:19.601207 14833 master.cpp:3295] Status update TASK_RUNNING (UUID: cdfcdc15-24a1-407a-a28b-acb18762eeec) for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:19.601263 14833 master.cpp:3336] Forwarding status update TASK_RUNNING (UUID: cdfcdc15-24a1-407a-a28b-acb18762eeec) for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:19.601328 14833 master.cpp:4618] Updating the latest state of task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 to TASK_RUNNING
+I1211 17:07:19.678696 14830 master.cpp:2782] Forwarding status update acknowledgement cdfcdc15-24a1-407a-a28b-acb18762eeec for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:20.456698 14828 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:20.456766 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:20.456779 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 150928ns
+I1211 17:07:21.457185 14828 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:21.457283 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:21.457293 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 175412ns
+I1211 17:07:22.458171 14828 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:22.458228 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:22.458237 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 123302ns
+I1211 17:07:23.459942 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 62868ns
+I1211 17:07:23.460037 14828 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:23.469254 14832 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O21 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:23.469388 14832 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):0.01; disk(*):1; mem(*):1) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:23.469416 14832 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:23.469712 14832 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O19 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:23.469815 14832 hierarchical.hpp:648] Recovered cpus(*):0.48; mem(*):2669; disk(*):33170; ports(*):[31000-32000] (total allocatable: cpus(*):0.49; disk(*):33171; mem(*):2670; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:23.469879 14832 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:23.739466 14831 master.cpp:3388] Executor thermos-1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) exited with status 0
+I1211 17:07:23.739568 14831 master.cpp:4714] Removing executor 'thermos-1449853620277-www-data-devel-job2-0-2130f768-9b36-4f35-ab92-12aaf0101465' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:23.739641 14831 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.74; disk(*):33171; mem(*):2798; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:24.460250 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 100950ns
+I1211 17:07:24.460355 14829 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:25.461452 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:25.461537 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 125479ns
+I1211 17:07:25.895001 14827 master.cpp:3295] Status update TASK_FINISHED (UUID: 9a1af496-4674-4089-a953-aa5b4d7fe448) for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 from slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:25.895118 14827 master.cpp:3336] Forwarding status update TASK_FINISHED (UUID: 9a1af496-4674-4089-a953-aa5b4d7fe448) for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:25.895185 14827 master.cpp:4618] Updating the latest state of task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 to TASK_FINISHED
+I1211 17:07:25.895256 14827 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):0.01; disk(*):1; mem(*):1) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:25.934489 14826 master.cpp:4685] Removing task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba with resources cpus(*):0.01; disk(*):1; mem(*):1 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:25.934615 14826 master.cpp:2782] Forwarding status update acknowledgement 9a1af496-4674-4089-a953-aa5b4d7fe448 for task 1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083 to slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:26.462581 14833 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:26.462666 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:26.462679 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 159165ns
+I1211 17:07:27.463711 14833 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:27.463815 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:27.463829 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 201742ns
+I1211 17:07:28.464910 14830 hierarchical.hpp:898] Filtered cpus(*):0.01; disk(*):1; mem(*):1 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:28.465034 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:28.465049 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 204509ns
+I1211 17:07:29.465432 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 93241ns
+I1211 17:07:29.465582 14828 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:29.469427 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O23 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:29.469751 14828 hierarchical.hpp:648] Recovered cpus(*):0.01; disk(*):1; mem(*):1 (total allocatable: cpus(*):0.01; disk(*):1; mem(*):1) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:29.469779 14828 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:29.469977 14828 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O22 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:29.470064 14828 hierarchical.hpp:648] Recovered cpus(*):0.74; disk(*):33171; mem(*):2798; ports(*):[31000-32000] (total allocatable: cpus(*):0.75; disk(*):33172; mem(*):2799; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:29.470088 14828 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:30.469635 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 76961ns
+I1211 17:07:30.469744 14832 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:30.984838 14831 master.cpp:3388] Executor thermos-1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) exited with status 0
+I1211 17:07:30.984928 14831 master.cpp:4714] Removing executor 'thermos-1449853620528-www-data-devel-job8-0-555279b9-3c97-4a13-b1b4-e145a87496ba' with resources cpus(*):0.25; mem(*):128 of framework 20151211-170102-67108874-5050-14575-0000 on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4)
+I1211 17:07:30.984997 14831 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.25; mem(*):128) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:31.470476 14831 hierarchical.hpp:898] Filtered cpus(*):0.25; mem(*):128 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:31.470530 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:31.470540 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 121764ns
+I1211 17:07:32.470955 14831 hierarchical.hpp:898] Filtered cpus(*):0.25; mem(*):128 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:32.471034 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:32.471045 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 160389ns
+I1211 17:07:33.471941 14829 hierarchical.hpp:898] Filtered cpus(*):0.25; mem(*):128 on slave 20151211-170102-67108874-5050-14575-S1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:33.472061 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:33.472074 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 204729ns
+I1211 17:07:34.473263 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 74190ns
+I1211 17:07:34.473395 14826 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:34.475852 14826 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O25 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:34.475960 14826 master.cpp:2268] Processing ACCEPT call for offers: [ 20151211-170541-50331658-5050-14825-O24 ] on slave 20151211-170102-67108874-5050-14575-S1 at slave(1)@10.0.0.5:5051 (n4) for framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:34.476215 14827 hierarchical.hpp:648] Recovered cpus(*):0.25; mem(*):128 (total allocatable: cpus(*):0.25; mem(*):128) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:34.476251 14827 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:34.476327 14826 hierarchical.hpp:648] Recovered cpus(*):0.75; disk(*):33172; mem(*):2799; ports(*):[31000-32000] (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S1 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:34.476349 14826 hierarchical.hpp:684] Framework 20151211-170102-67108874-5050-14575-0000 filtered slave 20151211-170102-67108874-5050-14575-S1 for 5secs
+I1211 17:07:35.476172 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 114583ns
+I1211 17:07:35.476325 14827 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:36.477392 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:36.477458 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 115659ns
+I1211 17:07:37.477913 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:37.478024 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 163009ns
+I1211 17:07:38.478376 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:38.478514 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 189712ns
+I1211 17:07:39.479573 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:39.479639 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 121108ns
+I1211 17:07:40.480072 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:40.480137 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 115966ns
+I1211 17:07:41.480659 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:41.480725 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 116094ns
+I1211 17:07:42.481875 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:42.481950 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 113792ns
+I1211 17:07:43.483444 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:43.483489 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 92590ns
+I1211 17:07:44.486495 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:44.486604 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 150393ns
+I1211 17:07:45.487505 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:45.487612 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 159421ns
+I1211 17:07:46.488142 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:46.488209 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 117502ns
+I1211 17:07:47.488849 14829 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:47.488979 14829 hierarchical.hpp:741] Performed allocation for 2 slaves in 189486ns
+I1211 17:07:48.324575 14826 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 17:07:48.327965 14827 group.cpp:313] Group process (group(3)@10.0.0.3:5050) reconnected to ZooKeeper
+I1211 17:07:48.327996 14827 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 17:07:48.491066 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:48.491119 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 95377ns
+I1211 17:07:49.456809 14833 hierarchical.hpp:648] Recovered cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000] (total allocatable: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]) on slave 20151211-170102-67108874-5050-14575-S0 from framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:49.491559 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 111476ns
+I1211 17:07:49.491729 14830 master.cpp:3755] Sending 1 offers to framework 20151211-170102-67108874-5050-14575-0000 (TwitterScheduler) at scheduler-9d554861-4279-42a7-a137-861ec9af2e73@10.0.0.2:8083
+I1211 17:07:50.492375 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:50.492444 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 119990ns
+I1211 17:07:51.492724 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:51.492791 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 125137ns
+I1211 17:07:51.526970 14828 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 17:07:52.493336 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:52.493413 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 135571ns
+I1211 17:07:53.493885 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:53.493950 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 113560ns
+I1211 17:07:54.494499 14832 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:54.494578 14832 hierarchical.hpp:741] Performed allocation for 2 slaves in 138015ns
+I1211 17:07:54.959462 14832 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 17:07:54.980530 14831 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 17:07:54.997629 14829 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 17:07:55.495515 14826 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:55.495604 14826 hierarchical.hpp:741] Performed allocation for 2 slaves in 139678ns
+I1211 17:07:56.496588 14827 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:56.496721 14827 hierarchical.hpp:741] Performed allocation for 2 slaves in 192861ns
+I1211 17:07:57.497870 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:57.497941 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 123858ns
+I1211 17:07:58.498656 14833 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:58.498764 14833 hierarchical.hpp:741] Performed allocation for 2 slaves in 155411ns
+I1211 17:07:59.500128 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:07:59.500208 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 138613ns
+I1211 17:08:00.501256 14830 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:08:00.501380 14830 hierarchical.hpp:741] Performed allocation for 2 slaves in 172315ns
+I1211 17:08:01.502630 14828 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:08:01.503036 14828 hierarchical.hpp:741] Performed allocation for 2 slaves in 444802ns
+W1211 17:08:01.528587 14832 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=55191e1b2540011) expiration
+I1211 17:08:01.530964 14832 group.cpp:472] ZooKeeper session expired
+I1211 17:08:01.531303 14831 log.cpp:381] Renewing replica group membership
+I1211 17:08:02.504050 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:08:02.504129 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 139413ns
+I1211 17:08:03.504814 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:08:03.504894 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 137508ns
+I1211 17:08:04.505913 14831 hierarchical.hpp:834] No resources available to allocate!
+I1211 17:08:04.505990 14831 hierarchical.hpp:741] Performed allocation for 2 slaves in 139760ns
+W1211 17:08:04.959830 14831 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=45191e1b1ee0062) expiration
+I1211 17:08:04.960021 14831 group.cpp:472] ZooKeeper session expired
+I1211 17:08:04.960129 14829 network.hpp:424] ZooKeeper group memberships changed
+I1211 17:08:04.960193 14829 network.hpp:466] ZooKeeper group PIDs: {  }
+W1211 17:08:04.983476 14829 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=45191e1b1ee0061) expiration
+I1211 17:08:04.983639 14829 group.cpp:472] ZooKeeper session expired
+I1211 17:08:04.983741 14826 detector.cpp:126] The current leader (id=7) is lost
+I1211 17:08:04.983758 14826 detector.cpp:138] Detected a new leader: None
+I1211 17:08:04.983814 14826 master.cpp:1356] The newly elected leader is None

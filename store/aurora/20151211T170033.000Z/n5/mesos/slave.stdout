@@ -1,0 +1,853 @@
+I1211 17:01:32.688352 14131 logging.cpp:172] INFO level logging started!
+I1211 17:01:32.688532 14131 main.cpp:156] Build: 2015-03-26 13:36:52 by root
+I1211 17:01:32.688544 14131 main.cpp:158] Version: 0.22.0
+I1211 17:01:32.688550 14131 main.cpp:161] Git tag: 0.22.0
+I1211 17:01:32.688555 14131 main.cpp:165] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1211 17:01:32.688627 14131 containerizer.cpp:110] Using isolation: posix/cpu,posix/mem
+I1211 17:01:32.688762 14131 main.cpp:200] Starting Mesos slave
+I1211 17:01:32.688933 14131 slave.cpp:174] Slave started on 1)@10.0.0.6:5051
+I1211 17:01:32.689040 14131 slave.cpp:299] Slave resources: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1211 17:01:32.689062 14131 slave.cpp:328] Slave hostname: n5
+I1211 17:01:32.689069 14131 slave.cpp:329] Slave checkpoint: true
+I1211 17:01:32.734061 14133 state.cpp:35] Recovering state from '/var/lib/mesos/slave/meta'
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@716: Client environment:host.name=af07d6600b91
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/slave
+2015-12-11 17:01:32,734:14131(0x7f0253c6b700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7f025a895200 sessionId=0 sessionPasswd=<null> context=0x7f0240004570 flags=0
+I1211 17:01:32.734992 14134 status_update_manager.cpp:197] Recovering status update manager
+I1211 17:01:32.735029 14134 containerizer.cpp:307] Recovering containerizer
+I1211 17:01:32.735138 14134 slave.cpp:3778] Finished recovery
+2015-12-11 17:01:32,736:14131(0x7f024ec2b700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:01:32,783:14131(0x7f024ec2b700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.3:2181], sessionId=0x45191e1b1ee0009, negotiated timeout=10000
+I1211 17:01:32.784081 14134 group.cpp:313] Group process (group(1)@10.0.0.6:5051) connected to ZooKeeper
+I1211 17:01:32.784108 14134 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 17:01:32.784116 14134 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 17:01:32.801524 14134 detector.cpp:138] Detected a new leader: (id='4')
+I1211 17:01:32.801621 14134 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1211 17:01:32.806778 14134 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 17:01:32.806843 14134 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 17:01:32.807060 14134 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 17:01:32.807085 14134 slave.cpp:660] Detecting new master
+I1211 17:01:32.807102 14134 status_update_manager.cpp:171] Pausing sending status updates
+2015-12-11 17:01:36,156:14131(0x7f024ec2b700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 21ms
+I1211 17:02:32.745915 14133 slave.cpp:3618] Current disk usage 32.49%. Max allowed age: 4.025824974874630days
+I1211 17:03:03.045886 14133 slave.cpp:2918] master@10.0.0.3:5050 exited
+W1211 17:03:03.045981 14133 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+I1211 17:03:12.015718 14133 detector.cpp:138] Detected a new leader: (id='5')
+I1211 17:03:12.015825 14133 group.cpp:659] Trying to get '/mesos/info_0000000005' in ZooKeeper
+I1211 17:03:12.016338 14133 detector.cpp:452] A new leading master (UPID=master@10.0.0.4:5050) is detected
+I1211 17:03:12.016387 14133 slave.cpp:624] New master detected at master@10.0.0.4:5050
+I1211 17:03:12.016526 14133 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 17:03:12.016556 14133 slave.cpp:660] Detecting new master
+I1211 17:03:12.016580 14133 status_update_manager.cpp:171] Pausing sending status updates
+I1211 17:03:12.320477 14133 slave.cpp:792] Registered with master master@10.0.0.4:5050; given slave ID 20151211-170102-67108874-5050-14575-S0
+I1211 17:03:12.320827 14133 status_update_manager.cpp:178] Resuming sending status updates
+I1211 17:03:32.752086 14133 slave.cpp:3618] Current disk usage 32.49%. Max allowed age: 4.025764278203344days
+I1211 17:03:46.008724 14133 detector.cpp:138] Detected a new leader: (id='6')
+I1211 17:03:46.008884 14133 group.cpp:659] Trying to get '/mesos/info_0000000006' in ZooKeeper
+I1211 17:03:46.009508 14133 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1211 17:03:46.009572 14133 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1211 17:03:46.009824 14133 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 17:03:46.009860 14133 slave.cpp:660] Detecting new master
+I1211 17:03:46.009886 14133 status_update_manager.cpp:171] Pausing sending status updates
+I1211 17:04:32.756539 14136 slave.cpp:3618] Current disk usage 32.49%. Max allowed age: 4.025695012590220days
+I1211 17:04:42.324764 14136 slave.cpp:2908] No pings from master received within 75secs
+I1211 17:05:32.762516 14136 slave.cpp:3618] Current disk usage 32.49%. Max allowed age: 4.025628603291041days
+/usr/sbin/mesos-slave already running.
+I1211 17:05:46.247230 14136 slave.cpp:2918] master@10.0.0.2:5050 exited
+W1211 17:05:46.255674 14136 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+I1211 17:05:58.136837 14135 detector.cpp:138] Detected a new leader: (id='7')
+I1211 17:05:58.154266 14135 group.cpp:659] Trying to get '/mesos/info_0000000007' in ZooKeeper
+I1211 17:05:58.176410 14135 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 17:05:58.258136 14135 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 17:05:58.259132 14135 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 17:05:58.265434 14135 slave.cpp:660] Detecting new master
+I1211 17:05:58.258630 14140 status_update_manager.cpp:171] Pausing sending status updates
+I1211 17:05:58.592458 14135 slave.cpp:860] Re-registered with master master@10.0.0.3:5050
+I1211 17:05:58.607674 14139 status_update_manager.cpp:178] Resuming sending status updates
+I1211 17:05:58.614495 14135 slave.cpp:2010] Updated checkpointed resources from  to 
+W1211 17:05:59.404464 14134 slave.cpp:1911] Ignoring updating pid for framework 20151211-170102-67108874-5050-14575-0000 because it does not exist
+W1211 17:06:09.400003 14133 slave.cpp:1911] Ignoring updating pid for framework 20151211-170102-67108874-5050-14575-0000 because it does not exist
+I1211 17:06:32.765741 14136 slave.cpp:3618] Current disk usage 32.49%. Max allowed age: 4.025489357986308days
+I1211 17:07:00.836438 14136 slave.cpp:1121] Got assigned task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:00.837987 14136 slave.cpp:1231] Launching task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:00.841441 14136 slave.cpp:4160] Launching executor thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785/runs/fce23d89-4f22-454a-a5ce-bce5e3804602'
+I1211 17:07:00.841693 14139 containerizer.cpp:472] Starting container 'fce23d89-4f22-454a-a5ce-bce5e3804602' for executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:00.842217 14136 slave.cpp:1378] Queuing task '1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' for executor thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:00.843602 14139 launcher.cpp:130] Forked child with pid '14516' for container 'fce23d89-4f22-454a-a5ce-bce5e3804602'
+I1211 17:07:00.845957 14139 containerizer.cpp:682] Checkpointing executor's forked pid 14516 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785/runs/fce23d89-4f22-454a-a5ce-bce5e3804602/pids/forked.pid'
+I1211 17:07:00.873160 14133 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:01.050721 14137 containerizer.cpp:906] Destroying container 'fce23d89-4f22-454a-a5ce-bce5e3804602'
+E1211 17:07:01.051754 14138 slave.cpp:3082] Container 'fce23d89-4f22-454a-a5ce-bce5e3804602' for executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container 'fce23d89-4f22-454a-a5ce-bce5e3804602'with exit status: 256
+I1211 17:07:01.152196 14134 containerizer.cpp:1111] Executor for container 'fce23d89-4f22-454a-a5ce-bce5e3804602' has exited
+I1211 17:07:01.153556 14134 slave.cpp:3193] Executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' of framework 20151211-170102-67108874-5050-14575-0000 exited with status 1
+E1211 17:07:01.153949 14139 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+I1211 17:07:01.154527 14134 slave.cpp:2508] Handling status update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+W1211 17:07:01.154688 14140 containerizer.cpp:802] Ignoring update for unknown container: fce23d89-4f22-454a-a5ce-bce5e3804602
+I1211 17:07:01.155500 14135 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.155791 14135 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.158426 14135 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:01.255341 14139 slave.cpp:1558] Asked to kill task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:01.255384 14139 slave.cpp:1683] Ignoring kill task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' is terminating/terminated
+I1211 17:07:01.294176 14139 status_update_manager.cpp:389] Received status update acknowledgement (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.294247 14139 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: e3593742-973e-49a3-a4b8-7addfdaf49a2) for task 1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.295999 14139 slave.cpp:3302] Cleaning up executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.296279 14139 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.296337 14139 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785/runs/fce23d89-4f22-454a-a5ce-bce5e3804602' for gc 6.99999657195556days in the future
+I1211 17:07:01.296375 14139 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' for gc 6.99999657157333days in the future
+I1211 17:07:01.296391 14139 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785/runs/fce23d89-4f22-454a-a5ce-bce5e3804602' for gc 6.99999657135407days in the future
+I1211 17:07:01.296428 14139 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785' for gc 6.99999657117926days in the future
+I1211 17:07:01.296473 14139 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999657042963days in the future
+I1211 17:07:01.296489 14139 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999657027556days in the future
+I1211 17:07:01.296412 14138 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.586172 14139 slave.cpp:1121] Got assigned task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.587082 14139 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:01.587229 14139 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:01.587316 14135 slave.cpp:1231] Launching task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.588297 14135 slave.cpp:4160] Launching executor thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc/runs/da726add-2ac6-4040-949c-0417243c9654'
+I1211 17:07:01.588614 14136 containerizer.cpp:472] Starting container 'da726add-2ac6-4040-949c-0417243c9654' for executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:01.589392 14136 launcher.cpp:130] Forked child with pid '14523' for container 'da726add-2ac6-4040-949c-0417243c9654'
+I1211 17:07:01.594082 14136 containerizer.cpp:682] Checkpointing executor's forked pid 14523 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc/runs/da726add-2ac6-4040-949c-0417243c9654/pids/forked.pid'
+I1211 17:07:01.624320 14135 slave.cpp:1378] Queuing task '1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' for executor thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.677194 14136 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:01.884850 14136 containerizer.cpp:906] Destroying container 'da726add-2ac6-4040-949c-0417243c9654'
+E1211 17:07:01.885248 14138 slave.cpp:3082] Container 'da726add-2ac6-4040-949c-0417243c9654' for executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container 'da726add-2ac6-4040-949c-0417243c9654'with exit status: 256
+I1211 17:07:01.988669 14137 containerizer.cpp:1111] Executor for container 'da726add-2ac6-4040-949c-0417243c9654' has exited
+I1211 17:07:01.988992 14137 slave.cpp:3193] Executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' of framework 20151211-170102-67108874-5050-14575-0000 exited with status 1
+I1211 17:07:01.989557 14137 slave.cpp:2508] Handling status update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+E1211 17:07:01.989665 14137 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+W1211 17:07:01.989691 14137 containerizer.cpp:802] Ignoring update for unknown container: da726add-2ac6-4040-949c-0417243c9654
+I1211 17:07:01.989737 14137 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.989904 14137 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:01.992354 14139 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:02.132822 14133 slave.cpp:1558] Asked to kill task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:02.132920 14133 slave.cpp:1683] Ignoring kill task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' is terminating/terminated
+I1211 17:07:02.223417 14140 status_update_manager.cpp:389] Received status update acknowledgement (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.223489 14140 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: eae682d9-261b-44b6-914e-fb01099c3893) for task 1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.225294 14140 slave.cpp:3302] Cleaning up executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.225539 14140 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.225632 14140 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:02.225569 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc/runs/da726add-2ac6-4040-949c-0417243c9654' for gc 6.99999739041778days in the future
+I1211 17:07:02.225662 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' for gc 6.99999739004444days in the future
+I1211 17:07:02.225750 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc/runs/da726add-2ac6-4040-949c-0417243c9654' for gc 6.99999738983704days in the future
+I1211 17:07:02.225778 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc' for gc 6.99999738966519days in the future
+I1211 17:07:02.225795 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999738876148days in the future
+I1211 17:07:02.225806 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999738861037days in the future
+I1211 17:07:03.048813 14140 slave.cpp:1121] Got assigned task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.049571 14140 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:03.049659 14140 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:03.049722 14133 slave.cpp:1231] Launching task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.055799 14133 slave.cpp:4160] Launching executor thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334/runs/7382c630-1921-415c-838e-469f23aefd8a'
+I1211 17:07:03.058784 14138 containerizer.cpp:472] Starting container '7382c630-1921-415c-838e-469f23aefd8a' for executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:03.063961 14138 launcher.cpp:130] Forked child with pid '14530' for container '7382c630-1921-415c-838e-469f23aefd8a'
+I1211 17:07:03.064554 14138 containerizer.cpp:682] Checkpointing executor's forked pid 14530 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334/runs/7382c630-1921-415c-838e-469f23aefd8a/pids/forked.pid'
+I1211 17:07:03.072185 14133 slave.cpp:1378] Queuing task '1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' for executor thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.103173 14138 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:03.306316 14138 containerizer.cpp:906] Destroying container '7382c630-1921-415c-838e-469f23aefd8a'
+E1211 17:07:03.307801 14138 slave.cpp:3082] Container '7382c630-1921-415c-838e-469f23aefd8a' for executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container '7382c630-1921-415c-838e-469f23aefd8a'with exit status: 256
+I1211 17:07:03.409117 14139 containerizer.cpp:1111] Executor for container '7382c630-1921-415c-838e-469f23aefd8a' has exited
+I1211 17:07:03.409370 14139 slave.cpp:3193] Executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' of framework 20151211-170102-67108874-5050-14575-0000 terminated with signal Killed
+I1211 17:07:03.410102 14139 slave.cpp:2508] Handling status update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+E1211 17:07:03.410143 14135 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+W1211 17:07:03.410292 14137 containerizer.cpp:802] Ignoring update for unknown container: 7382c630-1921-415c-838e-469f23aefd8a
+I1211 17:07:03.410840 14140 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.411001 14140 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.417258 14140 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:03.488947 14133 slave.cpp:1558] Asked to kill task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:03.489017 14133 slave.cpp:1683] Ignoring kill task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' is terminating/terminated
+I1211 17:07:03.514775 14135 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.514821 14135 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 97c49ca5-679b-4c14-b56b-9e58e7b2a581) for task 1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.520575 14135 slave.cpp:3302] Cleaning up executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.520856 14135 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.521034 14135 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.520952 14136 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334/runs/7382c630-1921-415c-838e-469f23aefd8a' for gc 6.99999397242963days in the future
+I1211 17:07:03.521088 14136 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' for gc 6.99999397205037days in the future
+I1211 17:07:03.521116 14136 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334/runs/7382c630-1921-415c-838e-469f23aefd8a' for gc 6.99999397181926days in the future
+I1211 17:07:03.521149 14136 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334' for gc 6.99999397164444days in the future
+I1211 17:07:03.521181 14136 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999396977778days in the future
+I1211 17:07:03.521198 14136 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999396962963days in the future
+I1211 17:07:03.543218 14137 slave.cpp:1121] Got assigned task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.543848 14137 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:03.543928 14137 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:03.543969 14137 slave.cpp:1231] Launching task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.545375 14137 slave.cpp:4160] Launching executor thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf/runs/05bfdb92-8385-476d-be4b-f2a487f70129'
+I1211 17:07:03.545536 14139 containerizer.cpp:472] Starting container '05bfdb92-8385-476d-be4b-f2a487f70129' for executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:03.546373 14139 launcher.cpp:130] Forked child with pid '14537' for container '05bfdb92-8385-476d-be4b-f2a487f70129'
+I1211 17:07:03.547868 14139 containerizer.cpp:682] Checkpointing executor's forked pid 14537 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf/runs/05bfdb92-8385-476d-be4b-f2a487f70129/pids/forked.pid'
+I1211 17:07:03.554975 14137 slave.cpp:1378] Queuing task '1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' for executor thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.570139 14139 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:03.718061 14139 containerizer.cpp:906] Destroying container '05bfdb92-8385-476d-be4b-f2a487f70129'
+E1211 17:07:03.719148 14139 slave.cpp:3082] Container '05bfdb92-8385-476d-be4b-f2a487f70129' for executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container '05bfdb92-8385-476d-be4b-f2a487f70129'with exit status: 256
+I1211 17:07:03.820379 14135 containerizer.cpp:1111] Executor for container '05bfdb92-8385-476d-be4b-f2a487f70129' has exited
+I1211 17:07:03.820591 14135 slave.cpp:3193] Executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' of framework 20151211-170102-67108874-5050-14575-0000 terminated with signal Killed
+I1211 17:07:03.821161 14135 slave.cpp:2508] Handling status update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+W1211 17:07:03.821305 14135 containerizer.cpp:802] Ignoring update for unknown container: 05bfdb92-8385-476d-be4b-f2a487f70129
+E1211 17:07:03.821204 14134 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+I1211 17:07:03.821795 14134 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.822106 14134 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.826707 14134 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:03.915161 14140 slave.cpp:1558] Asked to kill task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:03.915212 14140 slave.cpp:1683] Ignoring kill task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' is terminating/terminated
+I1211 17:07:03.947316 14140 status_update_manager.cpp:389] Received status update acknowledgement (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.947360 14140 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: f4730928-6841-4205-a419-1393e84bedf8) for task 1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.951572 14140 slave.cpp:3302] Cleaning up executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.951838 14140 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:03.951907 14140 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf/runs/05bfdb92-8385-476d-be4b-f2a487f70129' for gc 6.99998898413037days in the future
+I1211 17:07:03.951944 14140 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' for gc 6.9999889837837days in the future
+I1211 17:07:03.951989 14140 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf/runs/05bfdb92-8385-476d-be4b-f2a487f70129' for gc 6.9999889835763days in the future
+I1211 17:07:03.952095 14140 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf' for gc 6.99998898341333days in the future
+I1211 17:07:03.952121 14140 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.9999889829037days in the future
+I1211 17:07:03.952149 14140 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99998898264889days in the future
+I1211 17:07:03.951969 14138 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.198652 14134 slave.cpp:1121] Got assigned task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.199498 14134 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:05.199563 14134 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:05.199623 14134 slave.cpp:1231] Launching task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.200778 14134 slave.cpp:4160] Launching executor thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb/runs/e9a93fc4-1988-49da-b3b2-54af1229d832'
+I1211 17:07:05.200953 14137 containerizer.cpp:472] Starting container 'e9a93fc4-1988-49da-b3b2-54af1229d832' for executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:05.215289 14137 launcher.cpp:130] Forked child with pid '14544' for container 'e9a93fc4-1988-49da-b3b2-54af1229d832'
+I1211 17:07:05.215509 14137 containerizer.cpp:682] Checkpointing executor's forked pid 14544 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb/runs/e9a93fc4-1988-49da-b3b2-54af1229d832/pids/forked.pid'
+I1211 17:07:05.251925 14134 slave.cpp:1378] Queuing task '1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' for executor thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.263608 14137 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:05.353858 14137 containerizer.cpp:906] Destroying container 'e9a93fc4-1988-49da-b3b2-54af1229d832'
+E1211 17:07:05.355147 14137 slave.cpp:3082] Container 'e9a93fc4-1988-49da-b3b2-54af1229d832' for executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container 'e9a93fc4-1988-49da-b3b2-54af1229d832'with exit status: 256
+I1211 17:07:05.457069 14139 containerizer.cpp:1111] Executor for container 'e9a93fc4-1988-49da-b3b2-54af1229d832' has exited
+I1211 17:07:05.457293 14139 slave.cpp:3193] Executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' of framework 20151211-170102-67108874-5050-14575-0000 terminated with signal Killed
+I1211 17:07:05.457847 14139 slave.cpp:2508] Handling status update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+E1211 17:07:05.457960 14139 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+W1211 17:07:05.457989 14139 containerizer.cpp:802] Ignoring update for unknown container: e9a93fc4-1988-49da-b3b2-54af1229d832
+I1211 17:07:05.458425 14138 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.458781 14138 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.460510 14138 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:05.506031 14133 slave.cpp:1558] Asked to kill task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:05.506069 14133 slave.cpp:1683] Ignoring kill task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' is terminating/terminated
+I1211 17:07:05.536998 14133 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.537060 14133 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 6a6555f1-cdc0-4e87-9c9c-bdeb4c0b1684) for task 1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.539887 14133 slave.cpp:3302] Cleaning up executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.540150 14133 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:05.540205 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb/runs/e9a93fc4-1988-49da-b3b2-54af1229d832' for gc 6.99999374915556days in the future
+I1211 17:07:05.540246 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' for gc 6.99999374877333days in the future
+I1211 17:07:05.540299 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb/runs/e9a93fc4-1988-49da-b3b2-54af1229d832' for gc 6.99999374851852days in the future
+I1211 17:07:05.540329 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb' for gc 6.99999374833481days in the future
+I1211 17:07:05.540343 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999374789333days in the future
+I1211 17:07:05.540354 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999374774222days in the future
+I1211 17:07:05.540278 14136 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.544952 14133 slave.cpp:1121] Got assigned task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.545714 14133 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:09.545871 14133 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:09.545912 14133 slave.cpp:1231] Launching task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.547065 14133 slave.cpp:4160] Launching executor thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54/runs/b7a0fac1-fb0f-4893-8f52-c940394d42c4'
+I1211 17:07:09.551604 14140 containerizer.cpp:472] Starting container 'b7a0fac1-fb0f-4893-8f52-c940394d42c4' for executor 'thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:09.552361 14140 launcher.cpp:130] Forked child with pid '14551' for container 'b7a0fac1-fb0f-4893-8f52-c940394d42c4'
+I1211 17:07:09.556854 14140 containerizer.cpp:682] Checkpointing executor's forked pid 14551 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54/runs/b7a0fac1-fb0f-4893-8f52-c940394d42c4/pids/forked.pid'
+I1211 17:07:09.575958 14133 slave.cpp:1378] Queuing task '1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' for executor thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:09.627429 14138 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:09.948688 14138 containerizer.cpp:906] Destroying container 'b7a0fac1-fb0f-4893-8f52-c940394d42c4'
+E1211 17:07:09.953253 14138 slave.cpp:3082] Container 'b7a0fac1-fb0f-4893-8f52-c940394d42c4' for executor 'thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container 'b7a0fac1-fb0f-4893-8f52-c940394d42c4'with exit status: 256
+I1211 17:07:10.074817 14134 containerizer.cpp:1111] Executor for container 'b7a0fac1-fb0f-4893-8f52-c940394d42c4' has exited
+I1211 17:07:10.075011 14134 slave.cpp:3193] Executor 'thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' of framework 20151211-170102-67108874-5050-14575-0000 terminated with signal Killed
+E1211 17:07:10.075325 14139 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+I1211 17:07:10.075754 14134 slave.cpp:2508] Handling status update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+W1211 17:07:10.075865 14134 containerizer.cpp:802] Ignoring update for unknown container: b7a0fac1-fb0f-4893-8f52-c940394d42c4
+I1211 17:07:10.075922 14134 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.076570 14134 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.078449 14140 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:10.206204 14133 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.206259 14133 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 5738fb70-1818-4e82-9c56-f098a6cbaba2) for task 1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.207790 14133 slave.cpp:3302] Cleaning up executor 'thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.208019 14133 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.208068 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54/runs/b7a0fac1-fb0f-4893-8f52-c940394d42c4' for gc 6.99999759317037days in the future
+I1211 17:07:10.208096 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' for gc 6.9999975928237days in the future
+I1211 17:07:10.208111 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54/runs/b7a0fac1-fb0f-4893-8f52-c940394d42c4' for gc 6.9999975926163days in the future
+I1211 17:07:10.208122 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54' for gc 6.99999759244148days in the future
+I1211 17:07:10.208140 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999759205037days in the future
+I1211 17:07:10.208181 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999759190815days in the future
+I1211 17:07:10.208165 14135 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.532168 14133 slave.cpp:1121] Got assigned task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.533368 14139 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:10.533818 14135 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:10.533877 14133 slave.cpp:1231] Launching task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.535064 14133 slave.cpp:4160] Launching executor thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b/runs/d6ab3574-bf8a-45e7-90ee-802d85d99e2c'
+I1211 17:07:10.535337 14140 containerizer.cpp:472] Starting container 'd6ab3574-bf8a-45e7-90ee-802d85d99e2c' for executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:10.543217 14140 launcher.cpp:130] Forked child with pid '14558' for container 'd6ab3574-bf8a-45e7-90ee-802d85d99e2c'
+I1211 17:07:10.550890 14140 containerizer.cpp:682] Checkpointing executor's forked pid 14558 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b/runs/d6ab3574-bf8a-45e7-90ee-802d85d99e2c/pids/forked.pid'
+I1211 17:07:10.576016 14133 slave.cpp:1378] Queuing task '1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' for executor thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.600991 14139 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:10.784651 14135 containerizer.cpp:906] Destroying container 'd6ab3574-bf8a-45e7-90ee-802d85d99e2c'
+E1211 17:07:10.785297 14136 slave.cpp:3082] Container 'd6ab3574-bf8a-45e7-90ee-802d85d99e2c' for executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container 'd6ab3574-bf8a-45e7-90ee-802d85d99e2c'with exit status: 256
+I1211 17:07:10.887608 14134 containerizer.cpp:1111] Executor for container 'd6ab3574-bf8a-45e7-90ee-802d85d99e2c' has exited
+I1211 17:07:10.887989 14134 slave.cpp:3193] Executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' of framework 20151211-170102-67108874-5050-14575-0000 exited with status 1
+I1211 17:07:10.888583 14134 slave.cpp:2508] Handling status update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+E1211 17:07:10.888720 14134 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+W1211 17:07:10.888797 14140 containerizer.cpp:802] Ignoring update for unknown container: d6ab3574-bf8a-45e7-90ee-802d85d99e2c
+I1211 17:07:10.889673 14140 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.889884 14140 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.894654 14140 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:10.964659 14138 slave.cpp:1558] Asked to kill task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:10.964717 14138 slave.cpp:1683] Ignoring kill task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' is terminating/terminated
+I1211 17:07:10.986001 14133 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.986042 14133 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 1b40fe11-597c-4779-83de-e403e4d88fe1) for task 1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.987579 14133 slave.cpp:3302] Cleaning up executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.987823 14133 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:10.987872 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b/runs/d6ab3574-bf8a-45e7-90ee-802d85d99e2c' for gc 6.99998856768593days in the future
+I1211 17:07:10.987900 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' for gc 6.99998856733926days in the future
+I1211 17:07:10.987912 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b/runs/d6ab3574-bf8a-45e7-90ee-802d85d99e2c' for gc 6.99998856713185days in the future
+I1211 17:07:10.987925 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b' for gc 6.99998856695704days in the future
+I1211 17:07:10.987937 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99998856653926days in the future
+I1211 17:07:10.987956 14133 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.9999885664days in the future
+I1211 17:07:10.987973 14139 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:17.940327 14133 slave.cpp:1121] Got assigned task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:17.941202 14133 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:17.941331 14133 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:17.941370 14133 slave.cpp:1231] Launching task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:17.942334 14133 slave.cpp:4160] Launching executor thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1/runs/2f4cf337-a03d-433b-8999-717c1b367ca7'
+I1211 17:07:17.942664 14140 containerizer.cpp:472] Starting container '2f4cf337-a03d-433b-8999-717c1b367ca7' for executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:17.943400 14140 launcher.cpp:130] Forked child with pid '14565' for container '2f4cf337-a03d-433b-8999-717c1b367ca7'
+I1211 17:07:17.943572 14140 containerizer.cpp:682] Checkpointing executor's forked pid 14565 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1/runs/2f4cf337-a03d-433b-8999-717c1b367ca7/pids/forked.pid'
+I1211 17:07:17.946784 14133 slave.cpp:1378] Queuing task '1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' for executor thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:17.965294 14140 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:18.134306 14140 containerizer.cpp:906] Destroying container '2f4cf337-a03d-433b-8999-717c1b367ca7'
+E1211 17:07:18.135648 14140 slave.cpp:3082] Container '2f4cf337-a03d-433b-8999-717c1b367ca7' for executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container '2f4cf337-a03d-433b-8999-717c1b367ca7'with exit status: 256
+I1211 17:07:18.237175 14138 containerizer.cpp:1111] Executor for container '2f4cf337-a03d-433b-8999-717c1b367ca7' has exited
+I1211 17:07:18.237576 14138 slave.cpp:3193] Executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' of framework 20151211-170102-67108874-5050-14575-0000 terminated with signal Killed
+I1211 17:07:18.238173 14138 slave.cpp:2508] Handling status update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+E1211 17:07:18.238284 14138 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+W1211 17:07:18.238353 14136 containerizer.cpp:802] Ignoring update for unknown container: 2f4cf337-a03d-433b-8999-717c1b367ca7
+I1211 17:07:18.238910 14136 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.239127 14136 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.240983 14136 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:18.281922 14136 slave.cpp:1558] Asked to kill task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:18.281965 14136 slave.cpp:1683] Ignoring kill task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' is terminating/terminated
+I1211 17:07:18.310986 14137 status_update_manager.cpp:389] Received status update acknowledgement (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.311053 14137 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: ea7d0696-11bd-484f-8ec8-7f8d74639872) for task 1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.312793 14137 slave.cpp:3302] Cleaning up executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.313019 14137 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.313068 14137 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1/runs/2f4cf337-a03d-433b-8999-717c1b367ca7' for gc 6.99999637789333days in the future
+I1211 17:07:18.313102 14137 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' for gc 6.99999637755852days in the future
+I1211 17:07:18.313114 14137 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1/runs/2f4cf337-a03d-433b-8999-717c1b367ca7' for gc 6.9999963773363days in the future
+I1211 17:07:18.313127 14137 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1' for gc 6.99999637716444days in the future
+I1211 17:07:18.313138 14137 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999637677037days in the future
+I1211 17:07:18.313153 14137 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99999637663111days in the future
+I1211 17:07:18.313171 14137 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.610893 14139 slave.cpp:1121] Got assigned task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.611829 14139 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:18.611870 14139 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' from gc
+I1211 17:07:18.611906 14139 slave.cpp:1231] Launching task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.612891 14139 slave.cpp:4160] Launching executor thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0/runs/8bf67d0d-7480-46b2-b015-499980b5436f'
+I1211 17:07:18.613158 14135 containerizer.cpp:472] Starting container '8bf67d0d-7480-46b2-b015-499980b5436f' for executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' of framework '20151211-170102-67108874-5050-14575-0000'
+I1211 17:07:18.613900 14135 launcher.cpp:130] Forked child with pid '14572' for container '8bf67d0d-7480-46b2-b015-499980b5436f'
+I1211 17:07:18.614025 14135 containerizer.cpp:682] Checkpointing executor's forked pid 14572 to '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0/runs/8bf67d0d-7480-46b2-b015-499980b5436f/pids/forked.pid'
+I1211 17:07:18.626826 14139 slave.cpp:1378] Queuing task '1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' for executor thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework '20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.645145 14133 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 17:07:18.747535 14140 containerizer.cpp:906] Destroying container '8bf67d0d-7480-46b2-b015-499980b5436f'
+E1211 17:07:18.748731 14140 slave.cpp:3082] Container '8bf67d0d-7480-46b2-b015-499980b5436f' for executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' of framework '20151211-170102-67108874-5050-14575-0000' failed to start: Failed to fetch URIs for container '8bf67d0d-7480-46b2-b015-499980b5436f'with exit status: 256
+I1211 17:07:18.849676 14139 containerizer.cpp:1111] Executor for container '8bf67d0d-7480-46b2-b015-499980b5436f' has exited
+I1211 17:07:18.849864 14139 slave.cpp:3193] Executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' of framework 20151211-170102-67108874-5050-14575-0000 terminated with signal Killed
+I1211 17:07:18.850471 14139 slave.cpp:2508] Handling status update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 from @0.0.0.0:0
+E1211 17:07:18.850612 14139 slave.cpp:3431] Failed to unmonitor container for executor thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000: Not monitored
+W1211 17:07:18.850641 14139 containerizer.cpp:802] Ignoring update for unknown container: 8bf67d0d-7480-46b2-b015-499980b5436f
+I1211 17:07:18.850687 14139 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.850857 14139 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.853124 14137 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 to master@10.0.0.3:5050
+I1211 17:07:18.872683 14134 slave.cpp:1558] Asked to kill task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+W1211 17:07:18.872719 14134 slave.cpp:1683] Ignoring kill task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000 because the executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' is terminating/terminated
+I1211 17:07:18.911088 14134 status_update_manager.cpp:389] Received status update acknowledgement (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.911156 14134 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: b95be312-58f0-406a-aa35-82d5a9be0561) for task 1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0 of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.914736 14134 slave.cpp:3302] Cleaning up executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' of framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.914973 14134 slave.cpp:3381] Cleaning up framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:18.915024 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0/runs/8bf67d0d-7480-46b2-b015-499980b5436f' for gc 6.99998941082074days in the future
+I1211 17:07:18.915055 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' for gc 6.99998941046222days in the future
+I1211 17:07:18.915067 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0/runs/8bf67d0d-7480-46b2-b015-499980b5436f' for gc 6.99998941025482days in the future
+I1211 17:07:18.915081 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000/executors/thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0' for gc 6.99998941009185days in the future
+I1211 17:07:18.915092 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99998940968593days in the future
+I1211 17:07:18.915103 14134 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-170102-67108874-5050-14575-S0/frameworks/20151211-170102-67108874-5050-14575-0000' for gc 6.99998940954963days in the future
+I1211 17:07:18.915117 14134 status_update_manager.cpp:279] Closing status update streams for framework 20151211-170102-67108874-5050-14575-0000
+I1211 17:07:32.766983 14137 slave.cpp:3618] Current disk usage 33.24%. Max allowed age: 3.972910330920290days
+2015-12-11 17:07:48,245:14131(0x7f024ec2b700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.3:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.3:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 17:07:48,245:14131(0x7f024ec2b700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:07:48.245594 14138 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+2015-12-11 17:07:54,915:14131(0x7f024ec2b700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.5:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.5:2181 timed out (exceeded timeout by 4ms)
+W1211 17:07:58.247283 14140 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=45191e1b1ee0009) expiration
+I1211 17:07:58.247458 14140 group.cpp:472] ZooKeeper session expired
+I1211 17:07:58.247606 14134 detector.cpp:138] Detected a new leader: None
+I1211 17:07:58.248026 14134 slave.cpp:617] Lost leading master
+I1211 17:07:58.248049 14134 slave.cpp:660] Detecting new master
+I1211 17:07:58.248103 14134 status_update_manager.cpp:171] Pausing sending status updates
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@zookeeper_close@2522: Freeing zookeeper resources for sessionId=0x45191e1b1ee0009
+
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@716: Client environment:host.name=af07d6600b91
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/slave
+2015-12-11 17:07:58,248:14131(0x7f0250464700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7f025a895200 sessionId=0 sessionPasswd=<null> context=0x7f0234007220 flags=0
+I1211 17:08:00.843121 14134 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853620205-www-data-devel-job5-0-297cd5b3-b903-4e5d-80b9-e5b30ff35785'
+I1211 17:08:01.624975 14134 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853621201-www-data-devel-job5-0-6270fd51-6e42-4d8f-8eb0-2594c572c5dc'
+I1211 17:08:03.073173 14136 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853620343-www-data-devel-job4-0-a59eb3e3-a577-4257-bfbc-4fa7d36f2334'
+I1211 17:08:03.552986 14137 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853623440-www-data-devel-job4-0-0c59744f-1d4a-4894-bfdc-99804e7e77cf'
+2015-12-11 17:08:04,917:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 2ms)
+2015-12-11 17:08:04,917:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:04,919:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+I1211 17:08:05.228899 14140 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853620413-www-data-devel-job6-0-821612aa-99d8-4e63-b96f-7aa8f30f2aeb'
+I1211 17:08:09.575642 14134 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853620475-www-data-devel-job3-0-d29e61c0-2acc-4a5b-9812-c2a9a74d0e54'
+I1211 17:08:10.561811 14134 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853630170-www-data-devel-job3-0-f919ea24-98ff-46cd-ac0c-f796f6bec62b'
+2015-12-11 17:08:11,588:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.3:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.3:2181 timed out (exceeded timeout by 3ms)
+2015-12-11 17:08:11,588:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:08:17.947233 14134 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853620606-www-data-devel-job7-0-4d7b7361-d179-418f-a291-ff277b1f75c1'
+2015-12-11 17:08:18,255:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.5:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.5:2181 timed out (exceeded timeout by 1ms)
+I1211 17:08:18.623739 14134 slave.cpp:3534] Framework 20151211-170102-67108874-5050-14575-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449853638268-www-data-devel-job7-0-23c30e6f-dbd7-487c-a7f3-b03d28e291f0'
+2015-12-11 17:08:21,591:14131(0x7f024e42a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 3336ms
+I1211 17:08:25.530879 14133 slave.cpp:2918] master@10.0.0.3:5050 exited
+W1211 17:08:25.530921 14133 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+/usr/sbin/mesos-slave already running.
+2015-12-11 17:08:28,262:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 5ms)
+2015-12-11 17:08:28,262:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:28,262:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:28,262:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:28,267:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:28,267:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:28,267:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:31,606:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:31,613:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:31,613:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:31,620:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:31,620:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:31,635:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:31,635:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:31,635:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:08:32.768229 14136 slave.cpp:3618] Current disk usage 33.25%. Max allowed age: 3.972684682118773days
+2015-12-11 17:08:34,977:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:34,981:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:34,981:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:34,982:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:34,982:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:34,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:34,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:34,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:38,334:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:38,353:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:38,354:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:38,355:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:38,355:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:38,369:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:38,369:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:38,369:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:41,706:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:41,718:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:41,718:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:41,718:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:41,718:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:41,733:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:41,733:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:41,733:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:45,071:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:45,081:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:45,081:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:45,082:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:45,082:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:45,099:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:45,099:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:45,099:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:48,441:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:48,491:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:48,491:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:48,492:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:48,492:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:48,545:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:48,545:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:48,545:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:51,890:14131(0x7f024e42a700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 11ms
+2015-12-11 17:08:51,890:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 17:08:51,904:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:51,904:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:51,905:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:51,905:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:51,911:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:51,911:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:51,911:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:55,249:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:55,249:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:55,249:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:55,250:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:55,265:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:55,265:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:55,265:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:58,604:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:58,604:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:08:58,605:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:58,605:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:08:58,606:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:08:58,606:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:08:58,606:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:01,942:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:01,943:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:01,944:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:01,944:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:01,944:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:01,944:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:01,945:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:05,280:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:05,280:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:05,281:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:05,281:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:05,282:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:05,282:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:05,282:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:08,617:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:08,617:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:08,618:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:08,619:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:08,619:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:08,619:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:08,619:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:11,955:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:11,955:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:11,957:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:11,957:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:11,957:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:11,957:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:11,958:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:15,293:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:15,293:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:15,294:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:15,294:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:15,295:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:15,295:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:15,295:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:18,632:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:18,632:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:18,632:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:18,633:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:18,633:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:18,633:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:18,633:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:21,970:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:21,970:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:21,971:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:21,972:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:21,972:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:21,972:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:21,972:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:25,308:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:25,308:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:25,309:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:25,309:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:25,309:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:25,309:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:25,309:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:28,645:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:28,645:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:28,646:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:28,647:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:28,647:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:28,647:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:28,647:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:31,981:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:31,981:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:31,982:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:31,982:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:31,983:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:31,983:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:31,983:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:09:32.779685 14137 slave.cpp:3618] Current disk usage 33.25%. Max allowed age: 3.972469744494548days
+2015-12-11 17:09:35,318:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:35,318:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:35,319:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:35,319:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:35,320:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:35,320:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:35,320:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:38,655:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:38,655:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:38,656:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:38,656:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:38,657:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:38,657:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:38,657:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:09:40.535523 14140 slave.cpp:2908] No pings from master received within 75secs
+I1211 17:09:40.554064 14134 slave.cpp:613] Re-detecting master
+I1211 17:09:40.554194 14134 slave.cpp:660] Detecting new master
+I1211 17:09:40.554127 14138 status_update_manager.cpp:171] Pausing sending status updates
+2015-12-11 17:09:41,993:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:41,993:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:41,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:41,994:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:41,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:41,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:41,994:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:45,331:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:45,331:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:45,331:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:45,332:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:45,332:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:45,332:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:45,332:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:48,669:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:48,669:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:48,669:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:48,670:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:48,670:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:48,670:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:48,670:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:52,005:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:52,005:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:52,006:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:52,006:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:52,006:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:52,007:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:52,007:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:55,343:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:55,343:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:55,345:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:55,345:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:55,345:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:55,345:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:55,345:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:58,681:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:58,681:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:09:58,681:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:58,682:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:09:58,682:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:09:58,682:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:09:58,682:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:02,018:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:02,018:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:02,019:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:02,019:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:02,020:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:02,020:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:02,020:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:05,356:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:05,356:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:05,357:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:05,357:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:05,358:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:05,358:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:05,358:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:08,694:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:08,694:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:08,695:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:08,695:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:08,696:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:08,696:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:08,696:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:12,033:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:12,033:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:12,034:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:12,034:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:12,035:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:12,035:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:12,035:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:15,372:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:15,372:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:15,373:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:15,374:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:15,374:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:15,374:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:15,374:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:18,711:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:18,711:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:18,712:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:18,712:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:18,713:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:18,713:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:18,713:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:22,049:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:22,049:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:22,050:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:22,051:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:22,051:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:22,051:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:22,051:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:25,387:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:25,387:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:25,388:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:25,388:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:25,389:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:25,389:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:25,389:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:28,725:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:28,725:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:28,725:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:28,726:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:28,726:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:28,726:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:28,726:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:32,062:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:32,063:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:32,064:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:32,065:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:32,065:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:32,065:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:32,065:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:10:32.791714 14134 slave.cpp:3618] Current disk usage 33.25%. Max allowed age: 3.972209819925717days
+2015-12-11 17:10:35,402:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:35,402:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:35,403:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:35,404:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:35,404:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:35,404:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:35,404:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:38,740:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:38,740:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:38,741:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:38,741:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:38,741:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:38,741:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:38,741:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:42,078:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:42,078:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:42,079:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:42,079:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:42,079:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:42,079:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:42,079:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:45,415:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:45,416:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:45,416:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:45,416:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:45,417:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:45,417:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:45,417:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:48,753:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:48,753:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:48,754:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:48,755:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:48,755:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:48,755:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:48,755:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:52,089:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:52,089:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:52,090:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:52,090:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:52,090:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:52,090:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:52,090:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:55,425:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:55,425:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:55,426:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:55,426:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:55,427:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:55,427:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:55,427:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:58,763:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:58,763:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:10:58,764:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:58,764:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:10:58,765:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:10:58,765:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:10:58,765:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:02,102:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:02,102:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:02,102:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:02,103:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:02,103:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:02,103:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:02,103:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:05,440:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:05,440:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:05,440:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:05,441:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:05,441:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:05,441:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:05,441:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:08,777:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:08,778:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:08,779:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:08,779:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:08,779:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:08,779:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:08,780:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:12,115:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:12,115:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:12,115:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:12,116:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:12,116:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:12,116:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:12,116:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:15,450:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:15,450:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:15,450:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:15,451:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:15,451:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:15,451:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:15,451:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:18,786:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:18,786:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:18,786:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:18,786:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:18,787:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:18,787:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:18,787:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:22,124:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:22,124:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:22,124:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:22,125:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:22,125:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:22,125:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:22,125:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:25,461:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:25,461:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:25,462:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:25,462:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:25,462:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:25,463:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:25,463:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:28,799:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:28,799:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:28,800:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:28,800:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:28,800:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:28,800:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:28,800:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:32,137:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:32,137:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:32,138:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:32,138:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:32,138:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:32,138:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:32,138:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 17:11:32.793745 14134 slave.cpp:3618] Current disk usage 33.26%. Max allowed age: 3.971947753121435days
+2015-12-11 17:11:35,475:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:35,475:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:35,477:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:35,478:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:35,478:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:35,478:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:35,478:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:38,814:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:38,814:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:38,815:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:38,815:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:38,815:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:38,815:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:38,815:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:42,152:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:42,152:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:42,153:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:42,153:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:42,153:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:42,153:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:42,153:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:45,490:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:45,490:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:45,491:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:45,491:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:45,492:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:45,492:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:45,492:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:48,828:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:48,828:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 17:11:48,830:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:48,830:14131(0x7f024e42a700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 17:11:48,834:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 17:11:48,834:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.4:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 17:11:48,834:14131(0x7f024e42a700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
