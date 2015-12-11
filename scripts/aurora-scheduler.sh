@@ -29,6 +29,7 @@ AURORA_FLAGS=(
 
   # TODO(Kevin Sweeney): Point these to real URLs.
   -thermos_executor_path=/aurora/dist/thermos_executor.pex
+  -thermos_executor_flags="--announcer-enable --announcer-ensemble localhost:2181"
   # -gc_executor_path=/dev/null
 
   -vlog=INFO
