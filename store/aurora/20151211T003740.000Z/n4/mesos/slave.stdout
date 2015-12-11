@@ -1,0 +1,618 @@
+I1211 00:37:53.795990  7314 logging.cpp:172] INFO level logging started!
+I1211 00:37:53.796159  7314 main.cpp:156] Build: 2015-03-26 13:36:52 by root
+I1211 00:37:53.796171  7314 main.cpp:158] Version: 0.22.0
+I1211 00:37:53.796176  7314 main.cpp:161] Git tag: 0.22.0
+I1211 00:37:53.796181  7314 main.cpp:165] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1211 00:37:53.801854  7314 containerizer.cpp:110] Using isolation: posix/cpu,posix/mem
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@716: Client environment:host.name=aab7befaccb5
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/slave
+2015-12-11 00:37:53,806:7314(0x7f8b2de1f700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7f8b38250200 sessionId=0 sessionPasswd=<null> context=0x7f8b24000930 flags=0
+I1211 00:37:53.806942  7314 main.cpp:200] Starting Mesos slave
+I1211 00:37:53.815006  7319 slave.cpp:174] Slave started on 1)@10.0.0.5:5051
+I1211 00:37:53.815141  7319 slave.cpp:299] Slave resources: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1211 00:37:53.815165  7319 slave.cpp:328] Slave hostname: n4
+I1211 00:37:53.815171  7319 slave.cpp:329] Slave checkpoint: true
+2015-12-11 00:37:53,816:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+I1211 00:37:53.819332  7319 state.cpp:35] Recovering state from '/var/lib/mesos/slave/meta'
+I1211 00:37:53.830312  7317 status_update_manager.cpp:197] Recovering status update manager
+I1211 00:37:53.830374  7317 containerizer.cpp:307] Recovering containerizer
+2015-12-11 00:37:53,840:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.4:2181], sessionId=0x3518e5e54de0004, negotiated timeout=10000
+I1211 00:37:53.841106  7320 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1211 00:37:53.843443  7320 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 00:37:53.843477  7320 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 00:37:53.843678  7317 slave.cpp:3778] Finished recovery
+I1211 00:37:53.855896  7320 detector.cpp:138] Detected a new leader: (id='9')
+I1211 00:37:53.855990  7320 group.cpp:659] Trying to get '/mesos/info_0000000009' in ZooKeeper
+I1211 00:37:53.863111  7320 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 00:37:53.863168  7320 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 00:37:53.865591  7316 status_update_manager.cpp:171] Pausing sending status updates
+I1211 00:37:53.865658  7320 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 00:37:53.865681  7320 slave.cpp:660] Detecting new master
+I1211 00:37:58.046500  7320 slave.cpp:792] Registered with master master@10.0.0.3:5050; given slave ID 20151211-003753-50331658-5050-7178-S0
+I1211 00:37:58.047138  7320 status_update_manager.cpp:178] Resuming sending status updates
+2015-12-11 00:38:14,246:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 25ms
+2015-12-11 00:38:20,931:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 15ms
+2015-12-11 00:38:24,280:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 15ms
+I1211 00:38:53.827888  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505530048218658days
+I1211 00:39:53.836781  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505505055471655days
+2015-12-11 00:39:57,703:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 5ms)
+I1211 00:39:57.704809  7320 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+2015-12-11 00:39:57,705:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 00:40:02,869:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+W1211 00:40:07.714689  7316 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=3518e5e54de0004) expiration
+I1211 00:40:07.715173  7316 group.cpp:472] ZooKeeper session expired
+I1211 00:40:07.715430  7315 detector.cpp:138] Detected a new leader: None
+I1211 00:40:07.715492  7315 slave.cpp:617] Lost leading master
+I1211 00:40:07.715504  7315 slave.cpp:660] Detecting new master
+I1211 00:40:07.715530  7315 status_update_manager.cpp:171] Pausing sending status updates
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@zookeeper_close@2522: Freeing zookeeper resources for sessionId=0x3518e5e54de0004
+
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@716: Client environment:host.name=aab7befaccb5
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/slave
+2015-12-11 00:40:07,715:7314(0x7f8b30e25700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7f8b38250200 sessionId=0 sessionPasswd=<null> context=0x1012bd0 flags=0
+2015-12-11 00:40:07,717:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-11 00:40:07,717:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.5:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+I1211 00:40:07.761320  7315 slave.cpp:2918] master@10.0.0.3:5050 exited
+W1211 00:40:07.761378  7315 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+2015-12-11 00:40:14,386:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 00:40:21,054:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 2ms)
+2015-12-11 00:40:27,725:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 00:40:27,725:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 00:40:27,726:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:40:31,062:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-11 00:40:31,063:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.5:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:40:37,730:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 0ms)
+2015-12-11 00:40:44,397:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 1ms)
+2015-12-11 00:40:51,064:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 2ms)
+2015-12-11 00:40:51,065:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 00:40:51,065:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+I1211 00:40:53.880960  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505417937896389days
+2015-12-11 00:40:54,402:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-11 00:40:54,403:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.5:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:41:01,074:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 5ms)
+2015-12-11 00:41:07,745:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 5ms)
+I1211 00:41:13.076603  7315 slave.cpp:2908] No pings from master received within 75secs
+2015-12-11 00:41:14,411:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 1ms)
+2015-12-11 00:41:14,412:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.3:2181]
+2015-12-11 00:41:14,412:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.3:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:41:17,749:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.5:2181]
+2015-12-11 00:41:17,749:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.5:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:41:24,419:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.2:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.2:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 00:41:31,090:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 5ms)
+/usr/sbin/mesos-slave already running.
+2015-12-11 00:41:35,099:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:41:35,101:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.4:2181], sessionId=0x3518e5e54de0009, negotiated timeout=10000
+I1211 00:41:35.101352  7315 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1211 00:41:35.101379  7315 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 00:41:35.101392  7315 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 00:41:35.103914  7315 detector.cpp:138] Detected a new leader: (id='10')
+I1211 00:41:35.103978  7315 group.cpp:659] Trying to get '/mesos/info_0000000010' in ZooKeeper
+I1211 00:41:35.156580  7315 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1211 00:41:35.156658  7315 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1211 00:41:35.156857  7317 status_update_manager.cpp:171] Pausing sending status updates
+I1211 00:41:35.156932  7315 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 00:41:35.156956  7315 slave.cpp:660] Detecting new master
+I1211 00:41:35.847367  7315 slave.cpp:860] Re-registered with master master@10.0.0.2:5050
+I1211 00:41:35.847537  7315 status_update_manager.cpp:178] Resuming sending status updates
+I1211 00:41:35.891252  7315 slave.cpp:2010] Updated checkpointed resources from  to 
+W1211 00:41:36.356838  7322 slave.cpp:1911] Ignoring updating pid for framework 20151211-003753-50331658-5050-7178-0000 because it does not exist
+2015-12-11 00:41:39,347:7314(0x7f8b1f7fe700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 96ms
+I1211 00:41:53.923938  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505457212213102days
+I1211 00:42:53.927249  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505452927742187days
+2015-12-11 00:43:22,780:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 1ms)
+2015-12-11 00:43:22,780:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:43:22.780808  7320 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+2015-12-11 00:43:26,116:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:43:26,116:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:43:26,118:7314(0x7f8b1f7fe700):ZOO_INFO@check_events@1750: session establishment complete on server [10.0.0.2:2181], sessionId=0x3518e5e54de0009, negotiated timeout=10000
+I1211 00:43:26.118568  7316 group.cpp:313] Group process (group(1)@10.0.0.5:5051) reconnected to ZooKeeper
+I1211 00:43:26.118620  7316 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+2015-12-11 00:43:28,243:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+I1211 00:43:28.243482  7321 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 00:43:32.790282  7317 slave.cpp:2918] master@10.0.0.2:5050 exited
+W1211 00:43:32.790338  7317 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+2015-12-11 00:43:34,912:7314(0x7f8b1f7fe700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 2ms)
+W1211 00:43:38.249333  7317 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=3518e5e54de0009) expiration
+I1211 00:43:38.249842  7317 group.cpp:472] ZooKeeper session expired
+I1211 00:43:38.250223  7315 detector.cpp:138] Detected a new leader: None
+I1211 00:43:38.250344  7315 slave.cpp:617] Lost leading master
+I1211 00:43:38.250358  7315 slave.cpp:660] Detecting new master
+I1211 00:43:38.250378  7315 status_update_manager.cpp:171] Pausing sending status updates
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@zookeeper_close@2522: Freeing zookeeper resources for sessionId=0x3518e5e54de0009
+
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@712: Client environment:zookeeper.version=zookeeper C client 3.4.5
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@716: Client environment:host.name=aab7befaccb5
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@723: Client environment:os.name=Linux
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@724: Client environment:os.arch=4.1.12-boot2docker
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@725: Client environment:os.version=#1 SMP Tue Nov 3 06:03:36 UTC 2015
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@733: Client environment:user.name=(null)
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@741: Client environment:user.home=/root
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@log_env@753: Client environment:user.dir=/var/lib/mesos/slave
+2015-12-11 00:43:38,250:7314(0x7f8b30624700):ZOO_INFO@zookeeper_init@786: Initiating client connection, host=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181 sessionTimeout=10000 watcher=0x7f8b38250200 sessionId=0 sessionPasswd=<null> context=0x7f8b140014f0 flags=0
+2015-12-11 00:43:38,251:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:43:38,251:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:43:44,920:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 2ms)
+2015-12-11 00:43:44,920:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:43:51,590:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 00:43:51,590:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:43:53.940382  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505364382009954days
+2015-12-11 00:43:54,927:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:43:54,927:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:44:01,598:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 5ms)
+2015-12-11 00:44:01,598:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:44:08,268:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 5ms)
+2015-12-11 00:44:08,268:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:44:11,605:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:44:11,606:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:44:18,275:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 3ms)
+2015-12-11 00:44:18,275:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:44:24,945:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 00:44:24,945:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:44:28,282:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:44:28,282:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:44:34,950:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 1ms)
+2015-12-11 00:44:34,950:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:44:35.915376  7315 slave.cpp:2908] No pings from master received within 75secs
+2015-12-11 00:44:41,621:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 5ms)
+2015-12-11 00:44:41,621:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:44:44,957:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:44:44,957:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:44:51,627:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.4:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.4:2181 timed out (exceeded timeout by 4ms)
+2015-12-11 00:44:51,627:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:44:53.955567  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505233705647049days
+2015-12-11 00:44:58,311:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 17ms
+2015-12-11 00:44:58,311:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1643: Socket [10.0.0.6:2181] zk retcode=-7, errno=110(Connection timed out): connection to 10.0.0.6:2181 timed out (exceeded timeout by 19ms)
+2015-12-11 00:44:58,311:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 17ms
+2015-12-11 00:44:58,311:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:01,648:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:01,649:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:04,644:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:04,646:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:04,646:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:04,647:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:04,647:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:04,647:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+/usr/sbin/mesos-slave already running.
+2015-12-11 00:45:07,988:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:07,994:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:07,994:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:07,999:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:07,999:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:07,999:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:08,010:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:08,011:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:11,367:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 23ms
+2015-12-11 00:45:11,367:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:11,411:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:11,411:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:11,455:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:11,455:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:11,455:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:11,470:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:11,470:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:14,804:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:14,830:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:14,830:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:14,844:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:14,844:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:14,845:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:14,858:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:14,858:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:18,195:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:18,203:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:18,203:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:18,253:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:18,253:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:18,253:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:18,293:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:18,293:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:21,629:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:21,634:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:21,634:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:21,641:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:21,641:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:21,641:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:21,658:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:21,659:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:25,011:7314(0x7f8b1ffff700):ZOO_WARN@zookeeper_interest@1557: Exceeded deadline by 20ms
+2015-12-11 00:45:25,013:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.2:2181]
+2015-12-11 00:45:25,077:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.2:2181] zk retcode=-4, errno=104(Connection reset by peer): failed while receiving a server response
+2015-12-11 00:45:25,077:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:25,085:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:25,085:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:25,085:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:25,103:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:25,104:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:28,444:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:28,444:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:28,453:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:28,453:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:28,453:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:28,464:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:28,464:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:31,803:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:31,803:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:31,833:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:31,833:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:31,833:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:31,843:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:31,843:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:35,177:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:35,177:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:35,178:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:35,178:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:35,178:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:35,179:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:35,179:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:38,515:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:38,515:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:38,516:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:38,516:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:38,516:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:38,517:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:38,517:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:41,852:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:41,852:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:41,853:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:41,853:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:41,853:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:41,854:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:41,854:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:45,190:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:45,191:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:45,191:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:45,191:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:45,192:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:45,193:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:45,193:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:48,526:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:48,526:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:48,527:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:48,527:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:48,527:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:48,528:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:48,528:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:51,863:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:51,864:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:51,864:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:51,864:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:51,864:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:51,865:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:51,865:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:45:53.956692  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505148016228750days
+2015-12-11 00:45:55,201:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:55,201:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:55,202:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:55,202:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:55,202:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:55,203:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:55,203:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:58,539:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:58,539:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:45:58,540:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:58,540:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:45:58,540:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:45:58,541:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:45:58,541:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:01,877:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:01,877:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:01,878:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:01,878:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:01,878:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:01,879:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:01,879:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:05,215:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:05,215:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:05,216:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:05,216:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:05,216:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:05,219:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:05,220:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:08,556:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:08,556:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:08,558:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:08,558:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:08,558:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:08,559:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:08,559:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:11,896:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:11,897:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:11,897:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:11,897:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:11,897:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:11,898:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:11,898:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:15,234:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:15,234:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:15,235:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:15,235:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:15,235:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:15,239:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:15,239:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:18,575:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:18,576:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:18,576:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:18,577:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:18,577:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:18,578:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:18,578:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:21,914:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:21,914:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:21,915:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:21,915:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:21,915:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:21,917:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:21,917:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:25,252:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:25,252:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:25,253:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:25,253:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:25,253:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:25,254:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:25,254:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:28,590:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:28,590:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:28,591:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:28,591:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:28,591:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:28,592:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:28,592:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:31,932:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:31,932:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:31,932:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:31,933:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:31,933:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:31,933:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:31,933:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:35,270:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:35,270:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:35,271:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:35,271:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:35,271:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:35,272:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:35,272:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:38,608:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:38,609:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:38,609:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:38,609:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:38,610:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:38,610:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:38,610:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:41,946:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:41,946:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:41,947:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:41,947:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:41,947:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:41,948:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:41,948:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:45,284:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:45,285:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:45,285:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:45,285:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:45,285:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:45,286:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:45,286:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:48,620:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:48,620:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:48,621:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:48,621:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:48,621:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:48,622:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:48,622:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:51,958:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:51,959:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:51,959:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:51,959:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:51,959:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:51,960:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:51,960:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:46:53.958118  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.504945932017280days
+2015-12-11 00:46:55,295:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:55,296:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:55,296:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:55,296:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:55,296:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:55,297:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:55,297:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:58,633:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:58,633:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:46:58,634:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:58,634:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:46:58,634:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:46:58,635:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:46:58,635:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:01,971:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:01,971:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:01,972:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:01,972:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:01,973:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:01,973:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:01,973:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:05,312:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:05,312:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:05,313:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:05,313:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:05,313:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:05,314:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:05,314:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:08,650:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:08,650:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:08,651:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:08,651:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:08,651:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:08,651:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:08,652:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:11,986:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:11,986:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:11,987:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:11,987:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:11,988:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:11,988:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:11,988:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:15,324:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:15,324:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:15,325:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:15,325:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:15,325:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:15,326:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:15,326:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:18,660:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:18,660:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:18,661:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:18,661:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:18,661:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:18,661:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:18,661:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:21,996:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:21,996:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:21,997:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:21,997:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:21,997:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:21,997:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:21,997:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:25,333:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:25,334:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:25,334:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:25,334:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:25,334:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:25,335:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:25,335:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:28,671:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:28,672:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:28,672:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:28,672:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:28,672:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:28,673:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:28,673:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:32,010:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:32,010:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:32,012:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:32,012:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:32,012:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:32,013:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:32,013:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:35,349:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:35,349:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:35,350:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:35,350:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:35,351:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:35,351:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:35,352:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:38,687:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:38,688:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:38,688:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:38,688:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:38,689:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:38,689:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:38,689:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:42,023:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:42,023:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:42,024:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:42,024:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:42,024:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:42,024:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:42,024:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:45,361:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:45,361:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:45,362:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:45,362:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:45,362:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:45,363:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:45,363:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:48,696:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:48,696:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:48,697:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:48,697:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:48,697:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:48,698:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:48,698:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:52,033:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:52,034:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:52,034:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:52,034:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:52,035:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:52,035:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:52,035:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+I1211 00:47:53.959686  7315 slave.cpp:3618] Current disk usage 25.65%. Max allowed age: 4.504758843453993days
+2015-12-11 00:47:55,372:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:55,372:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:55,372:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:55,372:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:55,373:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:55,373:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:55,373:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:58,710:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:58,710:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:47:58,711:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:58,711:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:47:58,711:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:47:58,712:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:47:58,712:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:02,048:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:02,048:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:02,049:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:02,050:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:02,050:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:02,050:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:02,050:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:05,387:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:05,387:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:05,388:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:05,388:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:05,388:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:05,389:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:05,389:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:08,726:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:08,726:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:08,727:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:08,727:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:08,727:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:08,728:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:08,728:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:12,064:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:12,064:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:12,065:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:12,065:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:12,065:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:12,066:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:12,066:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:15,400:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:15,400:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:15,401:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:15,401:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:15,401:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:15,402:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:15,402:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:18,736:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:18,736:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:18,737:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:18,737:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:18,737:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:18,737:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:18,737:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:22,074:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:22,074:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:22,075:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:22,075:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:22,075:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:22,076:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:22,076:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:25,412:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.2:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:25,412:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.4:2181]
+2015-12-11 00:48:25,412:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.4:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:25,412:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.5:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client
+2015-12-11 00:48:25,413:7314(0x7f8b1ffff700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.0.6:2181]
+2015-12-11 00:48:25,413:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1721: Socket [10.0.0.6:2181] zk retcode=-4, errno=112(Host is down): failed while receiving a server response
+2015-12-11 00:48:25,413:7314(0x7f8b1ffff700):ZOO_ERROR@handle_socket_error_msg@1697: Socket [10.0.0.3:2181] zk retcode=-4, errno=111(Connection refused): server refused to accept the client

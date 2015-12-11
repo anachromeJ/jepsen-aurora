@@ -1,0 +1,260 @@
+Log file created at: 2015/12/11 01:06:31
+Running on machine: 5b0a294d4b1f
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 01:06:31.277338  9004 logging.cpp:172] INFO level logging started!
+I1211 01:06:31.277478  9004 main.cpp:156] Build: 2015-03-26 13:36:52 by root
+I1211 01:06:31.277487  9004 main.cpp:158] Version: 0.22.0
+I1211 01:06:31.277493  9004 main.cpp:161] Git tag: 0.22.0
+I1211 01:06:31.277498  9004 main.cpp:165] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1211 01:06:31.277550  9004 containerizer.cpp:110] Using isolation: posix/cpu,posix/mem
+I1211 01:06:31.277665  9004 main.cpp:200] Starting Mesos slave
+I1211 01:06:31.277811  9004 slave.cpp:174] Slave started on 1)@10.0.0.6:5051
+I1211 01:06:31.277912  9004 slave.cpp:299] Slave resources: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1211 01:06:31.277930  9004 slave.cpp:328] Slave hostname: n5
+I1211 01:06:31.277936  9004 slave.cpp:329] Slave checkpoint: true
+I1211 01:06:31.306916  9011 state.cpp:35] Recovering state from '/var/lib/mesos/slave/meta'
+I1211 01:06:31.311367  9010 status_update_manager.cpp:197] Recovering status update manager
+I1211 01:06:31.311419  9010 containerizer.cpp:307] Recovering containerizer
+I1211 01:06:31.311527  9010 slave.cpp:3778] Finished recovery
+I1211 01:06:31.355234  9010 group.cpp:313] Group process (group(1)@10.0.0.6:5051) connected to ZooKeeper
+I1211 01:06:31.355259  9010 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 01:06:31.355268  9010 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 01:06:31.390313  9010 detector.cpp:138] Detected a new leader: (id='0')
+I1211 01:06:31.390415  9010 group.cpp:659] Trying to get '/mesos/info_0000000000' in ZooKeeper
+I1211 01:06:31.403923  9010 detector.cpp:452] A new leading master (UPID=master@10.0.0.4:5050) is detected
+I1211 01:06:31.403986  9010 slave.cpp:624] New master detected at master@10.0.0.4:5050
+I1211 01:06:31.404121  9010 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 01:06:31.404193  9010 slave.cpp:660] Detecting new master
+I1211 01:06:31.404211  9010 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:06:31.796047  9010 slave.cpp:792] Registered with master master@10.0.0.4:5050; given slave ID 20151211-010617-67108874-5050-9066-S1
+I1211 01:06:31.796427  9010 status_update_manager.cpp:178] Resuming sending status updates
+W1211 01:06:50.441699  9010 slave.cpp:1911] Ignoring updating pid for framework 20151211-003753-50331658-5050-7178-0000 because it does not exist
+I1211 01:07:31.320672  9010 slave.cpp:3618] Current disk usage 25.65%. Max allowed age: 4.504351104638611days
+I1211 01:08:24.834751  9010 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 01:08:31.341043  9008 slave.cpp:3618] Current disk usage 25.65%. Max allowed age: 4.504307545850972days
+W1211 01:08:34.836532  9008 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=4518e92fd2d0006) expiration
+I1211 01:08:34.836693  9008 group.cpp:472] ZooKeeper session expired
+I1211 01:08:34.836818  9006 detector.cpp:138] Detected a new leader: None
+I1211 01:08:34.836876  9006 slave.cpp:617] Lost leading master
+I1211 01:08:34.836889  9006 slave.cpp:660] Detecting new master
+I1211 01:08:34.836911  9006 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:08:34.855260  9011 group.cpp:313] Group process (group(1)@10.0.0.6:5051) connected to ZooKeeper
+I1211 01:08:34.855284  9011 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 01:08:34.855293  9011 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 01:08:34.876674  9011 detector.cpp:138] Detected a new leader: (id='0')
+I1211 01:08:34.876740  9011 group.cpp:659] Trying to get '/mesos/info_0000000000' in ZooKeeper
+I1211 01:08:34.877310  9011 detector.cpp:452] A new leading master (UPID=master@10.0.0.4:5050) is detected
+I1211 01:08:34.877346  9011 slave.cpp:624] New master detected at master@10.0.0.4:5050
+I1211 01:08:34.877403  9011 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 01:08:34.877429  9011 slave.cpp:660] Detecting new master
+I1211 01:08:34.877380  9010 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:08:44.026257  9011 detector.cpp:138] Detected a new leader: (id='2')
+I1211 01:08:44.026379  9011 group.cpp:659] Trying to get '/mesos/info_0000000002' in ZooKeeper
+I1211 01:08:44.026830  9011 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1211 01:08:44.026895  9011 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1211 01:08:44.026983  9011 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 01:08:44.027007  9011 slave.cpp:660] Detecting new master
+I1211 01:08:44.027027  9011 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:08:44.041672  9011 detector.cpp:138] Detected a new leader: (id='3')
+I1211 01:08:44.041741  9011 group.cpp:659] Trying to get '/mesos/info_0000000003' in ZooKeeper
+I1211 01:08:44.042143  9011 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 01:08:44.042176  9011 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 01:08:44.042270  9011 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 01:08:44.042291  9011 slave.cpp:660] Detecting new master
+I1211 01:08:44.042314  9011 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:08:44.047812  9008 detector.cpp:138] Detected a new leader: (id='4')
+I1211 01:08:44.047906  9008 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1211 01:08:44.048177  9008 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 01:08:44.048209  9008 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 01:08:44.048220  9008 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 01:08:44.048259  9008 slave.cpp:660] Detecting new master
+I1211 01:08:44.048236  9006 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:09:16.812815  9008 slave.cpp:2908] No pings from master received within 75secs
+I1211 01:09:31.344210  9008 slave.cpp:3618] Current disk usage 25.65%. Max allowed age: 4.504204004470532days
+I1211 01:09:59.584691  9008 slave.cpp:860] Re-registered with master master@10.0.0.3:5050
+I1211 01:09:59.584944  9008 slave.cpp:2010] Updated checkpointed resources from  to 
+I1211 01:09:59.584962  9008 status_update_manager.cpp:178] Resuming sending status updates
+W1211 01:10:02.121016  9008 slave.cpp:1911] Ignoring updating pid for framework 20151211-003753-50331658-5050-7178-0000 because it does not exist
+I1211 01:10:18.290370  9009 slave.cpp:1121] Got assigned task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:18.297839  9009 slave.cpp:1231] Launching task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:18.320538  9009 slave.cpp:4160] Launching executor thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145/runs/e767bcb1-5e93-41a3-b940-0a36faa0daf1'
+I1211 01:10:18.324666  9006 containerizer.cpp:472] Starting container 'e767bcb1-5e93-41a3-b940-0a36faa0daf1' for executor 'thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' of framework '20151211-003753-50331658-5050-7178-0000'
+I1211 01:10:18.325152  9009 slave.cpp:1378] Queuing task '1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' for executor thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework '20151211-003753-50331658-5050-7178-0000
+I1211 01:10:18.329243  9006 launcher.cpp:130] Forked child with pid '9352' for container 'e767bcb1-5e93-41a3-b940-0a36faa0daf1'
+I1211 01:10:18.337821  9006 containerizer.cpp:682] Checkpointing executor's forked pid 9352 to '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145/runs/e767bcb1-5e93-41a3-b940-0a36faa0daf1/pids/forked.pid'
+I1211 01:10:18.368021  9008 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 01:10:18.994303  9008 slave.cpp:3135] Monitoring executor 'thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' of framework '20151211-003753-50331658-5050-7178-0000' in container 'e767bcb1-5e93-41a3-b940-0a36faa0daf1'
+I1211 01:10:19.103818  9008 containerizer.cpp:1111] Executor for container 'e767bcb1-5e93-41a3-b940-0a36faa0daf1' has exited
+I1211 01:10:19.103912  9008 containerizer.cpp:906] Destroying container 'e767bcb1-5e93-41a3-b940-0a36faa0daf1'
+I1211 01:10:19.116734  9009 slave.cpp:3193] Executor 'thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' of framework 20151211-003753-50331658-5050-7178-0000 exited with status 0
+I1211 01:10:19.117370  9009 slave.cpp:2508] Handling status update TASK_LOST (UUID: 10f36317-df57-44f4-be1f-09b53e57fac0) for task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000 from @0.0.0.0:0
+W1211 01:10:19.117550  9009 containerizer.cpp:802] Ignoring update for unknown container: e767bcb1-5e93-41a3-b940-0a36faa0daf1
+I1211 01:10:19.117614  9009 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 10f36317-df57-44f4-be1f-09b53e57fac0) for task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:19.117790  9009 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 10f36317-df57-44f4-be1f-09b53e57fac0) for task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:19.134486  9010 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 10f36317-df57-44f4-be1f-09b53e57fac0) for task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000 to master@10.0.0.3:5050
+I1211 01:10:20.223204  9007 slave.cpp:1121] Got assigned task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:20.233937  9007 slave.cpp:1231] Launching task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:20.243754  9007 slave.cpp:4160] Launching executor thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc/runs/16241d51-03ed-494a-9718-79dc22b70f00'
+I1211 01:10:20.246460  9010 containerizer.cpp:472] Starting container '16241d51-03ed-494a-9718-79dc22b70f00' for executor 'thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' of framework '20151211-003753-50331658-5050-7178-0000'
+I1211 01:10:20.256083  9010 launcher.cpp:130] Forked child with pid '9372' for container '16241d51-03ed-494a-9718-79dc22b70f00'
+I1211 01:10:20.258429  9010 containerizer.cpp:682] Checkpointing executor's forked pid 9372 to '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc/runs/16241d51-03ed-494a-9718-79dc22b70f00/pids/forked.pid'
+I1211 01:10:20.259727  9007 slave.cpp:1378] Queuing task '1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' for executor thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework '20151211-003753-50331658-5050-7178-0000
+I1211 01:10:20.403136  9009 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 01:10:21.127321  9009 slave.cpp:1558] Asked to kill task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000
+W1211 01:10:21.128332  9009 slave.cpp:1683] Ignoring kill task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000 because the executor 'thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' is terminating/terminated
+I1211 01:10:21.235299  9012 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 10f36317-df57-44f4-be1f-09b53e57fac0) for task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.244647  9012 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 10f36317-df57-44f4-be1f-09b53e57fac0) for task 1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.249852  9012 slave.cpp:3302] Cleaning up executor 'thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.250505  9012 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145/runs/e767bcb1-5e93-41a3-b940-0a36faa0daf1' for gc 6.99999710158519days in the future
+I1211 01:10:21.251510  9012 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' for gc 6.99999710120296days in the future
+I1211 01:10:21.255167  9012 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145/runs/e767bcb1-5e93-41a3-b940-0a36faa0daf1' for gc 6.99999710099556days in the future
+I1211 01:10:21.255187  9012 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145' for gc 6.99999710083259days in the future
+I1211 01:10:21.395206  9006 slave.cpp:3135] Monitoring executor 'thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' of framework '20151211-003753-50331658-5050-7178-0000' in container '16241d51-03ed-494a-9718-79dc22b70f00'
+I1211 01:10:21.507073  9006 containerizer.cpp:1111] Executor for container '16241d51-03ed-494a-9718-79dc22b70f00' has exited
+I1211 01:10:21.517004  9006 containerizer.cpp:906] Destroying container '16241d51-03ed-494a-9718-79dc22b70f00'
+I1211 01:10:21.517910  9006 slave.cpp:3193] Executor 'thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' of framework 20151211-003753-50331658-5050-7178-0000 exited with status 0
+I1211 01:10:21.518430  9006 slave.cpp:2508] Handling status update TASK_LOST (UUID: 5adbf883-7711-47eb-b7f6-0e16fdb957b5) for task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000 from @0.0.0.0:0
+W1211 01:10:21.518600  9005 containerizer.cpp:802] Ignoring update for unknown container: 16241d51-03ed-494a-9718-79dc22b70f00
+I1211 01:10:21.518828  9010 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 5adbf883-7711-47eb-b7f6-0e16fdb957b5) for task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.518995  9010 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 5adbf883-7711-47eb-b7f6-0e16fdb957b5) for task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.521352  9010 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 5adbf883-7711-47eb-b7f6-0e16fdb957b5) for task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000 to master@10.0.0.3:5050
+I1211 01:10:21.743062  9007 slave.cpp:1558] Asked to kill task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000
+W1211 01:10:21.743183  9007 slave.cpp:1683] Ignoring kill task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000 because the executor 'thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' is terminating/terminated
+I1211 01:10:21.787325  9009 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 5adbf883-7711-47eb-b7f6-0e16fdb957b5) for task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.787400  9009 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 5adbf883-7711-47eb-b7f6-0e16fdb957b5) for task 1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.790568  9009 slave.cpp:3302] Cleaning up executor 'thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.790769  9009 slave.cpp:3381] Cleaning up framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:21.790824  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc/runs/16241d51-03ed-494a-9718-79dc22b70f00' for gc 6.99999084828741days in the future
+I1211 01:10:21.790858  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' for gc 6.99999084800889days in the future
+I1211 01:10:21.790873  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc/runs/16241d51-03ed-494a-9718-79dc22b70f00' for gc 6.99999084780148days in the future
+I1211 01:10:21.790890  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc' for gc 6.99999084763852days in the future
+I1211 01:10:21.793289  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999084722074days in the future
+I1211 01:10:21.793316  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999084708444days in the future
+I1211 01:10:21.793241  9012 status_update_manager.cpp:279] Closing status update streams for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:22.931660  9008 slave.cpp:1121] Got assigned task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:22.932312  9008 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' from gc
+I1211 01:10:22.932377  9008 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' from gc
+I1211 01:10:22.932412  9008 slave.cpp:1231] Launching task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:22.933455  9008 slave.cpp:4160] Launching executor thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7/runs/47bde7d4-26e0-44ef-b484-dcd8d04dd3d1'
+I1211 01:10:22.933789  9006 containerizer.cpp:472] Starting container '47bde7d4-26e0-44ef-b484-dcd8d04dd3d1' for executor 'thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' of framework '20151211-003753-50331658-5050-7178-0000'
+I1211 01:10:22.934494  9006 launcher.cpp:130] Forked child with pid '9388' for container '47bde7d4-26e0-44ef-b484-dcd8d04dd3d1'
+I1211 01:10:22.934654  9006 containerizer.cpp:682] Checkpointing executor's forked pid 9388 to '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7/runs/47bde7d4-26e0-44ef-b484-dcd8d04dd3d1/pids/forked.pid'
+I1211 01:10:22.941465  9008 slave.cpp:1378] Queuing task '1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' for executor thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework '20151211-003753-50331658-5050-7178-0000
+I1211 01:10:22.957643  9007 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 01:10:23.156618  9007 slave.cpp:3135] Monitoring executor 'thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' of framework '20151211-003753-50331658-5050-7178-0000' in container '47bde7d4-26e0-44ef-b484-dcd8d04dd3d1'
+I1211 01:10:23.260016  9007 containerizer.cpp:1111] Executor for container '47bde7d4-26e0-44ef-b484-dcd8d04dd3d1' has exited
+I1211 01:10:23.260211  9007 containerizer.cpp:906] Destroying container '47bde7d4-26e0-44ef-b484-dcd8d04dd3d1'
+I1211 01:10:23.260915  9007 slave.cpp:3193] Executor 'thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' of framework 20151211-003753-50331658-5050-7178-0000 exited with status 0
+I1211 01:10:23.261451  9007 slave.cpp:2508] Handling status update TASK_LOST (UUID: f0ed970e-8715-4e25-b7ac-edf13b7b56ca) for task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000 from @0.0.0.0:0
+W1211 01:10:23.261597  9005 containerizer.cpp:802] Ignoring update for unknown container: 47bde7d4-26e0-44ef-b484-dcd8d04dd3d1
+I1211 01:10:23.262333  9010 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: f0ed970e-8715-4e25-b7ac-edf13b7b56ca) for task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.262500  9010 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: f0ed970e-8715-4e25-b7ac-edf13b7b56ca) for task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.265470  9010 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: f0ed970e-8715-4e25-b7ac-edf13b7b56ca) for task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000 to master@10.0.0.3:5050
+I1211 01:10:23.302827  9009 slave.cpp:1558] Asked to kill task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000
+W1211 01:10:23.302862  9009 slave.cpp:1683] Ignoring kill task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000 because the executor 'thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' is terminating/terminated
+I1211 01:10:23.317260  9009 status_update_manager.cpp:389] Received status update acknowledgement (UUID: f0ed970e-8715-4e25-b7ac-edf13b7b56ca) for task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.317299  9009 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: f0ed970e-8715-4e25-b7ac-edf13b7b56ca) for task 1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.319288  9009 slave.cpp:3302] Cleaning up executor 'thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.319520  9009 slave.cpp:3381] Cleaning up framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.319568  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7/runs/47bde7d4-26e0-44ef-b484-dcd8d04dd3d1' for gc 6.99999630262815days in the future
+I1211 01:10:23.319593  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' for gc 6.99999630231407days in the future
+I1211 01:10:23.319605  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7/runs/47bde7d4-26e0-44ef-b484-dcd8d04dd3d1' for gc 6.99999630210667days in the future
+I1211 01:10:23.319617  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7' for gc 6.99999630194667days in the future
+I1211 01:10:23.319627  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999630152889days in the future
+I1211 01:10:23.319636  9009 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999630138963days in the future
+I1211 01:10:23.319655  9009 status_update_manager.cpp:279] Closing status update streams for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:10:23.560950  9012 slave.cpp:2918] master@10.0.0.4:5050 exited
+I1211 01:10:31.345718  9012 slave.cpp:3618] Current disk usage 25.66%. Max allowed age: 4.503953362922026days
+I1211 01:10:51.241382  9006 slave.cpp:2918] master@10.0.0.2:5050 exited
+I1211 01:11:18.325501  9007 slave.cpp:3534] Framework 20151211-003753-50331658-5050-7178-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449796217104-www-data-devel-job16-0-821a3cd8-f3eb-43aa-976e-c54dcbcd0145'
+I1211 01:11:20.260387  9006 slave.cpp:3534] Framework 20151211-003753-50331658-5050-7178-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449796218863-www-data-devel-job700-0-13178551-d091-4660-8e9b-5160704f9cfc'
+I1211 01:11:21.530894  9005 slave.cpp:1121] Got assigned task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.531498  9005 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' from gc
+I1211 01:11:21.531628  9005 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' from gc
+I1211 01:11:21.531677  9005 slave.cpp:1231] Launching task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.532665  9005 slave.cpp:4160] Launching executor thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f/runs/d7f3a65c-1adb-41ca-b87c-ad80877aa669'
+I1211 01:11:21.532927  9007 containerizer.cpp:472] Starting container 'd7f3a65c-1adb-41ca-b87c-ad80877aa669' for executor 'thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' of framework '20151211-003753-50331658-5050-7178-0000'
+I1211 01:11:21.533627  9007 launcher.cpp:130] Forked child with pid '9398' for container 'd7f3a65c-1adb-41ca-b87c-ad80877aa669'
+I1211 01:11:21.537250  9007 containerizer.cpp:682] Checkpointing executor's forked pid 9398 to '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f/runs/d7f3a65c-1adb-41ca-b87c-ad80877aa669/pids/forked.pid'
+I1211 01:11:21.543723  9005 slave.cpp:1378] Queuing task '1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' for executor thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework '20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.552708  9007 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 01:11:21.666345  9007 slave.cpp:3135] Monitoring executor 'thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' of framework '20151211-003753-50331658-5050-7178-0000' in container 'd7f3a65c-1adb-41ca-b87c-ad80877aa669'
+I1211 01:11:21.770120  9007 containerizer.cpp:1111] Executor for container 'd7f3a65c-1adb-41ca-b87c-ad80877aa669' has exited
+I1211 01:11:21.770180  9007 containerizer.cpp:906] Destroying container 'd7f3a65c-1adb-41ca-b87c-ad80877aa669'
+I1211 01:11:21.771198  9007 slave.cpp:3193] Executor 'thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' of framework 20151211-003753-50331658-5050-7178-0000 exited with status 0
+I1211 01:11:21.771858  9007 slave.cpp:2508] Handling status update TASK_LOST (UUID: cda65c2b-6133-40e3-a726-9dd3d602e227) for task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000 from @0.0.0.0:0
+W1211 01:11:21.772029  9010 containerizer.cpp:802] Ignoring update for unknown container: d7f3a65c-1adb-41ca-b87c-ad80877aa669
+I1211 01:11:21.772675  9008 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: cda65c2b-6133-40e3-a726-9dd3d602e227) for task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.772876  9008 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: cda65c2b-6133-40e3-a726-9dd3d602e227) for task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.776862  9008 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: cda65c2b-6133-40e3-a726-9dd3d602e227) for task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000 to master@10.0.0.3:5050
+I1211 01:11:21.795442  9011 slave.cpp:1558] Asked to kill task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000
+W1211 01:11:21.795476  9011 slave.cpp:1683] Ignoring kill task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000 because the executor 'thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' is terminating/terminated
+I1211 01:11:21.807880  9011 status_update_manager.cpp:389] Received status update acknowledgement (UUID: cda65c2b-6133-40e3-a726-9dd3d602e227) for task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.807921  9011 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: cda65c2b-6133-40e3-a726-9dd3d602e227) for task 1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.810052  9011 slave.cpp:3302] Cleaning up executor 'thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.810289  9011 slave.cpp:3381] Cleaning up framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:21.810340  9011 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f/runs/d7f3a65c-1adb-41ca-b87c-ad80877aa669' for gc 6.99999062238519days in the future
+I1211 01:11:21.810369  9011 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' for gc 6.99999062207407days in the future
+I1211 01:11:21.810381  9011 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f/runs/d7f3a65c-1adb-41ca-b87c-ad80877aa669' for gc 6.99999062187556days in the future
+I1211 01:11:21.810392  9011 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f' for gc 6.99999062171556days in the future
+I1211 01:11:21.810402  9011 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999062133037days in the future
+I1211 01:11:21.810425  9011 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999062118222days in the future
+I1211 01:11:21.810451  9009 status_update_manager.cpp:279] Closing status update streams for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:22.942562  9010 slave.cpp:3534] Framework 20151211-003753-50331658-5050-7178-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449796221708-www-data-devel-job700-0-c71eff32-cbe2-43fd-9b9b-1f1ce5a937c7'
+I1211 01:11:23.311372  9009 slave.cpp:1121] Got assigned task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.312140  9009 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' from gc
+I1211 01:11:23.312196  9009 gc.cpp:84] Unscheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' from gc
+I1211 01:11:23.312288  9009 slave.cpp:1231] Launching task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.313279  9009 slave.cpp:4160] Launching executor thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000 in work directory '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224/runs/61063266-5bd1-4911-b89a-a862f10eaf7a'
+I1211 01:11:23.313547  9005 containerizer.cpp:472] Starting container '61063266-5bd1-4911-b89a-a862f10eaf7a' for executor 'thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' of framework '20151211-003753-50331658-5050-7178-0000'
+I1211 01:11:23.314342  9005 launcher.cpp:130] Forked child with pid '9408' for container '61063266-5bd1-4911-b89a-a862f10eaf7a'
+I1211 01:11:23.316015  9005 containerizer.cpp:682] Checkpointing executor's forked pid 9408 to '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224/runs/61063266-5bd1-4911-b89a-a862f10eaf7a/pids/forked.pid'
+I1211 01:11:23.317602  9009 slave.cpp:1378] Queuing task '1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' for executor thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework '20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.341023  9005 fetcher.cpp:238] Fetching URIs using command '/usr/libexec/mesos/mesos-fetcher'
+I1211 01:11:23.482470  9005 slave.cpp:3135] Monitoring executor 'thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' of framework '20151211-003753-50331658-5050-7178-0000' in container '61063266-5bd1-4911-b89a-a862f10eaf7a'
+I1211 01:11:23.585093  9005 containerizer.cpp:1111] Executor for container '61063266-5bd1-4911-b89a-a862f10eaf7a' has exited
+I1211 01:11:23.585165  9005 containerizer.cpp:906] Destroying container '61063266-5bd1-4911-b89a-a862f10eaf7a'
+I1211 01:11:23.586351  9005 slave.cpp:3193] Executor 'thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' of framework 20151211-003753-50331658-5050-7178-0000 exited with status 0
+I1211 01:11:23.587326  9005 slave.cpp:2508] Handling status update TASK_LOST (UUID: 7c512261-337f-4e5b-85eb-3c6b53fc5c0e) for task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000 from @0.0.0.0:0
+W1211 01:11:23.587473  9005 containerizer.cpp:802] Ignoring update for unknown container: 61063266-5bd1-4911-b89a-a862f10eaf7a
+I1211 01:11:23.587565  9005 status_update_manager.cpp:317] Received status update TASK_LOST (UUID: 7c512261-337f-4e5b-85eb-3c6b53fc5c0e) for task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.587947  9005 status_update_manager.hpp:346] Checkpointing UPDATE for status update TASK_LOST (UUID: 7c512261-337f-4e5b-85eb-3c6b53fc5c0e) for task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.591444  9011 slave.cpp:2753] Forwarding the update TASK_LOST (UUID: 7c512261-337f-4e5b-85eb-3c6b53fc5c0e) for task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000 to master@10.0.0.3:5050
+I1211 01:11:23.603588  9008 slave.cpp:1558] Asked to kill task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000
+W1211 01:11:23.603636  9008 slave.cpp:1683] Ignoring kill task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000 because the executor 'thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' is terminating/terminated
+I1211 01:11:23.621080  9007 status_update_manager.cpp:389] Received status update acknowledgement (UUID: 7c512261-337f-4e5b-85eb-3c6b53fc5c0e) for task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.621119  9007 status_update_manager.hpp:346] Checkpointing ACK for status update TASK_LOST (UUID: 7c512261-337f-4e5b-85eb-3c6b53fc5c0e) for task 1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224 of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.624148  9007 slave.cpp:3302] Cleaning up executor 'thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' of framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.624408  9007 slave.cpp:3381] Cleaning up framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:23.624459  9007 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224/runs/61063266-5bd1-4911-b89a-a862f10eaf7a' for gc 6.99999277386667days in the future
+I1211 01:11:23.624514  9007 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' for gc 6.99999277354074days in the future
+I1211 01:11:23.624542  9007 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224/runs/61063266-5bd1-4911-b89a-a862f10eaf7a' for gc 6.99999277334518days in the future
+I1211 01:11:23.624554  9007 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000/executors/thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224' for gc 6.99999277318222days in the future
+I1211 01:11:23.624564  9007 gc.cpp:56] Scheduling '/var/lib/mesos/slave/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999277270815days in the future
+I1211 01:11:23.624584  9007 gc.cpp:56] Scheduling '/var/lib/mesos/slave/meta/slaves/20151211-010617-67108874-5050-9066-S1/frameworks/20151211-003753-50331658-5050-7178-0000' for gc 6.99999277256889days in the future
+I1211 01:11:23.624595  9007 status_update_manager.cpp:279] Closing status update streams for framework 20151211-003753-50331658-5050-7178-0000
+I1211 01:11:31.346804  9008 slave.cpp:3618] Current disk usage 25.66%. Max allowed age: 4.503850535620069days
+I1211 01:11:46.521811  9011 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+W1211 01:11:56.523093  9006 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=2518e9510e30002) expiration
+I1211 01:11:56.523263  9006 group.cpp:472] ZooKeeper session expired
+I1211 01:11:56.523372  9011 detector.cpp:138] Detected a new leader: None
+I1211 01:11:56.523430  9011 slave.cpp:617] Lost leading master
+I1211 01:11:56.523443  9011 slave.cpp:660] Detecting new master
+I1211 01:11:56.523468  9011 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:12:21.536029  9012 slave.cpp:3534] Framework 20151211-003753-50331658-5050-7178-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449796221492-www-data-devel-job15-0-907c64d3-aea6-4a1d-b05f-c4ae6d6e893f'
+I1211 01:12:23.317464  9009 slave.cpp:3534] Framework 20151211-003753-50331658-5050-7178-0000 seems to have exited. Ignoring registration timeout for executor 'thermos-1449796223271-www-data-devel-job700-0-e239aca5-af52-4d6a-82ff-7482a8435224'
+I1211 01:12:31.347201  9009 slave.cpp:3618] Current disk usage 25.66%. Max allowed age: 4.503773415143599days
+I1211 01:12:44.602669  9006 slave.cpp:2908] No pings from master received within 75secs
+I1211 01:13:29.911041  9005 group.cpp:313] Group process (group(1)@10.0.0.6:5051) connected to ZooKeeper
+I1211 01:13:29.911070  9005 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 01:13:29.911078  9005 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 01:13:29.912737  9005 detector.cpp:138] Detected a new leader: (id='4')
+I1211 01:13:29.912817  9005 group.cpp:659] Trying to get '/mesos/info_0000000004' in ZooKeeper
+I1211 01:13:29.913086  9005 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 01:13:29.913121  9005 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 01:13:29.913133  9005 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 01:13:29.913143  9005 slave.cpp:660] Detecting new master
+I1211 01:13:29.913158  9005 status_update_manager.cpp:171] Pausing sending status updates
+I1211 01:13:31.348300  9011 slave.cpp:3618] Current disk usage 25.66%. Max allowed age: 4.503615603798241days
+I1211 01:13:32.360882  9009 slave.cpp:548] Slave asked to shut down by master@10.0.0.3:5050 because 'health check timed out'
+I1211 01:13:32.360956  9009 slave.cpp:506] Slave terminating
