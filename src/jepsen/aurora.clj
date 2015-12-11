@@ -128,8 +128,7 @@
               interval    (+ 1
                              duration
                              epsilon
-                             epsilon-forgiveness
-                             (rand-int 30))]
+                             epsilon-forgiveness)]
         {:type   :invoke
          :f      :add-job
          :value  {:name     (swap! id inc)
@@ -137,7 +136,7 @@
                   :count    300 ;; actually running infinitely
                   :duration duration
                   :epsilon  epsilon
-                  :interval 0}})))))
+                  :interval interval}})))))
 
 (defrecord Client [node]
   client/Client
@@ -145,7 +144,7 @@
     (assoc this :node node))
 
   (invoke! [this test op]
-    (timeout 20000 (assoc op :type :info, :value :timed-out)
+   (timeout 20000 (assoc op :type :info, :value :timed-out)
              (try
                (case (:f op)
                  :add-job (do (add-job! node (:value op))
@@ -201,7 +200,7 @@
                      (gen/nemesis (gen/once {:type :info, :f :stop}))
                      (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
-                     (gen/sleep 400)
+                     (gen/sleep 100)
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
