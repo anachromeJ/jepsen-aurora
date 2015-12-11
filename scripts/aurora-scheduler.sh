@@ -47,5 +47,10 @@ AURORA_FLAGS=(
 export GLOG_v=0
 export LIBPROCESS_PORT=8083
 
+# clean up log files
+rm -f $AURORA_SCHEDULER_HOME/db/*
+mesos-log initialize --path=$AURORA_SCHEDULER_HOME/db
+
+# start scheduler
 JAVA_OPTS="${JAVA_OPTS[*]}" exec "$AURORA_SCHEDULER_HOME/bin/aurora-scheduler" "${AURORA_FLAGS[@]}" > /dev/null &
 
