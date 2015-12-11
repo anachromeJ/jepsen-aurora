@@ -5,6 +5,8 @@ AURORA_SNAPSHOT=aurora-scheduler-0.11.0-SNAPSHOT
 AURORA_ZIP=$AURORA_SNAPSHOT.zip
 AURORA_ZIP_LINK=https://github.com/jchli/jepsen-aurora/raw/master/resources/$AURORA_ZIP
 
+readonly MESOS_VERSION=0.23.0
+
 # check if aurora is already installed first
 if [[ ! -e $AURORA_DIR ]]; then
     echo "installing aurora..."
@@ -23,7 +25,37 @@ if [[ ! -e $AURORA_DIR ]]; then
 
     # Add Log output parameter
     mesos-log initialize --path=$AURORA_DIR/db
+
     echo "done"
 else
     echo "aurora already installed, aborting..."
+fi
+
+# install mesos egg and build thermos
+if [[! -e "/aurora"]]; then
+    cd /
+    apt-get update
+    apt-get -y install gcc bison \
+        curl \
+        git \
+        libapr1-dev \
+        libcurl4-nss-dev \
+        libsasl2-dev \
+        libsvn-dev \
+        python-dev \
+        zookeeperd
+    git clone https://github.com/apache/aurora.git
+    pushd aurora
+    mkdir -p third_party
+    pushd third_party
+    wget -c https://svn.apache.org/repos/asf/aurora/3rdparty/ubuntu/trusty64/python/mesos.native-${MESOS_VERSION}-py2.7-linux-x86_64.egg
+    popd
+
+    wget -c http://downloads.mesosphere.io/master/ubuntu/12.04/mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
+    dpkg --install mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
+
+    ./pants binary src/main/python/apache/aurora/executor:thermos_executor
+    popd
+else
+    echo "thermos already installed, exiting..."
 fi
