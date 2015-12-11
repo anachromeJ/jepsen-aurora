@@ -28,7 +28,7 @@ AURORA_FLAGS=(
   -backup_dir="$AURORA_SCHEDULER_HOME/backups"
 
   # TODO(Kevin Sweeney): Point these to real URLs.
-  -thermos_executor_path=/thermos_executor.pex
+  -thermos_executor_path=/aurora/dist/thermos_executor.pex
   # -gc_executor_path=/dev/null
 
   -vlog=INFO
