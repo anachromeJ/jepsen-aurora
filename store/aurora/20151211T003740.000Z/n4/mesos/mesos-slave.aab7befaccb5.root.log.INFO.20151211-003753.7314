@@ -1,0 +1,77 @@
+Log file created at: 2015/12/11 00:37:53
+Running on machine: aab7befaccb5
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 00:37:53.795990  7314 logging.cpp:172] INFO level logging started!
+I1211 00:37:53.796159  7314 main.cpp:156] Build: 2015-03-26 13:36:52 by root
+I1211 00:37:53.796171  7314 main.cpp:158] Version: 0.22.0
+I1211 00:37:53.796176  7314 main.cpp:161] Git tag: 0.22.0
+I1211 00:37:53.796181  7314 main.cpp:165] Git SHA: e890e2414903bb69cab730d5204f10b10d2e91bb
+I1211 00:37:53.801854  7314 containerizer.cpp:110] Using isolation: posix/cpu,posix/mem
+I1211 00:37:53.806942  7314 main.cpp:200] Starting Mesos slave
+I1211 00:37:53.815006  7319 slave.cpp:174] Slave started on 1)@10.0.0.5:5051
+I1211 00:37:53.815141  7319 slave.cpp:299] Slave resources: cpus(*):1; mem(*):2927; disk(*):33172; ports(*):[31000-32000]
+I1211 00:37:53.815165  7319 slave.cpp:328] Slave hostname: n4
+I1211 00:37:53.815171  7319 slave.cpp:329] Slave checkpoint: true
+I1211 00:37:53.819332  7319 state.cpp:35] Recovering state from '/var/lib/mesos/slave/meta'
+I1211 00:37:53.830312  7317 status_update_manager.cpp:197] Recovering status update manager
+I1211 00:37:53.830374  7317 containerizer.cpp:307] Recovering containerizer
+I1211 00:37:53.841106  7320 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1211 00:37:53.843443  7320 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 00:37:53.843477  7320 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 00:37:53.843678  7317 slave.cpp:3778] Finished recovery
+I1211 00:37:53.855896  7320 detector.cpp:138] Detected a new leader: (id='9')
+I1211 00:37:53.855990  7320 group.cpp:659] Trying to get '/mesos/info_0000000009' in ZooKeeper
+I1211 00:37:53.863111  7320 detector.cpp:452] A new leading master (UPID=master@10.0.0.3:5050) is detected
+I1211 00:37:53.863168  7320 slave.cpp:624] New master detected at master@10.0.0.3:5050
+I1211 00:37:53.865591  7316 status_update_manager.cpp:171] Pausing sending status updates
+I1211 00:37:53.865658  7320 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 00:37:53.865681  7320 slave.cpp:660] Detecting new master
+I1211 00:37:58.046500  7320 slave.cpp:792] Registered with master master@10.0.0.3:5050; given slave ID 20151211-003753-50331658-5050-7178-S0
+I1211 00:37:58.047138  7320 status_update_manager.cpp:178] Resuming sending status updates
+I1211 00:38:53.827888  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505530048218658days
+I1211 00:39:53.836781  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505505055471655days
+I1211 00:39:57.704809  7320 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+W1211 00:40:07.714689  7316 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=3518e5e54de0004) expiration
+I1211 00:40:07.715173  7316 group.cpp:472] ZooKeeper session expired
+I1211 00:40:07.715430  7315 detector.cpp:138] Detected a new leader: None
+I1211 00:40:07.715492  7315 slave.cpp:617] Lost leading master
+I1211 00:40:07.715504  7315 slave.cpp:660] Detecting new master
+I1211 00:40:07.715530  7315 status_update_manager.cpp:171] Pausing sending status updates
+I1211 00:40:07.761320  7315 slave.cpp:2918] master@10.0.0.3:5050 exited
+W1211 00:40:07.761378  7315 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+I1211 00:40:53.880960  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505417937896389days
+I1211 00:41:13.076603  7315 slave.cpp:2908] No pings from master received within 75secs
+I1211 00:41:35.101352  7315 group.cpp:313] Group process (group(1)@10.0.0.5:5051) connected to ZooKeeper
+I1211 00:41:35.101379  7315 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 00:41:35.101392  7315 group.cpp:385] Trying to create path '/mesos' in ZooKeeper
+I1211 00:41:35.103914  7315 detector.cpp:138] Detected a new leader: (id='10')
+I1211 00:41:35.103978  7315 group.cpp:659] Trying to get '/mesos/info_0000000010' in ZooKeeper
+I1211 00:41:35.156580  7315 detector.cpp:452] A new leading master (UPID=master@10.0.0.2:5050) is detected
+I1211 00:41:35.156658  7315 slave.cpp:624] New master detected at master@10.0.0.2:5050
+I1211 00:41:35.156857  7317 status_update_manager.cpp:171] Pausing sending status updates
+I1211 00:41:35.156932  7315 slave.cpp:649] No credentials provided. Attempting to register without authentication
+I1211 00:41:35.156956  7315 slave.cpp:660] Detecting new master
+I1211 00:41:35.847367  7315 slave.cpp:860] Re-registered with master master@10.0.0.2:5050
+I1211 00:41:35.847537  7315 status_update_manager.cpp:178] Resuming sending status updates
+I1211 00:41:35.891252  7315 slave.cpp:2010] Updated checkpointed resources from  to 
+W1211 00:41:36.356838  7322 slave.cpp:1911] Ignoring updating pid for framework 20151211-003753-50331658-5050-7178-0000 because it does not exist
+I1211 00:41:53.923938  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505457212213102days
+I1211 00:42:53.927249  7320 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505452927742187days
+I1211 00:43:22.780808  7320 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 00:43:26.118568  7316 group.cpp:313] Group process (group(1)@10.0.0.5:5051) reconnected to ZooKeeper
+I1211 00:43:26.118620  7316 group.cpp:790] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1211 00:43:28.243482  7321 group.cpp:418] Lost connection to ZooKeeper, attempting to reconnect ...
+I1211 00:43:32.790282  7317 slave.cpp:2918] master@10.0.0.2:5050 exited
+W1211 00:43:32.790338  7317 slave.cpp:2921] Master disconnected! Waiting for a new master to be elected
+W1211 00:43:38.249333  7317 group.cpp:456] Timed out waiting to reconnect to ZooKeeper. Forcing ZooKeeper session (sessionId=3518e5e54de0009) expiration
+I1211 00:43:38.249842  7317 group.cpp:472] ZooKeeper session expired
+I1211 00:43:38.250223  7315 detector.cpp:138] Detected a new leader: None
+I1211 00:43:38.250344  7315 slave.cpp:617] Lost leading master
+I1211 00:43:38.250358  7315 slave.cpp:660] Detecting new master
+I1211 00:43:38.250378  7315 status_update_manager.cpp:171] Pausing sending status updates
+I1211 00:43:53.940382  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505364382009954days
+I1211 00:44:35.915376  7315 slave.cpp:2908] No pings from master received within 75secs
+I1211 00:44:53.955567  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505233705647049days
+I1211 00:45:53.956692  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.505148016228750days
+I1211 00:46:53.958118  7315 slave.cpp:3618] Current disk usage 25.64%. Max allowed age: 4.504945932017280days
+I1211 00:47:53.959686  7315 slave.cpp:3618] Current disk usage 25.65%. Max allowed age: 4.504758843453993days
