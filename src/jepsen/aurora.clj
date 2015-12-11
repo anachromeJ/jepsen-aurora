@@ -84,7 +84,7 @@
 (defn add-job!
   "Submits a new job to Aurora"
   [node job]
-  (c/exec "/add-job.sh" 
+  (shell/sh "/add-job.sh" 
           (str (:name job))
           (str (:duration job))))
 

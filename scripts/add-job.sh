@@ -21,7 +21,7 @@ echo "
 # run the script
 $NAME = Process(
   name = '$NAME',
-  cmdline = '$(cat TEMPJOB)')
+  cmdline = '$(cat ${TEMPJOB})')
 
 # describe the task
 $TASKNAME = SequentialTask(
