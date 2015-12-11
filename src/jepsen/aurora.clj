@@ -147,7 +147,7 @@
     (assoc this :node node))
 
   (invoke! [this test op]
-   (timeout 20000 (assoc op :type :info, :value :timed-out)
+   (timeout 10000 (assoc op :type :info, :value :timed-out)
              (try
                (case (:f op)
                  :add-job (do (add-job! node (:value op))
