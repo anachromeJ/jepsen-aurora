@@ -30,11 +30,13 @@ $TASKNAME = SequentialTask(
   resources = Resources(cpu = 0.01, ram = 1*MB, disk=1*MB))
 
 jobs = [
-  Service(cluster = 'testcluster',
-          environment = 'devel',
-          role = 'www-data',
-          name = '$NAME',
-          task = $TASKNAME)
+  Job(cluster = 'testcluster',
+      environment = 'devel',
+      role = 'www-data',
+      max_task_failures = -1,
+      cron_schedule = '*/1 * * * *',
+      name = '$NAME',
+      task = $TASKNAME)
 ]" > $TEMPCONFIG
 
-$AURORA_CLIENT job create testcluster/www-data/devel/$NAME $TEMPCONFIG
+$AURORA_CLIENT cron schedule testcluster/www-data/devel/$NAME $TEMPCONFIG

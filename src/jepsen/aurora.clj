@@ -140,7 +140,7 @@
                   :count    300 ;; actually running infinitely
                   :duration duration
                   :epsilon  epsilon
-                  :interval interval}})))))
+                  :interval 60}}))))) ;; always 60 seconds
 
 (defrecord Client [node]
   client/Client
