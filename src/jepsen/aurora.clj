@@ -192,12 +192,12 @@
          :client    (->Client nil)
          :generator (gen/phases
                      (->> (add-job)
-                          (gen/delay 120)
+                          (gen/delay 60)
                           (gen/stagger 30)
                           (gen/nemesis
-                           (gen/seq (cycle [(gen/sleep 100)
+                           (gen/seq (cycle [(gen/sleep 120)
                                             {:type :info, :f :start}
-                                            (gen/sleep 100)
+                                            (gen/sleep 120)
                                             {:type :info, :f :stop}
                                             {:type :info, :f :resurrect}])))
                           (gen/time-limit 350))
