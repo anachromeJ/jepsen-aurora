@@ -25,25 +25,16 @@ if [[ ! -e $AURORA_DIR ]]; then
 
     # Add Log output parameter
     mesos-log initialize --path=$AURORA_DIR/db
-
-    echo "done"
 else
-    echo "aurora already installed, aborting..."
+    echo "aurora already installed, exiting..."
 fi
 
 # install mesos egg and build thermos
 if [[ ! -e "/aurora" ]]; then
     cd /
     apt-get update
-    apt-get -y install gcc bison \
-        curl \
-        git \
-        libapr1-dev \
-        libcurl4-nss-dev \
-        libsasl2-dev \
-        libsvn-dev \
-        python-dev \
-        zookeeperd
+    apt-get -y install gcc bison curl git libapr1-dev libcurl4-nss-dev \
+        libsasl2-dev libsvn-dev python-dev zookeeperd
     git clone https://github.com/apache/aurora.git
     pushd aurora
     mkdir -p third_party
@@ -54,12 +45,13 @@ if [[ ! -e "/aurora" ]]; then
     wget -c http://downloads.mesosphere.io/master/ubuntu/12.04/mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
     dpkg --install mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
 
+    # build thermos executor and runner
     ./pants binary src/main/python/apache/aurora/executor:thermos_executor
     ./pants binary src/main/python/apache/thermos/runner:thermos_runner
     
-    # Package runner within executor.
+    # package runner within executor
     build-support/embed_runner_in_executor.py
-    
+
     chmod +x /aurora/dist/thermos_executor.pex
     popd
 else
