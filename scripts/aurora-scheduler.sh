@@ -16,18 +16,18 @@ JAVA_OPTS=(
 
 # Flags control the behavior of the Aurora scheduler.
 # For a full list of available flags, run bin/aurora-scheduler -help
+ZK_QUORUM=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181
 AURORA_FLAGS=(
   -cluster_name=testcluster
   -http_port=8081
   -native_log_quorum_size=5
-  -zk_endpoints=localhost:2181
-  -mesos_master_address=zk://n1:2181,n2:2181,n3:2181,n4:2181,n5:2181/mesos
+  -zk_endpoints=${ZK_QUORUM}
+  -mesos_master_address=zk://${ZK_QUORUM}/mesos
   -serverset_path=/aurora/scheduler
   -native_log_zk_group_path=/aurora/replicated-log
   -native_log_file_path="$AURORA_SCHEDULER_HOME/db"
   -backup_dir="$AURORA_SCHEDULER_HOME/backups"
 
-  # TODO(Kevin Sweeney): Point these to real URLs.
   -thermos_executor_path=/aurora/dist/thermos_executor.pex
   -thermos_executor_flags="--announcer-enable --announcer-ensemble localhost:2181"
   # -gc_executor_path=/dev/null
