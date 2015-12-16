@@ -61,7 +61,10 @@
       (teardown! [_ test node]
         (info node "stopping aurora")
         (c/su (cu/grepkill "aurora-scheduler"))
-        ;; temporary: don't tear down mesos when done
+
+        ;; there are problems with zookeeper
+        ;; manually killing it
+        (c/su (cu/grepkill "zookeeper"))
         (db/teardown! mesos test node)
         ;; (c/su (c/exec :rm :-rf job-result-dir))
       )
@@ -198,11 +201,11 @@
                                             (gen/sleep 120)
                                             {:type :info, :f :stop}
                                             {:type :info, :f :resurrect}])))
-                          (gen/time-limit 350))
+                          (gen/time-limit 600))
                      ;; (gen/nemesis (gen/once {:type :info, :f :stop}))
                      ;; (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
-                     (gen/sleep 100)
+                     (gen/sleep 300)
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
