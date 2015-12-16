@@ -61,7 +61,8 @@
       (teardown! [_ test node]
         (info node "stopping aurora")
         (c/su (cu/grepkill "aurora-scheduler"))
-        (db/teardown! mesos test node)
+        ;; temporary: don't tear down mesos when done
+        ;; (db/teardown! mesos test node)
         ;; (c/su (c/exec :rm :-rf job-result-dir))
       )
 
