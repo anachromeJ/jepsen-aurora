@@ -5,7 +5,7 @@ AURORA_SNAPSHOT=aurora-scheduler-0.11.0-SNAPSHOT
 AURORA_ZIP=$AURORA_SNAPSHOT.zip
 AURORA_ZIP_LINK=https://github.com/jchli/jepsen-aurora/raw/master/resources/$AURORA_ZIP
 
-readonly MESOS_VERSION=0.23.0
+readonly MESOS_VERSION=0.24.1
 
 # check if aurora is already installed first
 if [[ ! -e $AURORA_DIR ]]; then
@@ -42,8 +42,9 @@ if [[ ! -e "/aurora" ]]; then
     wget -c https://svn.apache.org/repos/asf/aurora/3rdparty/ubuntu/trusty64/python/mesos.native-${MESOS_VERSION}-py2.7-linux-x86_64.egg
     popd
 
-    wget -c http://downloads.mesosphere.io/master/ubuntu/12.04/mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
-    dpkg --install mesos_${MESOS_VERSION}-1.0.ubuntu1204_amd64.deb
+    $deb=mesos_${MESOS_VERSION}-0.2.35.ubuntu1204_amd64.deb
+    wget -c http://downloads.mesosphere.io/master/ubuntu/12.04/$deb
+    dpkg --install $deb
 
     # build thermos executor and runner
     ./pants binary src/main/python/apache/aurora/executor:thermos_executor
