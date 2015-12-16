@@ -128,9 +128,9 @@
   (let [id (atom 0)]
     (reify gen/Generator
       (op [_ test process]
-        (let [head-start  10 ; Schedule a bit in the future
+        (let [head-start  5 ; Schedule a bit in the future
               duration    (rand-int 10)
-              epsilon     (+ 10 (rand-int 20))
+              epsilon     (+ 10 (rand-int 10))
               ; run once every 60-70 seconds
               interval    (+ 60
                              (rand-int 10))]
@@ -138,7 +138,7 @@
          :f      :add-job
          :value  {:name     (swap! id inc)
                   :start    (time/plus (time/now) (time/seconds head-start))
-                  :count    300 ;; actually running infinitely
+                  :count    50 ;; actually running infinitely
                   :duration duration
                   :epsilon  epsilon
                   :interval interval}})))))
@@ -196,14 +196,14 @@
                           (gen/delay 30)
                           (gen/stagger 30)
                           (gen/nemesis
-                           (gen/seq (cycle [(gen/sleep 120)
+                           (gen/seq (cycle [(gen/sleep 200)
                                             {:type :info, :f :start}
-                                            (gen/sleep 120)
+                                            (gen/sleep 200)
                                             {:type :info, :f :stop}
                                             {:type :info, :f :resurrect}])))
-                          (gen/time-limit 600))
-                     ;; (gen/nemesis (gen/once {:type :info, :f :stop}))
-                     ;; (gen/nemesis (gen/once {:type :info, :f :resurrect}))
+                          (gen/time-limit 450))
+                     (gen/nemesis (gen/once {:type :info, :f :stop}))
+                     (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
                      (gen/sleep 300)
                      (gen/clients
