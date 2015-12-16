@@ -203,15 +203,15 @@
                                             {:type :info, :f :stop}
                                             {:type :info, :f :resurrect}])))
                           (gen/time-limit 350))
-                     (gen/nemesis (gen/once {:type :info, :f :stop}))
-                     (gen/nemesis (gen/once {:type :info, :f :resurrect}))
+                     ;; (gen/nemesis (gen/once {:type :info, :f :stop}))
+                     ;; (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
                      (gen/sleep 100)
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
-         :nemesis   (resurrection-hub
-                     (nemesis/partition-random-halves))
+         ;; :nemesis   (resurrection-hub
+         ;;             (nemesis/partition-random-halves))
          :checker   (checker/compose
                      {:aurora (checker)
                       :perf (checker/perf)})
