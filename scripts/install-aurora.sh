@@ -9,6 +9,10 @@ readonly MESOS_VERSION=0.24.1
 
 # check if aurora is already installed first
 if [[ ! -e $AURORA_DIR ]]; then
+    # increase number of allowed ssh sessions
+    echo "MaxSessions 50" >> /etc/ssh/sshd_config
+    service ssh reload
+
     echo "installing aurora..."
     echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee "/etc/apt/sources.list.d/webupd8team-java.list"
     echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a "/etc/apt/sources.list.d/webupd8team-java.list"
