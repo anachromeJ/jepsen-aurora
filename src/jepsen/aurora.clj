@@ -51,18 +51,18 @@
   (let [mesos (mesos/db mesos-version)]
     (reify db/DB
       (setup! [_ test node]
-        
+
       (db/setup! mesos test node)
       (install! test node)
       (c/su (c/exec :mkdir :-p job-result-dir))
       (start! test node)
       )
-      
+
       (teardown! [_ test node]
         (info node "stopping aurora")
         (c/su (cu/grepkill "aurora-scheduler"))
         ;; temporary: don't tear down mesos when done
-        ;; (db/teardown! mesos test node)
+        (db/teardown! mesos test node)
         ;; (c/su (c/exec :rm :-rf job-result-dir))
       )
 
@@ -128,13 +128,9 @@
         (let [head-start  10 ; Schedule a bit in the future
               duration    (rand-int 10)
               epsilon     (+ 10 (rand-int 20))
-              ; (Aurora) won't schedule tasks concurrently, so we ensure they'll
-              ; never overlap.
-              interval    (+ 1
-                             duration
-                             epsilon
-                             epsilon-forgiveness
-                             60)]
+              ; run once every 60-70 seconds
+              interval    (+ 60
+                             (rand-int 10))]
         {:type   :invoke
          :f      :add-job
          :value  {:name     (swap! id inc)
@@ -142,7 +138,7 @@
                   :count    300 ;; actually running infinitely
                   :duration duration
                   :epsilon  epsilon
-                  :interval interval}}))))) ;; always 60 seconds
+                  :interval interval}})))))
 
 (defrecord Client [node]
   client/Client
