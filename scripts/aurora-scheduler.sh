@@ -16,7 +16,7 @@ JAVA_OPTS=(
 
 # Flags control the behavior of the Aurora scheduler.
 # For a full list of available flags, run bin/aurora-scheduler -help
-ZK_QUORUM=n1:2181,n2:2181,n3:2181,n4:2181,n5:2181
+ZK_QUORUM=10.0.0.2:2181,10.0.0.3:2181,10.0.0.4:2181,10.0.0.5:2181,10.0.0.6:2181
 AURORA_FLAGS=(
   -cluster_name=testcluster
   -http_port=8081
