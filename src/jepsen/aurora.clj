@@ -66,7 +66,8 @@
         ;; manually killing it
         (c/su (cu/grepkill "zookeeper"))
         (db/teardown! mesos test node)
-        (c/su (c/exec :rm :-rf job-result-dir))
+        (c/su (c/exec :rm :-rf job-result-dir)
+              (c/exec :truncate :--size 0 "/var/log/messages")))
       )
 
       db/LogFiles
