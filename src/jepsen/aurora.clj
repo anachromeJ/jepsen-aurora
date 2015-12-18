@@ -131,9 +131,8 @@
         (let [head-start  5 ; Schedule a bit in the future
               duration    (rand-int 10)
               epsilon     (+ 10 (rand-int 10))
-              ; run once every 60-70 seconds
-              interval    (+ 60
-                             (rand-int 10))]
+              ; run once every 60 seconds
+              interval    60]
         {:type   :invoke
          :f      :add-job
          :value  {:name     (swap! id inc)
@@ -205,7 +204,7 @@
                      (gen/nemesis (gen/once {:type :info, :f :stop}))
                      (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
-                     (gen/sleep 300)
+                     (gen/sleep 400)
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
