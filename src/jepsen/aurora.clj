@@ -191,6 +191,7 @@
          :db        (db mesos-version)
          :client    (->Client nil)
          :generator (gen/phases
+                     (gen/sleep 60) ; wait a bit for scheduler to start up
                      (->> (add-job)
                           (gen/delay 30)
                           (gen/stagger 30)
