@@ -4,7 +4,7 @@ Jepsen tests for Apache Aurora
 
 ## Usage
 
-This test is performed in a docker container with a typical Jepsen test environment setup. Instructions can be found at [](https://github.com/aphyr/jepsen/tree/master/docker). Essentially with docker installed, the following sequence of commands runs the test:
+This test is performed in a docker container with a typical Jepsen test environment setup. Instructions can be found at [https://github.com/aphyr/jepsen/tree/master/docker](). Essentially with docker installed, the following sequence of commands runs the test:
 
 ```
 docker run --privileged -t -i tjake/jepsen
