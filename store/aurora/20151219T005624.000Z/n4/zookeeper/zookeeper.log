@@ -1,0 +1,269 @@
+2015-12-19 00:56:30,978 - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /etc/zookeeper/conf/zoo.cfg
+2015-12-19 00:56:30,988 - INFO  [main:QuorumPeerConfig@334] - Defaulting to majority quorums
+2015-12-19 00:56:30,993 - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2015-12-19 00:56:30,993 - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2015-12-19 00:56:30,996 - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2015-12-19 00:56:31,072 - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2015-12-19 00:56:31,085 - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2181
+2015-12-19 00:56:31,106 - INFO  [main:QuorumPeer@913] - tickTime set to 2000
+2015-12-19 00:56:31,106 - INFO  [main:QuorumPeer@933] - minSessionTimeout set to -1
+2015-12-19 00:56:31,106 - INFO  [main:QuorumPeer@944] - maxSessionTimeout set to -1
+2015-12-19 00:56:31,106 - INFO  [main:QuorumPeer@959] - initLimit set to 10
+2015-12-19 00:56:31,117 - INFO  [main:QuorumPeer@429] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2015-12-19 00:56:31,121 - INFO  [main:QuorumPeer@444] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2015-12-19 00:56:31,128 - INFO  [Thread-1:QuorumCnxManager$Listener@486] - My election bind port: 0.0.0.0/0.0.0.0:3888
+2015-12-19 00:56:31,139 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+2015-12-19 00:56:31,141 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@740] - New election. My id =  2, proposed zxid=0x0
+2015-12-19 00:56:31,152 - INFO  [WorkerSender[myid=2]:QuorumCnxManager@190] - Have smaller server identifier, so dropping the connection: (3, 2)
+2015-12-19 00:56:31,152 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 2 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,152 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,153 - INFO  [n4/10.0.0.5:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.4:48149
+2015-12-19 00:56:31,153 - WARN  [WorkerSender[myid=2]:QuorumCnxManager@368] - Cannot open channel to 4 at election address n2/10.0.0.3:3888
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:327)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:393)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:365)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:56:31,154 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,155 - INFO  [WorkerSender[myid=2]:QuorumCnxManager@190] - Have smaller server identifier, so dropping the connection: (5, 2)
+2015-12-19 00:56:31,155 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,156 - INFO  [n4/10.0.0.5:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.2:59621
+2015-12-19 00:56:31,156 - WARN  [WorkerSender[myid=2]:QuorumCnxManager@368] - Cannot open channel to 4 at election address n2/10.0.0.3:3888
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:327)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:393)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:365)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:56:31,157 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 5 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,177 - INFO  [n4/10.0.0.5:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.3:37103
+2015-12-19 00:56:31,178 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 4 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 4 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,180 - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 4 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-19 00:56:31,382 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumPeer@738] - FOLLOWING
+2015-12-19 00:56:31,385 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Learner@85] - TCP NoDelay set to: true
+2015-12-19 00:56:31,390 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:zookeeper.version=3.4.5--1, built on 03/16/2014 21:36 GMT
+2015-12-19 00:56:31,390 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:host.name=n4
+2015-12-19 00:56:31,390 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.version=1.8.0_66
+2015-12-19 00:56:31,390 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2015-12-19 00:56:31,390 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-oracle/jre
+2015-12-19 00:56:31,390 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.class.path=/etc/zookeeper/conf:/usr/share/java/jline.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/xercesImpl.jar:/usr/share/java/xmlParserAPIs.jar:/usr/share/java/netty.jar:/usr/share/java/slf4j-api.jar:/usr/share/java/slf4j-log4j12.jar:/usr/share/java/zookeeper.jar
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.arch=amd64
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.version=3.13.0-48-generic
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=zookeeper
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.home=/var/lib/zookeeper
+2015-12-19 00:56:31,391 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.dir=/
+2015-12-19 00:56:31,392 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@162] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2
+2015-12-19 00:56:31,392 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Follower@63] - FOLLOWING - LEADER ELECTION TOOK - 251
+2015-12-19 00:56:31,394 - WARN  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Learner@232] - Unexpected exception, tries=0, connecting to n1/10.0.0.2:2888
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:224)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:71)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:740)
+2015-12-19 00:56:31,906 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53479
+2015-12-19 00:56:31,961 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53481
+2015-12-19 00:56:31,962 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-19 00:56:31,962 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53479 (no session established for client)
+2015-12-19 00:56:31,963 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-19 00:56:31,963 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53481 (no session established for client)
+2015-12-19 00:56:31,963 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53485
+2015-12-19 00:56:31,963 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-19 00:56:31,963 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53485 (no session established for client)
+2015-12-19 00:56:31,964 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53486
+2015-12-19 00:56:31,964 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-19 00:56:31,964 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53486 (no session established for client)
+2015-12-19 00:56:32,412 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Learner@322] - Getting a diff from the leader 0x0
+2015-12-19 00:56:32,415 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0
+2015-12-19 00:56:32,421 - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0
+2015-12-19 00:56:32,437 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.6:51645
+2015-12-19 00:56:32,439 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.6:51645; will be dropped if server is in r-o mode
+2015-12-19 00:56:32,440 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.6:51645
+2015-12-19 00:56:32,452 - WARN  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Follower@118] - Got zxid 0x100000001 expected 0x1
+2015-12-19 00:56:32,453 - INFO  [SyncThread:2:FileTxnLog@199] - Creating new log file: log.100000001
+2015-12-19 00:56:32,461 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0000 with negotiated timeout 10000 for client /10.0.0.6:51645
+2015-12-19 00:56:32,462 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.4:53103
+2015-12-19 00:56:32,463 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.4:53103; will be dropped if server is in r-o mode
+2015-12-19 00:56:32,463 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.4:53103
+2015-12-19 00:56:32,473 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0001 with negotiated timeout 10000 for client /10.0.0.4:53103
+2015-12-19 00:56:32,547 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.3:33113
+2015-12-19 00:56:32,547 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.3:33116
+2015-12-19 00:56:32,547 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.3:33113; will be dropped if server is in r-o mode
+2015-12-19 00:56:32,548 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.3:33113
+2015-12-19 00:56:32,548 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.3:33116; will be dropped if server is in r-o mode
+2015-12-19 00:56:32,548 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.3:33116
+2015-12-19 00:56:32,550 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0002 with negotiated timeout 10000 for client /10.0.0.3:33113
+2015-12-19 00:56:32,550 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0003 with negotiated timeout 10000 for client /10.0.0.3:33116
+2015-12-19 00:56:34,808 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53530
+2015-12-19 00:56:34,812 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.2:53530; will be dropped if server is in r-o mode
+2015-12-19 00:56:34,812 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.2:53530
+2015-12-19 00:56:34,827 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0004 with negotiated timeout 4000 for client /10.0.0.2:53530
+2015-12-19 00:56:35,840 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.4:53141
+2015-12-19 00:56:35,842 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.4:53141; will be dropped if server is in r-o mode
+2015-12-19 00:56:35,842 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.4:53141
+2015-12-19 00:56:35,846 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0005 with negotiated timeout 4000 for client /10.0.0.4:53141
+2015-12-19 00:56:35,948 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.5:53096
+2015-12-19 00:56:35,951 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.5:53096; will be dropped if server is in r-o mode
+2015-12-19 00:56:35,951 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.5:53096
+2015-12-19 00:56:35,954 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0006 with negotiated timeout 4000 for client /10.0.0.5:53096
+2015-12-19 00:56:37,663 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53550
+2015-12-19 00:56:37,663 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.2:53550; will be dropped if server is in r-o mode
+2015-12-19 00:56:37,663 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.2:53550
+2015-12-19 00:56:37,683 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0007 with negotiated timeout 4000 for client /10.0.0.2:53550
+2015-12-19 00:56:39,440 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.6:51709
+2015-12-19 00:56:39,440 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.6:51709; will be dropped if server is in r-o mode
+2015-12-19 00:56:39,440 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.6:51709
+2015-12-19 00:56:39,445 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0008 with negotiated timeout 4000 for client /10.0.0.6:51709
+2015-12-19 00:57:25,510 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41279
+2015-12-19 00:57:25,510 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41279
+2015-12-19 00:57:25,513 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0009 with negotiated timeout 10000 for client /10.0.42.1:41279
+2015-12-19 00:57:29,068 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41281
+2015-12-19 00:57:29,068 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41281
+2015-12-19 00:57:29,070 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f000a with negotiated timeout 10000 for client /10.0.42.1:41281
+2015-12-19 00:57:38,403 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f0004, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:57:38,404 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53530 which had sessionid 0x251b7bcf39f0004
+2015-12-19 00:57:38,404 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f0007, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:57:38,405 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53550 which had sessionid 0x251b7bcf39f0007
+2015-12-19 00:57:55,525 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41293
+2015-12-19 00:57:55,526 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41293
+2015-12-19 00:57:55,528 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f000b with negotiated timeout 10000 for client /10.0.42.1:41293
+2015-12-19 00:58:13,127 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41301
+2015-12-19 00:58:13,127 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41301
+2015-12-19 00:58:13,129 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f000c with negotiated timeout 10000 for client /10.0.42.1:41301
+2015-12-19 00:58:28,133 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41308
+2015-12-19 00:58:28,133 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41308
+2015-12-19 00:58:28,136 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f000d with negotiated timeout 10000 for client /10.0.42.1:41308
+2015-12-19 00:58:32,632 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f0001, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:32,633 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.4:53103 which had sessionid 0x251b7bcf39f0001
+2015-12-19 00:58:33,384 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41312
+2015-12-19 00:58:33,384 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41312
+2015-12-19 00:58:33,387 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f000e with negotiated timeout 10000 for client /10.0.42.1:41312
+2015-12-19 00:58:34,098 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41313
+2015-12-19 00:58:34,098 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41313
+2015-12-19 00:58:34,101 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f000f with negotiated timeout 10000 for client /10.0.42.1:41313
+2015-12-19 00:58:35,482 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41315
+2015-12-19 00:58:35,483 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41315
+2015-12-19 00:58:35,485 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0010 with negotiated timeout 10000 for client /10.0.42.1:41315
+2015-12-19 00:58:38,509 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f0005, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:38,510 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.4:53141 which had sessionid 0x251b7bcf39f0005
+2015-12-19 00:58:45,077 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f0010, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,099 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41315 which had sessionid 0x251b7bcf39f0010
+2015-12-19 00:58:45,265 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f0009, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,266 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41279 which had sessionid 0x251b7bcf39f0009
+2015-12-19 00:58:45,266 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f000b, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,267 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41293 which had sessionid 0x251b7bcf39f000b
+2015-12-19 00:58:45,276 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f000d, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,277 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41308 which had sessionid 0x251b7bcf39f000d
+2015-12-19 00:58:45,277 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f000c, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,277 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41301 which had sessionid 0x251b7bcf39f000c
+2015-12-19 00:58:45,292 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f000a, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,292 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41281 which had sessionid 0x251b7bcf39f000a
+2015-12-19 00:58:45,293 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f000f, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,293 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41313 which had sessionid 0x251b7bcf39f000f
+2015-12-19 00:58:45,365 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x251b7bcf39f000e, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-19 00:58:45,365 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41312 which had sessionid 0x251b7bcf39f000e
+2015-12-19 01:00:58,540 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41458
+2015-12-19 01:00:58,540 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41458
+2015-12-19 01:00:58,542 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0011 with negotiated timeout 10000 for client /10.0.42.1:41458
+2015-12-19 01:00:58,551 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41458 which had sessionid 0x251b7bcf39f0011
+2015-12-19 01:01:06,654 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41470
+2015-12-19 01:01:06,654 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41470
+2015-12-19 01:01:06,656 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0012 with negotiated timeout 10000 for client /10.0.42.1:41470
+2015-12-19 01:01:06,665 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41470 which had sessionid 0x251b7bcf39f0012
+2015-12-19 01:01:08,002 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41482
+2015-12-19 01:01:08,002 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41482
+2015-12-19 01:01:08,004 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0013 with negotiated timeout 10000 for client /10.0.42.1:41482
+2015-12-19 01:01:08,013 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41482 which had sessionid 0x251b7bcf39f0013
+2015-12-19 01:01:47,726 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41522
+2015-12-19 01:01:47,726 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41522
+2015-12-19 01:01:47,728 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0014 with negotiated timeout 10000 for client /10.0.42.1:41522
+2015-12-19 01:01:47,737 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41522 which had sessionid 0x251b7bcf39f0014
+2015-12-19 01:01:48,433 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41524
+2015-12-19 01:01:48,434 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41524
+2015-12-19 01:01:48,436 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0015 with negotiated timeout 10000 for client /10.0.42.1:41524
+2015-12-19 01:01:48,441 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41524 which had sessionid 0x251b7bcf39f0015
+2015-12-19 01:02:25,007 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41582
+2015-12-19 01:02:25,007 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41582
+2015-12-19 01:02:25,009 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0016 with negotiated timeout 10000 for client /10.0.42.1:41582
+2015-12-19 01:02:25,014 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41582 which had sessionid 0x251b7bcf39f0016
+2015-12-19 01:04:11,819 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41707
+2015-12-19 01:04:11,819 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41707
+2015-12-19 01:04:11,821 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0017 with negotiated timeout 10000 for client /10.0.42.1:41707
+2015-12-19 01:04:11,830 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41707 which had sessionid 0x251b7bcf39f0017
+2015-12-19 01:04:34,014 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41724
+2015-12-19 01:04:34,015 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41724
+2015-12-19 01:04:34,017 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0018 with negotiated timeout 10000 for client /10.0.42.1:41724
+2015-12-19 01:04:34,025 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41724 which had sessionid 0x251b7bcf39f0018
+2015-12-19 01:04:40,267 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:41737
+2015-12-19 01:04:40,267 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:41737
+2015-12-19 01:04:40,269 - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x251b7bcf39f0019 with negotiated timeout 10000 for client /10.0.42.1:41737
+2015-12-19 01:04:40,274 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:41737 which had sessionid 0x251b7bcf39f0019
