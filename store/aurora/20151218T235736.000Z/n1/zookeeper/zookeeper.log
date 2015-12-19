@@ -1,0 +1,389 @@
+2015-12-18 23:57:43,273 - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /etc/zookeeper/conf/zoo.cfg
+2015-12-18 23:57:43,284 - INFO  [main:QuorumPeerConfig@334] - Defaulting to majority quorums
+2015-12-18 23:57:43,288 - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2015-12-18 23:57:43,289 - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2015-12-18 23:57:43,291 - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2015-12-18 23:57:43,384 - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2015-12-18 23:57:43,397 - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2181
+2015-12-18 23:57:43,419 - INFO  [main:QuorumPeer@913] - tickTime set to 2000
+2015-12-18 23:57:43,419 - INFO  [main:QuorumPeer@933] - minSessionTimeout set to -1
+2015-12-18 23:57:43,420 - INFO  [main:QuorumPeer@944] - maxSessionTimeout set to -1
+2015-12-18 23:57:43,420 - INFO  [main:QuorumPeer@959] - initLimit set to 10
+2015-12-18 23:57:43,432 - INFO  [main:QuorumPeer@429] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2015-12-18 23:57:43,437 - INFO  [main:QuorumPeer@444] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2015-12-18 23:57:43,446 - INFO  [Thread-1:QuorumCnxManager$Listener@486] - My election bind port: 0.0.0.0/0.0.0.0:3888
+2015-12-18 23:57:43,471 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.4:53614
+2015-12-18 23:57:43,473 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+2015-12-18 23:57:43,480 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@740] - New election. My id =  5, proposed zxid=0x0
+2015-12-18 23:57:43,483 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.3:42445
+2015-12-18 23:57:43,503 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.6:50166
+2015-12-18 23:57:43,503 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,503 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 4 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,503 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 4 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,503 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 4 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,504 - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:831)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:667)
+2015-12-18 23:57:43,504 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.6:50169
+2015-12-18 23:57:43,504 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,504 - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 5, error = 
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:223)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2015-12-18 23:57:43,507 - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2015-12-18 23:57:43,507 - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:831)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:667)
+2015-12-18 23:57:43,508 - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+2015-12-18 23:57:43,506 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,508 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 5 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,508 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 4 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 4 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,508 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 4 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,508 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,506 - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 5, error = 
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:223)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2015-12-18 23:57:43,509 - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2015-12-18 23:57:43,506 - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+2015-12-18 23:57:43,508 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.6:50171
+2015-12-18 23:57:43,509 - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:831)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:667)
+2015-12-18 23:57:43,510 - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+2015-12-18 23:57:43,510 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.5:40100
+2015-12-18 23:57:43,510 - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:831)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:667)
+2015-12-18 23:57:43,513 - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@762] - Connection broken for id 2, my id = 5, error = 
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:223)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2015-12-18 23:57:43,514 - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2015-12-18 23:57:43,513 - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 5, error = 
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:223)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2015-12-18 23:57:43,514 - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2015-12-18 23:57:43,512 - INFO  [n1/10.0.0.2:3888:QuorumCnxManager$Listener@493] - Received connection request /10.0.0.5:40102
+2015-12-18 23:57:43,514 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,514 - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@762] - Connection broken for id 2, my id = 5, error = 
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:223)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2015-12-18 23:57:43,513 - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+2015-12-18 23:57:43,515 - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2015-12-18 23:57:43,515 - ERROR [SendWorker:2:QuorumCnxManager$SendWorker@655] - Failed to send last message. Shutting down thread.
+java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:116)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:132)
+	at java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.send(QuorumCnxManager.java:624)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:651)
+2015-12-18 23:57:43,516 - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+2015-12-18 23:57:43,515 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,519 - INFO  [WorkerReceiver[myid=5]:FastLeaderElection@542] - Notification: 5 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)
+2015-12-18 23:57:43,720 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:QuorumPeer@750] - LEADING
+2015-12-18 23:57:43,724 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Leader@58] - TCP NoDelay set to: true
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:zookeeper.version=3.4.5--1, built on 03/16/2014 21:36 GMT
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:host.name=n1
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.version=1.8.0_66
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-oracle/jre
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.class.path=/etc/zookeeper/conf:/usr/share/java/jline.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/xercesImpl.jar:/usr/share/java/xmlParserAPIs.jar:/usr/share/java/netty.jar:/usr/share/java/slf4j-api.jar:/usr/share/java/slf4j-log4j12.jar:/usr/share/java/zookeeper.jar
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2015-12-18 23:57:43,732 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.arch=amd64
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.version=3.13.0-48-generic
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=zookeeper
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.home=/var/lib/zookeeper
+2015-12-18 23:57:43,733 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.dir=/
+2015-12-18 23:57:43,734 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@162] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2
+2015-12-18 23:57:43,735 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:Leader@345] - LEADING - LEADER ELECTION TOOK - 255
+2015-12-18 23:57:43,737 - INFO  [QuorumPeer[myid=5]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0
+2015-12-18 23:57:43,749 - INFO  [LearnerHandler-/10.0.0.5:37896:LearnerHandler@263] - Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@4f400eb
+2015-12-18 23:57:44,727 - INFO  [LearnerHandler-/10.0.0.4:34199:LearnerHandler@263] - Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@22171648
+2015-12-18 23:57:44,733 - INFO  [LearnerHandler-/10.0.0.4:34199:LearnerHandler@318] - Synchronizing with Follower sid: 3 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0
+2015-12-18 23:57:44,733 - INFO  [LearnerHandler-/10.0.0.6:51942:LearnerHandler@263] - Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@7e94adfd
+2015-12-18 23:57:44,733 - INFO  [LearnerHandler-/10.0.0.4:34199:LearnerHandler@395] - Sending DIFF
+2015-12-18 23:57:44,733 - INFO  [LearnerHandler-/10.0.0.5:37896:LearnerHandler@318] - Synchronizing with Follower sid: 2 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0
+2015-12-18 23:57:44,733 - INFO  [LearnerHandler-/10.0.0.3:58971:LearnerHandler@263] - Follower sid: 4 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@6102605b
+2015-12-18 23:57:44,733 - INFO  [LearnerHandler-/10.0.0.5:37896:LearnerHandler@395] - Sending DIFF
+2015-12-18 23:57:44,736 - INFO  [LearnerHandler-/10.0.0.6:51942:LearnerHandler@318] - Synchronizing with Follower sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0
+2015-12-18 23:57:44,736 - INFO  [LearnerHandler-/10.0.0.6:51942:LearnerHandler@395] - Sending DIFF
+2015-12-18 23:57:44,743 - INFO  [LearnerHandler-/10.0.0.3:58971:LearnerHandler@318] - Synchronizing with Follower sid: 4 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0
+2015-12-18 23:57:44,743 - INFO  [LearnerHandler-/10.0.0.3:58971:LearnerHandler@395] - Sending DIFF
+2015-12-18 23:57:44,745 - WARN  [LearnerHandler-/10.0.0.5:37896:Leader@574] - Commiting zxid 0x100000000 from /10.0.0.2:2888 not first!
+2015-12-18 23:57:44,745 - WARN  [LearnerHandler-/10.0.0.5:37896:Leader@576] - First is 0x0
+2015-12-18 23:57:44,745 - INFO  [LearnerHandler-/10.0.0.5:37896:Leader@598] - Have quorum of supporters; starting up and setting last processed zxid: 0x100000000
+2015-12-18 23:57:44,935 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.4:40637
+2015-12-18 23:57:44,979 - INFO  [SyncThread:5:FileTxnLog@199] - Creating new log file: log.100000001
+2015-12-18 23:57:45,004 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-18 23:57:45,005 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.4:40637 (no session established for client)
+2015-12-18 23:57:45,027 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x451b7871faa0001 type:create cxid:0x56749d7b zxid:0x100000007 txntype:-1 reqpath:n/a Error Path:/mesos Error:KeeperErrorCode = NodeExists for /mesos
+2015-12-18 23:57:45,045 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.2:53710
+2015-12-18 23:57:45,045 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-18 23:57:45,045 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.2:53710 (no session established for client)
+2015-12-18 23:57:45,057 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.3:37487
+2015-12-18 23:57:45,058 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-12-18 23:57:45,058 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.0.3:37487 (no session established for client)
+2015-12-18 23:57:45,064 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x351b7871fa10001 type:create cxid:0x56749d86 zxid:0x100000014 txntype:-1 reqpath:n/a Error Path:/mesos/log_replicas Error:KeeperErrorCode = NodeExists for /mesos/log_replicas
+2015-12-18 23:57:48,302 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.6:49074
+2015-12-18 23:57:48,307 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.6:49074; will be dropped if server is in r-o mode
+2015-12-18 23:57:48,308 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.6:49074
+2015-12-18 23:57:48,314 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0000 with negotiated timeout 4000 for client /10.0.0.6:49074
+2015-12-18 23:57:51,821 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x351b7871fa10005 type:create cxid:0x56749d85 zxid:0x100000024 txntype:-1 reqpath:n/a Error Path:/aurora/replicated-log Error:KeeperErrorCode = NodeExists for /aurora/replicated-log
+2015-12-18 23:57:52,335 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.6:49091
+2015-12-18 23:57:52,335 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.6:49091; will be dropped if server is in r-o mode
+2015-12-18 23:57:52,335 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.6:49091
+2015-12-18 23:57:52,338 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0001 with negotiated timeout 4000 for client /10.0.0.6:49091
+2015-12-18 23:57:52,386 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.0.3:37543
+2015-12-18 23:57:52,386 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.0.0.3:37543; will be dropped if server is in r-o mode
+2015-12-18 23:57:52,386 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.0.3:37543
+2015-12-18 23:57:52,388 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0002 with negotiated timeout 4000 for client /10.0.0.3:37543
+2015-12-18 23:58:30,370 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54080
+2015-12-18 23:58:30,370 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54080
+2015-12-18 23:58:30,372 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0003 with negotiated timeout 10000 for client /10.0.42.1:54080
+2015-12-18 23:58:58,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10005, timeout of 4000ms exceeded
+2015-12-18 23:58:58,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10005, timeout of 4000ms exceeded
+2015-12-18 23:58:58,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10006, timeout of 4000ms exceeded
+2015-12-18 23:58:58,000 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10005
+2015-12-18 23:58:58,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10005
+2015-12-18 23:58:58,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10006
+2015-12-18 23:59:04,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x151b7871fa30001, timeout of 10000ms exceeded
+2015-12-18 23:59:04,000 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30001
+2015-12-18 23:59:08,830 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54088
+2015-12-18 23:59:08,830 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54088
+2015-12-18 23:59:08,833 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0004 with negotiated timeout 10000 for client /10.0.42.1:54088
+2015-12-18 23:59:10,388 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54089
+2015-12-18 23:59:10,389 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54089
+2015-12-18 23:59:10,391 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0005 with negotiated timeout 10000 for client /10.0.42.1:54089
+2015-12-18 23:59:14,169 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54092
+2015-12-18 23:59:14,170 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54092
+2015-12-18 23:59:14,171 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0006 with negotiated timeout 10000 for client /10.0.42.1:54092
+2015-12-18 23:59:44,185 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54107
+2015-12-18 23:59:44,185 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54107
+2015-12-18 23:59:44,187 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0007 with negotiated timeout 10000 for client /10.0.42.1:54107
+2015-12-18 23:59:45,405 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54108
+2015-12-18 23:59:45,405 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54108
+2015-12-18 23:59:45,408 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0008 with negotiated timeout 10000 for client /10.0.42.1:54108
+2015-12-18 23:59:50,497 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54111
+2015-12-18 23:59:50,497 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54111
+2015-12-18 23:59:50,499 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0009 with negotiated timeout 10000 for client /10.0.42.1:54111
+2015-12-18 23:59:53,346 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54114
+2015-12-18 23:59:53,347 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54114
+2015-12-18 23:59:53,349 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab000a with negotiated timeout 10000 for client /10.0.42.1:54114
+2015-12-18 23:59:54,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa0001, timeout of 10000ms exceeded
+2015-12-18 23:59:54,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa0000, timeout of 10000ms exceeded
+2015-12-18 23:59:54,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10001, timeout of 10000ms exceeded
+2015-12-18 23:59:54,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10000, timeout of 10000ms exceeded
+2015-12-18 23:59:54,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0001
+2015-12-18 23:59:54,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0000
+2015-12-18 23:59:54,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10001
+2015-12-18 23:59:54,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10000
+2015-12-18 23:59:54,916 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab000a
+2015-12-18 23:59:54,918 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa1000b
+2015-12-18 23:59:54,919 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54114 which had sessionid 0x551b7871fab000a
+2015-12-18 23:59:54,920 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa000c
+2015-12-18 23:59:54,926 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0009
+2015-12-18 23:59:54,928 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54111 which had sessionid 0x551b7871fab0009
+2015-12-18 23:59:54,947 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0008
+2015-12-18 23:59:54,948 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30008
+2015-12-18 23:59:54,949 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54108 which had sessionid 0x551b7871fab0008
+2015-12-18 23:59:54,958 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa1000c
+2015-12-18 23:59:55,105 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x551b7871fab0004, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-18 23:59:55,106 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54088 which had sessionid 0x551b7871fab0004
+2015-12-18 23:59:55,185 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x551b7871fab0006, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-18 23:59:55,185 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54092 which had sessionid 0x551b7871fab0006
+2015-12-18 23:59:55,186 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x551b7871fab0007, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-18 23:59:55,186 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54107 which had sessionid 0x551b7871fab0007
+2015-12-18 23:59:55,190 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x551b7871fab0003, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-18 23:59:55,191 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54080 which had sessionid 0x551b7871fab0003
+2015-12-18 23:59:55,191 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x551b7871fab0005, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:220)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-18 23:59:55,191 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54089 which had sessionid 0x551b7871fab0005
+2015-12-18 23:59:56,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10008, timeout of 4000ms exceeded
+2015-12-18 23:59:56,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10007, timeout of 4000ms exceeded
+2015-12-18 23:59:56,000 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10008
+2015-12-18 23:59:56,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10007
+2015-12-18 23:59:58,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10003, timeout of 4000ms exceeded
+2015-12-18 23:59:58,001 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10003
+2015-12-19 00:00:04,000 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa1000a, timeout of 10000ms exceeded
+2015-12-19 00:00:04,000 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa1000a
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa1000a, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x151b7871fa30006, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa0008, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa1000e, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10008, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x551b7871fab0006, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa0007, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10010, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10009, timeout of 10000ms exceeded
+2015-12-19 00:00:06,001 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa1000b, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa0009, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10011, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x151b7871fa30004, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa000a, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x551b7871fab0005, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa1000f, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x151b7871fa30007, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa1000d, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x551b7871fab0003, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x451b7871faa000b, timeout of 10000ms exceeded
+2015-12-19 00:00:06,002 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa10012, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x151b7871fa30005, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x251b7871fa1000c, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x551b7871fab0007, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x551b7871fab0004, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x351b7871fa10009, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x151b7871fa30003, timeout of 10000ms exceeded
+2015-12-19 00:00:06,003 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa1000a
+2015-12-19 00:00:06,003 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30006
+2015-12-19 00:00:06,003 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0008
+2015-12-19 00:00:06,004 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa1000e
+2015-12-19 00:00:06,004 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10008
+2015-12-19 00:00:06,004 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0006
+2015-12-19 00:00:06,004 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0007
+2015-12-19 00:00:06,004 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10010
+2015-12-19 00:00:06,005 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10009
+2015-12-19 00:00:06,005 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa1000b
+2015-12-19 00:00:06,005 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0009
+2015-12-19 00:00:06,005 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10011
+2015-12-19 00:00:06,005 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30004
+2015-12-19 00:00:06,006 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa000a
+2015-12-19 00:00:06,006 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0005
+2015-12-19 00:00:06,006 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa1000f
+2015-12-19 00:00:06,006 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30007
+2015-12-19 00:00:06,007 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa1000d
+2015-12-19 00:00:06,007 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0003
+2015-12-19 00:00:06,008 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa000b
+2015-12-19 00:00:06,008 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10012
+2015-12-19 00:00:06,009 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30005
+2015-12-19 00:00:06,009 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa1000c
+2015-12-19 00:00:06,009 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0007
+2015-12-19 00:00:06,009 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0004
+2015-12-19 00:00:06,009 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10009
+2015-12-19 00:00:06,010 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30003
+2015-12-19 00:00:18,616 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54184
+2015-12-19 00:00:18,617 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54184
+2015-12-19 00:00:18,619 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab000b with negotiated timeout 10000 for client /10.0.42.1:54184
+2015-12-19 00:00:18,625 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab000b
+2015-12-19 00:00:18,627 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54184 which had sessionid 0x551b7871fab000b
+2015-12-19 00:00:23,885 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa000d
+2015-12-19 00:00:29,263 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54190
+2015-12-19 00:00:29,264 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54190
+2015-12-19 00:00:29,266 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab000c with negotiated timeout 10000 for client /10.0.42.1:54190
+2015-12-19 00:00:29,272 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab000c
+2015-12-19 00:00:29,274 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54190 which had sessionid 0x551b7871fab000c
+2015-12-19 00:00:33,011 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10014
+2015-12-19 00:01:07,999 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54217
+2015-12-19 00:01:08,000 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54217
+2015-12-19 00:01:08,002 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab000d with negotiated timeout 10000 for client /10.0.42.1:54217
+2015-12-19 00:01:08,008 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab000d
+2015-12-19 00:01:08,010 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54217 which had sessionid 0x551b7871fab000d
+2015-12-19 00:01:09,474 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10015
+2015-12-19 00:01:10,416 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa30009
+2015-12-19 00:01:11,305 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa000e
+2015-12-19 00:01:30,411 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa3000a
+2015-12-19 00:01:53,195 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa1000d
+2015-12-19 00:02:15,150 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10016
+2015-12-19 00:02:18,804 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa000f
+2015-12-19 00:02:35,143 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0010
+2015-12-19 00:02:38,174 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10017
+2015-12-19 00:02:40,229 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa1000e
+2015-12-19 00:02:56,864 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa3000b
+2015-12-19 00:03:13,867 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa3000c
+2015-12-19 00:03:20,888 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0011
+2015-12-19 00:03:25,046 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54378
+2015-12-19 00:03:25,046 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54378
+2015-12-19 00:03:25,048 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab000e with negotiated timeout 10000 for client /10.0.42.1:54378
+2015-12-19 00:03:25,054 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab000e
+2015-12-19 00:03:25,056 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54378 which had sessionid 0x551b7871fab000e
+2015-12-19 00:03:40,655 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa3000d
+2015-12-19 00:03:57,201 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54394
+2015-12-19 00:03:57,201 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54394
+2015-12-19 00:03:57,203 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab000f with negotiated timeout 10000 for client /10.0.42.1:54394
+2015-12-19 00:03:57,210 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab000f
+2015-12-19 00:03:57,211 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54394 which had sessionid 0x551b7871fab000f
+2015-12-19 00:04:00,250 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa1000f
+2015-12-19 00:04:17,738 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa3000e
+2015-12-19 00:04:23,703 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10010
+2015-12-19 00:04:40,145 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10011
+2015-12-19 00:04:48,889 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10012
+2015-12-19 00:04:51,406 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /10.0.42.1:54448
+2015-12-19 00:04:51,406 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /10.0.42.1:54448
+2015-12-19 00:04:51,408 - INFO  [CommitProcessor:5:ZooKeeperServer@595] - Established session 0x551b7871fab0010 with negotiated timeout 10000 for client /10.0.42.1:54448
+2015-12-19 00:04:51,415 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x551b7871fab0010
+2015-12-19 00:04:51,417 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /10.0.42.1:54448 which had sessionid 0x551b7871fab0010
+2015-12-19 00:05:00,109 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10013
+2015-12-19 00:05:28,437 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x251b7871fa10018
+2015-12-19 00:05:38,265 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0012
+2015-12-19 00:05:52,963 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x151b7871fa3000f
+2015-12-19 00:06:01,003 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x451b7871faa0013
+2015-12-19 00:06:14,126 - INFO  [ProcessThread(sid:5 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x351b7871fa10014
