@@ -208,8 +208,8 @@
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
-         ;; :nemesis   (resurrection-hub
-         ;;             (nemesis/partition-random-halves))
+         :nemesis   (resurrection-hub
+                     (nemesis/partition-random-halves))
          :checker   (checker/compose
                      {:aurora (checker)
                       :perf (checker/perf)})
