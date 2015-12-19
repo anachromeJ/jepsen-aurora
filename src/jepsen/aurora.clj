@@ -195,22 +195,22 @@
                      (->> (add-job)
                           (gen/delay 30)
                           (gen/stagger 30)
-                          (gen/nemesis
-                           (gen/seq (cycle [(gen/sleep 200)
-                                            {:type :info, :f :start}
-                                            (gen/sleep 200)
-                                            {:type :info, :f :stop}
-                                            {:type :info, :f :resurrect}])))
+                          ;; (gen/nemesis
+                          ;;  (gen/seq (cycle [(gen/sleep 200)
+                          ;;                   {:type :info, :f :start}
+                          ;;                   (gen/sleep 200)
+                          ;;                   {:type :info, :f :stop}
+                          ;;                   {:type :info, :f :resurrect}])))
                           (gen/time-limit 450))
-                     (gen/nemesis (gen/once {:type :info, :f :stop}))
-                     (gen/nemesis (gen/once {:type :info, :f :resurrect}))
+                     ;; (gen/nemesis (gen/once {:type :info, :f :stop}))
+                     ;; (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
                      (gen/sleep 400)
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
-         :nemesis   (resurrection-hub
-                     (nemesis/partition-random-halves))
+         ;; :nemesis   (resurrection-hub
+         ;;             (nemesis/partition-random-halves))
          :checker   (checker/compose
                      {:aurora (checker)
                       :perf (checker/perf)})
