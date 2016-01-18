@@ -1,24 +1,24 @@
 (ns jepsen.aurora
   "Sets up Aurora"
   (:require [clojure.tools.logging :refer :all]
-            [clojure.java.io :as io]
+            [clojure.java.io    :as io]
             [clojure.java.shell :as shell]
-            [clojure.string :as str]
-            [clj-time.core :as time]
-            [clj-time.format :as time.format]            
+            [clojure.string     :as str]
+            [clj-time.core      :as time]
+            [clj-time.format    :as time.format]
             [jepsen 
-             [client :as client]
-             [db :as db]
-             [tests :as tests]
-             [control :as c :refer [|]]
-             [checker :as checker]
-             [nemesis :as nemesis]
+             [client    :as client]
+             [db        :as db]
+             [tests     :as tests]
+             [control   :as c :refer [|]]
+             [checker   :as checker]
+             [nemesis   :as nemesis]
              [generator :as gen]
-             [util :as util :refer [meh timeout]]
+             [util      :as util :refer [meh timeout]]
              [zookeeper :as zk]
-             [mesos :as mesos]]
-            [jepsen.control.util :as cu]
-            [jepsen.os.debian :as debian]
+             [mesos     :as mesos]]
+            [jepsen.control.util   :as cu]
+            [jepsen.os.debian      :as debian]
             [jepsen.aurora.checker :refer [checker epsilon-forgiveness]]))
 
 (def job-script-dir "/tmp/aurora-jobs/")
@@ -29,14 +29,18 @@
   [test node]
   (info node "Installing Java 8 and Aurora")
   (c/su
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/install-aurora.sh" :-o "/install-aurora.sh")
+   (c/exec :curl 
+           :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/install-aurora.sh" 
+           :-o "/install-aurora.sh")
    (c/exec :bash "/install-aurora.sh")
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/aurora-scheduler.sh" :-o "/aurora-scheduler.sh")
-   (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/add-job.sh" :-o "/add-job.sh")
+   (c/exec :curl 
+           :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/aurora-scheduler.sh" 
+           :-o "/aurora-scheduler.sh")
+   (c/exec :curl 
+           :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/add-job.sh" 
+           :-o "/add-job.sh")
    (c/exec :mkdir :-p job-result-dir)
    (c/exec :chmod :777 job-result-dir)
-   ;; (c/exec :mkdir :-p "/etc/aurora")
-   ;; (c/exec :curl :-L "https://raw.githubusercontent.com/jchli/jepsen-aurora/master/scripts/clusters.json" :-o "/etc/aurora/clusters.json")
    ))
 
 (defn start!
@@ -193,24 +197,24 @@
          :generator (gen/phases
                      (gen/sleep 60) ; wait a bit for scheduler to start up
                      (->> (add-job)
-                          (gen/delay 30)
+                          (gen/delay   30)
                           (gen/stagger 30)
-                          ;; (gen/nemesis
-                          ;;  (gen/seq (cycle [(gen/sleep 200)
-                          ;;                   {:type :info, :f :start}
-                          ;;                   (gen/sleep 200)
-                          ;;                   {:type :info, :f :stop}
-                          ;;                   {:type :info, :f :resurrect}])))
+                          (gen/nemesis
+                           (gen/seq (cycle [(gen/sleep 200)
+                                            {:type :info, :f :start}
+                                            (gen/sleep 200)
+                                            {:type :info, :f :stop}
+                                            {:type :info, :f :resurrect}])))
                           (gen/time-limit 450))
-                     ;; (gen/nemesis (gen/once {:type :info, :f :stop}))
-                     ;; (gen/nemesis (gen/once {:type :info, :f :resurrect}))
+                     (gen/nemesis (gen/once {:type :info, :f :stop}))
+                     (gen/nemesis (gen/once {:type :info, :f :resurrect}))
                      (gen/log "Waiting for executions")
                      (gen/sleep 400)
                      (gen/clients
                       (gen/once
                        {:type :invoke, :f :read})))
-         ;; :nemesis   (resurrection-hub
-         ;;             (nemesis/partition-random-halves))
+         :nemesis   (resurrection-hub
+                     (nemesis/partition-random-halves))
          :checker   (checker/compose
                      {:aurora (checker)
                       :perf (checker/perf)})
