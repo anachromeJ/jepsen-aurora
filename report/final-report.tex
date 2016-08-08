@@ -442,7 +442,7 @@ Environment setup is a major issue in this project. We have tried setting up the
 
 One of the reasons that the test is time consuming is that, Aurora cron tasks only have minute-level granularity. Due to this property of Aurora cron tasks, every task must wait at least 60 seconds to be repeated. In our tests, we repeat around 20 times for each job. So in total it took around 30 minutes. 
 
-Additionally, configuration flags for the Aurora scheduler are not very well documented, and it took us a long time searching for examples and changing the parameters before we figured out a sensible configuration. In this particular regard, the Aurora team is not doing as well as Chronos.
+Additionally, configuration flags for the Aurora scheduler are not very well documented, and it took us a long time searching for examples and changing the parameters before we figured out a sensible configuration.
 
 \section{Conclusion}
 In this project, we wrote Clojure tests in the Jepsen environment to measure the correctness of Apache Mesos and Apache Aurora. In general, Mesos/Aurora behaves well under network partitions. Despite of the fact that not every job in our Mesos/Aurora test completed, we can still conclude that generally Mesos/Aurora perform better in network partitions than Chronos and can reliably recover from network partitions. 
