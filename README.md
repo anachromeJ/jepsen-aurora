@@ -2,6 +2,10 @@
 
 Jepsen tests for Apache Aurora
 
+## Report
+
+The report is available under [report/final-report.pdf](https://github.com/anachromeJ/jepsen-aurora/blob/master/report/final-report.pdf)
+
 ## Usage
 
 This test is performed in a docker container with a typical Jepsen test environment setup. Instructions can be found at [https://github.com/aphyr/jepsen/tree/master/docker](https://github.com/aphyr/jepsen/tree/master/docker). Essentially with docker installed, the following sequence of commands runs the test:
